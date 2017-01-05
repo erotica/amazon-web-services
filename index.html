@@ -92,7 +92,7 @@ title: Amazon Web Services
 
                 <h3>{{ api_name }}<h3>
                 <p><img src="{{ api_image }}" width="100%" style="padding: 10px;" align="left" /></p>
-                <p><strong>{{ api_description }}</strong><p>              
+                <p><strong>{{ api_description }}</strong><p>
 
                 <table width="100%" border="0" style="padding-top: 10px;">
                   <tr>
@@ -152,7 +152,7 @@ title: Amazon Web Services
                                 <td align="left" style="font-size: 18px; font-weight: bold; padding: 10px;">{{ api.name }}</td>
                                 <td align="right" style="padding: 10px;">
                                   {% if openapi_spec_url != null and openapi_spec_url != empty %}
-                                    <a href="{{ site.url }}{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>
+                                    (<a href="{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>)
                                   {% endif %}
                                 </td>
                               </tr>

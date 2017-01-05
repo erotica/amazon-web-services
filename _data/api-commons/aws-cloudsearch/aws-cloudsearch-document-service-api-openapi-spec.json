@@ -1,0 +1,60 @@
+
+  {
+	"swagger": "2.0",
+	"info": {
+		"title": "AWS CloudSearch Document Service API",
+		"description": "You use the document service API to add, replace, or delete documents in your Amazon CloudSearch domain. For more information managing the documents in your search domain, see Uploading Data to an Amazon CloudSearch Domain.",
+		"version": "1.0.0"
+	},
+	"schemes": ["http"],
+	"produces": ["application/json"],
+	"consumes": ["application/json"],
+	"paths": {
+		"/2013-01-01/documents/batch": {
+			"get": {
+				"summary": "You use the document service API to add, replace, or delete documents in your Amazon CloudSearch domain",
+				"description": "You use the document service API to add, replace, or delete documents in your Amazon CloudSearch domain. For more information managing the documents in your search domain, see Uploading Data to an Amazon CloudSearch Domain.",
+				"operationId": "search",
+				"parameters": [{
+					"in": "body",
+					"name": "fields",
+					"description": "A collection of one or more field_name properties that define the fields the document contains. Condition: Required for add operations. Must contain at least one field_name property",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "field_name",
+					"description": "tSpecifies a field within the document being added. Field names must begin with a letter and can contain the following characters: a-z (lower case), 0-9, and _ (underscore). Field names must be at least 3 and no more than 64 characters. The name score is reserved and cannot be used as a field name.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "id",
+					"description": "An alphanumeric string. Allowed characters are: A-Z (upper-case letters), -a-z (lower-case letters), 0-9, _ (underscore), - (hyphen), / (forward slash), # (hash sign), : (colon). The max length is 128 characters.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "type",
+					"description": "The operation type, add or delete.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": ["Search"]
+			}
+		}
+	},
+	"definitions": []
+}

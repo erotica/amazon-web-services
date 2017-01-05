@@ -12,7 +12,7 @@
 		"/{AccountId}/policies/data-retrieval": {
 			"get": {
 				"summary": "Get  Data  Retrieval  Policy",
-				"description": "DescriptionThis operation returns the current data retrieval policy for the account and region specified in thettttGET request",
+				"description": "DescriptionThis operation returns the current data retrieval policy for the account and region specified in thenttttGET request",
 				"operationId": "Get Data Retrieval Policy (GET policy)",
 				"parameters": [{
 					"in": "query",
@@ -160,7 +160,7 @@
 			},
 			"get": {
 				"summary": "Describe  Vault",
-				"description": "DescriptionThis operation returns information about a vault, including the vault Amazon Resource Namettt(ARN), the date the vault was created, the number of archives contained within thetttvault, and the total size of all the archives in the vault",
+				"description": "DescriptionThis operation returns information about a vault, including the vault Amazon Resource Namenttt(ARN), the date the vault was created, the number of archives contained within thentttvault, and the total size of all the archives in the vault",
 				"operationId": "Describe Vault (GET vault)",
 				"parameters": [{
 					"in": "query",
@@ -234,7 +234,7 @@
 			},
 			"get": {
 				"summary": "Get  Vault  Access  Policy",
-				"description": "DescriptionThis operation retrieves the access-policy subresource set on thetttvault&#8212;for more information on setting this subresource, see Set Vault Access Policy (PUT access-policy)",
+				"description": "DescriptionThis operation retrieves the access-policy subresource set on thentttvault&#8212;for more information on setting this subresource, see Set Vault Access Policy (PUT access-policy)",
 				"operationId": "Get Vault Access Policy (GET access-policy)",
 				"parameters": [{
 					"in": "query",
@@ -251,7 +251,7 @@
 			},
 			"put": {
 				"summary": "Set  Vault  Access  Policy",
-				"description": "DescriptionThis operation configures an access policy for a vault and will overwrite an existingtttpolicy",
+				"description": "DescriptionThis operation configures an access policy for a vault and will overwrite an existingntttpolicy",
 				"operationId": "Set Vault Access Policy (PUT access-policy)",
 				"parameters": [{
 					"in": "query",
@@ -299,7 +299,7 @@
 		"/{AccountId}/vaults/{VaultName}/jobs": {
 			"get": {
 				"summary": "List  Jobs",
-				"description": "DescriptionThis operation lists jobs for a vault including jobs that are in-progress and jobs that havetttrecently finished",
+				"description": "DescriptionThis operation lists jobs for a vault including jobs that are in-progress and jobs that haventttrecently finished",
 				"operationId": "list Jobs (GET jobs)",
 				"parameters": [{
 					"in": "query",
@@ -536,7 +536,7 @@
 		"/{AccountID}/vaults/{VaultName}/jobs/{JobID}": {
 			"get": {
 				"summary": "Describe  Job",
-				"description": "DescriptionThis operation returns information about a job you previously initiated, including the jobtttinitiation date, the user who initiated the job, the job status code/message and thetttAmazon Simple Notification Service (Amazon SNS) topic to notify after Amazon Glaciertttcompletes the job",
+				"description": "DescriptionThis operation returns information about a job you previously initiated, including the jobntttinitiation date, the user who initiated the job, the job status code/message and thentttAmazon Simple Notification Service (Amazon SNS) topic to notify after Amazon Glacierntttcompletes the job",
 				"operationId": "describe Job (GET JobID)",
 				"parameters": [{
 					"in": "query",
@@ -745,7 +745,7 @@
 		"/{AccountId}/vaults/{vaultName}/lock-policy": {
 			"delete": {
 				"summary": "Abort  Vault  Lock",
-				"description": "DescriptionThis operation aborts the vault locking process if the vault lock is not in thettttLocked state",
+				"description": "DescriptionThis operation aborts the vault locking process if the vault lock is not in thenttttLocked state",
 				"operationId": "Abort Vault Lock (DELETE lock-policy)",
 				"responses": {
 					"200": {
@@ -756,7 +756,7 @@
 			},
 			"get": {
 				"summary": "Get  Vault  Lock",
-				"description": "DescriptionThis operation retrieves the following attributes from the lock-policytttsubresource set on the specified vault: tttThe vault lock policy set on the vault",
+				"description": "DescriptionThis operation retrieves the following attributes from the lock-policyntttsubresource set on the specified vault: ntttThe vault lock policy set on the vault",
 				"operationId": "Get Vault Lock (GET lock-policy)",
 				"parameters": [{
 					"in": "query",
@@ -813,7 +813,7 @@
 		"/{AccountId}/vaults/{vaultName}/lock-policy/{lockId}": {
 			"post": {
 				"summary": "Complete  Vault  Lock",
-				"description": "DescriptionThis operation completes the vault locking process by transitioning the vault lock from         the InProgress state to the Locked state, which causes the vault         lock policy to become unchangeable",
+				"description": "DescriptionThis operation completes the vault locking process by transitioning the vault lock fromn         the InProgress state to the Locked state, which causes the vaultn         lock policy to become unchangeable",
 				"operationId": "Complete Vault Lock (POST lockId)",
 				"responses": {
 					"200": {
@@ -881,7 +881,7 @@
 		"/{AccountId}/vaults/{VaultName}/multipart-uploads/{uploadID}": {
 			"delete": {
 				"summary": "Abort  Multipart  Upload",
-				"description": "DescriptionThis multipart upload operation aborts a multipart upload identified by the uploadtttID",
+				"description": "DescriptionThis multipart upload operation aborts a multipart upload identified by the uploadntttID",
 				"operationId": "abort Multipart Upload (DELETE uploadID)",
 				"responses": {
 					"200": {
@@ -892,7 +892,7 @@
 			},
 			"get": {
 				"summary": "List  Parts",
-				"description": "DescriptionThis multipart upload operation lists the parts of an archive that have been uploaded in atttspecific multipart upload identified by an upload ID",
+				"description": "DescriptionThis multipart upload operation lists the parts of an archive that have been uploaded in antttspecific multipart upload identified by an upload ID",
 				"operationId": "list Parts (GET uploadID)",
 				"parameters": [{
 					"in": "query",
@@ -957,7 +957,7 @@
 			},
 			"post": {
 				"summary": "Complete  Multipart  Upload",
-				"description": "DescriptionYou call this multipart upload operation to inform Amazon Glacier that all the archive parts havetttbeen uploaded and Amazon Glacier can now assemble the archive from the uploaded parts",
+				"description": "DescriptionYou call this multipart upload operation to inform Amazon Glacier that all the archive parts haventttbeen uploaded and Amazon Glacier can now assemble the archive from the uploaded parts",
 				"operationId": "complete Multipart Upload (POST uploadID)",
 				"parameters": [{
 					"type": "string"
@@ -987,7 +987,7 @@
 		"/{AccountId}/vaults/{VaultName}/notification-configuration": {
 			"delete": {
 				"summary": "Delete  Vault  Notifications",
-				"description": "DescriptionThis operation deletes the notification configuration set for a vault tttSet Vault Notification Configuration (PUTttnotification-configuration)",
+				"description": "DescriptionThis operation deletes the notification configuration set for a vault ntttSet Vault Notification Configuration (PUTnttnotification-configuration)",
 				"operationId": "Delete Vault Notifications (DELETEnttnotification-configuration)",
 				"responses": {
 					"200": {
@@ -998,7 +998,7 @@
 			},
 			"get": {
 				"summary": "Get  Vault  Notifications",
-				"description": "DescriptionThis operation retrieves the notification-configuration subresource set on thetttvault (see Set Vault Notification Configuration (PUTttnotification-configuration)",
+				"description": "DescriptionThis operation retrieves the notification-configuration subresource set on thentttvault (see Set Vault Notification Configuration (PUTnttnotification-configuration)",
 				"operationId": "Get Vault Notifications (GETnttnotification-configuration)",
 				"parameters": [{
 					"in": "query",
@@ -1021,7 +1021,7 @@
 			},
 			"put": {
 				"summary": "Set  Vault  Notification  Configuration",
-				"description": "DescriptionRetrieving an archive and a vault inventory are asynchronous operations in Amazon Glacier for whichtttyou must first initiate a job and wait for the job to complete before you can downloadtttthe job output",
+				"description": "DescriptionRetrieving an archive and a vault inventory are asynchronous operations in Amazon Glacier for whichntttyou must first initiate a job and wait for the job to complete before you can downloadntttthe job output",
 				"operationId": "Set Vault Notification Configuration (PUTnttnotification-configuration)",
 				"parameters": [{
 					"in": "query",
@@ -1046,7 +1046,7 @@
 		"Synta": {
 			"syntax": {
 				"summary": "List  Provisioned  Capacity",
-				"description": "List Provisioned Capacity (GET        provisioned-capacity)This operation lists the provisioned capacity for the specified AWS account",
+				"description": "List Provisioned Capacity (GETn        provisioned-capacity)This operation lists the provisioned capacity for the specified AWS account",
 				"operationId": "List Provisioned Capacity (GETn        provisioned-capacity)",
 				"parameters": [{
 					"in": "query",

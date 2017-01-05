@@ -166,13 +166,13 @@ title: Amazon Web Services
 
                                       {% for spec in openapi_spec_json %}
 
+                                        spec: {{ spec }}
+
                                         {% for path in spec.paths %}
 
-
-                                          path: {{ path }}<br />
-
-
                                           {% assign method_json = path[1] %}
+
+                                          method_json: {{ method_json }}<br />
 
                                           {% for method in method_json %}
 

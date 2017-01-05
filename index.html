@@ -6,8 +6,8 @@ title: Amazon Web Services
 <strong>debug 4: </strong>
 
 {% assign index = site.data.apis %}
-{% assign apijson = index[1] %}
-
+{% assign apijson = index[0] %}
+{{ index }}
 {% for api in index.include %}
 
   {{ api.name }} - {{ api.url }}<br />

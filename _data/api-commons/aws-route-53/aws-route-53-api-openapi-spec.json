@@ -17,7 +17,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the change batch request. The value that you specify here is the value thatttttChangeResourceRecordSets returned in the Id element when you submitted thetttrequest.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the change batch request",
 					"type": "string"
 				}],
 				"responses": {
@@ -49,7 +49,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "CallerReference",
-					"description": "A unique string that identifies the request, and that allows you to retry failedttttCreateReusableDelegationSet requests without the risk of executing thetttoperation twice. You must use a unique CallerReference string every time youtttsubmit a CreateReusableDelegationSet request. CallerReference can betttany unique string, for example a date/time stamp.Type: StringLength Constraints: Minimum length of 1. Maximum length of 128.Required: Yes",
+					"description": "A unique string that identifies the request, and that allows you to retry failedttttCreateReusableDelegationSet requests without the risk of executing thetttoperation twice",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -57,7 +57,7 @@
 				{
 					"in": "body",
 					"name": "CreateReusableDelegationSetRequest",
-					"description": "Root level tag for the CreateReusableDelegationSetRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateReusableDelegationSetRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -65,7 +65,7 @@
 				{
 					"in": "body",
 					"name": "HostedZoneId",
-					"description": "If you want to mark the delegation set for an existing hosted zone as reusable, the IDtttfor that hosted zone.Type: StringLength Constraints: Maximum length of 32.Required: No",
+					"description": "If you want to mark the delegation set for an existing hosted zone as reusable, the IDtttfor that hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -86,7 +86,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the reusable delegation set you want to delete.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the reusable delegation set you want to delete",
 					"type": "string"
 				}],
 				"responses": {
@@ -103,7 +103,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the reusable delegation set for which you want to get a list of the nametttserver.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the reusable delegation set for which you want to get a list of the nametttserver",
 					"type": "string"
 				}],
 				"responses": {
@@ -122,7 +122,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "marker",
-					"description": "If youre making the second or subsequent call tottttListReusableDelegationSets, the Marker element matches the valuetttthat you specified in the marker parameter in the previous request.Length Constraints: Maximum length of 64.",
+					"description": "If you're making the second or subsequent call tottttListReusableDelegationSets, the Marker element matches the valuetttthat you specified in the marker parameter in the previous request",
 					"type": "string"
 				}],
 				"responses": {
@@ -141,7 +141,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "continentcode",
-					"description": "Amazon Route 53 supports the following continent codes:                        AF: Africa                        AN: Antarctica                        AS: Asia                        EU: Europe                        OC: Oceania                        NA: North America                        SA: South AmericaLength Constraints: Fixed length of 2.",
+					"description": "Amazon Route 53 supports the following continent codes:                        AF: Africa                        AN: Antarctica                        AS: Asia                        EU: Europe                        OC: Oceania                        NA: North America                        SA: South AmericaLength Constraints: Fixed length of 2",
 					"type": "string"
 				}],
 				"responses": {
@@ -160,7 +160,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "maxitems",
-					"description": "(Optional) The maximum number of geolocations to be included in the response body fortttthis request. If more than MaxItems geolocations remain to be listed, then thetttvalue of the IsTruncated element in the response is true.",
+					"description": "(Optional) The maximum number of geolocations to be included in the response body fortttthis request",
 					"type": "string"
 				}],
 				"responses": {
@@ -179,7 +179,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "CallerReference",
-					"description": "A unique string that identifies the request and that allows failedttttCreateHealthCheck requests to be retried without the risk of executing thetttoperation twice. You must use a unique CallerReference string every time youtttcreate a health check.Type: StringLength Constraints: Minimum length of 1. Maximum length of 64.Required: Yes",
+					"description": "A unique string that identifies the request and that allows failedttttCreateHealthCheck requests to be retried without the risk of executing thetttoperation twice",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -187,7 +187,7 @@
 				{
 					"in": "body",
 					"name": "CreateHealthCheckRequest",
-					"description": "Root level tag for the CreateHealthCheckRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateHealthCheckRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -195,7 +195,7 @@
 				{
 					"in": "body",
 					"name": "HealthCheckConfig",
-					"description": "A complex type that contains the response to a CreateHealthCheck request.ttType: HealthCheckConfig objectRequired: Yes",
+					"description": "A complex type that contains the response to a CreateHealthCheck request",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -216,7 +216,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "HealthCheckId",
-					"description": "The ID of the health check that you want to delete.Length Constraints: Maximum length of 64.",
+					"description": "The ID of the health check that you want to delete",
 					"type": "string"
 				}],
 				"responses": {
@@ -233,7 +233,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "HealthCheckId",
-					"description": "The identifier that Amazon Route 53 assigned to the health check when you created it. When youtttadd or update a resource record set, you use this value to specify which health check to use.tttThe value can be up to 64 characters long.Length Constraints: Maximum length of 64.",
+					"description": "The identifier that Amazon Route 53 assigned to the health check when you created it",
 					"type": "string"
 				}],
 				"responses": {
@@ -250,7 +250,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "AlarmIdentifier",
-					"description": "A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health checkers totttuse to determine whether this health check is healthy.Type: AlarmIdentifier objectRequired: No",
+					"description": "A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health checkers totttuse to determine whether this health check is healthy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -258,7 +258,7 @@
 				{
 					"in": "body",
 					"name": "ChildHealthChecks",
-					"description": "A complex type that contains one ChildHealthCheck element for each healthtttcheck that you want to associate with a CALCULATED health check.Type: array of StringsArray Members: Maximum number of 256 items.Length Constraints: Maximum length of 64.Required: No",
+					"description": "A complex type that contains one ChildHealthCheck element for each healthtttcheck that you want to associate with a CALCULATED health check",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -266,7 +266,7 @@
 				{
 					"in": "body",
 					"name": "EnableSNI",
-					"description": "Specify whether you want Amazon Route 53 to send the value ofttttFullyQualifiedDomainName to the endpoint in the client_hellotttmessage during TLS negotiation. This allows the endpoint to respond tottttHTTPS health check requests with the applicable SSL/TLS certificate.Some endpoints require that HTTPS requests include the host name in thettttclient_hello message. If you dont enable SNI, the status of the health checktttwill be SSL alert handshake_failure. A health check can also have that status fortttother reasons. If SNI is enabled and youre still getting the error, check the SSL/TLStttconfiguration on your endpoint and confirm that your certificate is valid.The SSL/TLS certificate on your endpoint includes a domain name in the CommonttttName field and possibly several more in the Subject Alternative Namestttfield. One of the domain names in the certificate should match the value that you specify forttttFullyQualifiedDomainName. If the endpoint responds to thettttclient_hello message with a certificate that does not include the domain nametttthat you specified in FullyQualifiedDomainName, a health checker will retry thettthandshake. In the second attempt, the health checker will omitttttFullyQualifiedDomainName from the client_hello message.Type: BooleanRequired: No",
+					"description": "Specify whether you want Amazon Route 53 to send the value ofttttFullyQualifiedDomainName to the endpoint in the client_hellotttmessage during TLS negotiation",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -274,7 +274,7 @@
 				{
 					"in": "body",
 					"name": "FailureThreshold",
-					"description": "The number of consecutive health checks that an endpoint must pass or fail for Amazon Route 53 totttchange the current status of the endpoint from unhealthy to healthy or vice versa. For moretttinformation, see How Amazon Route 53 Determines Whether an Endpoint Is Healthy in thettttAmazon Route 53 Developer Guide.Type: IntegerValid Range: Minimum value of 1. Maximum value of 10.Required: No",
+					"description": "The number of consecutive health checks that an endpoint must pass or fail for Amazon Route 53 totttchange the current status of the endpoint from unhealthy to healthy or vice versa",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -282,7 +282,7 @@
 				{
 					"in": "body",
 					"name": "FullyQualifiedDomainName",
-					"description": "Amazon Route 53 behavior depends on whether you specify a value for IPAddress.NoteIf a health check already has a value for IPAddress, you can change thetttvalue. However, you cant update an existing health check to add or remove the value oftttIPAddress.                   If you specify a value for                   IPAddress:Amazon Route 53 sends health check requests to the specified IPv4 or IPv6 address and passes the value of tttFullyQualifiedDomainName in the Host header for all health checks except tttTCP health checks. This is typically the fully qualified DNS name of the endpoint on which you want tttAmazon Route 53 to perform health checks.When Amazon Route 53 checks the health of an endpoint, here is how it constructs the Host header:If you specify a value of 80 for Port andttttttHTTP or HTTP_STR_MATCH for Type, Amazon Route 53 passes thetttttvalue of FullyQualifiedDomainName to the endpoint in the Hosttttttheader.If you specify a value of 443 for Port andttttttHTTPS or HTTPS_STR_MATCH for Type, Amazon Route 53 passestttttthe value of FullyQualifiedDomainName to the endpoint in the Hosttttttheader.If you specify another value for Port and any value exceptttttttTCP for Type, Amazon Route 53 passesttttttt                           FullyQualifiedDomainName:Port                         to thetttttendpoint in the Host header.If you dont specify a value for FullyQualifiedDomainName, Amazon Route 53tttsubstitutes the value of IPAddress in the Host header in each of thetttabove cases.                  If you dont specify a value for                   IPAddress:If you dont specify a value for IPAddress, Amazon Route 53 sends a DNS request totttthe domain that you specify in FullyQualifiedDomainName at the interval youtttspecify in RequestInterval. Using an IPv4 address that is returned by DNS, Amazon Route 53 thentttchecks the health of the endpoint.NoteIf you dont specify a value for IPAddress, Amazon Route 53 uses only IPv4 to tttsend health checks to the endpoint. If theres no resource record set with a type of A for the tttname that you specify for FullyQualifiedDomainName, the health check fails with a tttDNS resolution failed error.If you want to check the health of weighted, latency, or failover resource record setstttand you choose to specify the endpoint only by FullyQualifiedDomainName, wetttrecommend that you create a separate health check for each endpoint. For example, create attthealth check for each HTTP server that is serving content for www.example.com. For the valuetttof FullyQualifiedDomainName, specify the domain name of the server (such asttttus-east-1-www.example.com), not the name of the resource record setsttt(www.example.com).ImportantIn this configuration, if the value of FullyQualifiedDomainName matchesttttthe name of the resource record sets and you then associate the health check with thosettttresource record sets, health check results will be unpredictable.In addition, if the value of Type is HTTP,tttHTTPS, HTTP_STR_MATCH, or HTTPS_STR_MATCH, Amazon Route 53 passestttthe value of FullyQualifiedDomainName in the Host header, as it doestttwhen you specify a value for IPAddress. If the value of Type isttttTCP, Amazon Route 53 doesnt pass a Host header.Type: StringLength Constraints: Maximum length of 255.Required: No",
+					"description": "Amazon Route 53 behavior depends on whether you specify a value for IPAddress",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -290,13 +290,13 @@
 				{
 					"in": "path",
 					"name": "HealthCheckId",
-					"description": "The ID for the health check for which you want detailed information. When you createdtttthe health check, CreateHealthCheck returned the ID in the response, in thettttHealthCheckId element.Length Constraints: Maximum length of 64.",
+					"description": "The ID for the health check for which you want detailed information",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "HealthCheckVersion",
-					"description": "A sequential counter that Amazon Route 53 sets to 1 when you create a health checktttand increments by 1 each time you update settings for the health check.We recommend that you use GetHealthCheck or ListHealthCheckstttto get the current value of HealthCheckVersion for the health check that you wanttttto update, and that you include that value in your UpdateHealthCheck request.tttThis prevents Amazon Route 53 from overwriting an intervening update:f the value in the UpdateHealthCheck request matches the value ofttttttHealthCheckVersion in the health check, Amazon Route 53 updates the health check withtttttthe new settings.If the value of HealthCheckVersion in the health check is greater, thettttthealth check was changed after you got the version number. Amazon Route 53 does not update thettttthealth check, and it returns a HealthCheckVersionMismatch error.Type: LongValid Range: Minimum value of 1.Required: No",
+					"description": "A sequential counter that Amazon Route 53 sets to 1 when you create a health checktttand increments by 1 each time you update settings for the health check",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -304,7 +304,7 @@
 				{
 					"in": "body",
 					"name": "HealthThreshold",
-					"description": "The number of child health checks that are associated with a CALCULATEDttthealth that Amazon Route 53 must consider healthy for the CALCULATED health check to betttconsidered healthy. To specify the child health checks that you want to associate with attttCALCULATED health check, use the ChildHealthChecks andttttChildHealthCheck elements.Note the following:If you specify a number greater than the number of child health checks, Amazon Route 53tttttalways considers this health check to be unhealthy.If you specify 0, Amazon Route 53 always considers this health check to bettttthealthy.Type: IntegerValid Range: Minimum value of 0. Maximum value of 256.Required: No",
+					"description": "The number of child health checks that are associated with a CALCULATEDttthealth that Amazon Route 53 must consider healthy for the CALCULATED health check to betttconsidered healthy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -312,7 +312,7 @@
 				{
 					"in": "body",
 					"name": "InsufficientDataHealthStatus",
-					"description": "When CloudWatch has insufficient data about the metric to determine the alarm state, the status tttthat you want Amazon Route 53 to assign to the health check:                        Healthy: Amazon Route 53 considers the health check to be healthy.                        Unhealthy: Amazon Route 53 considers the health check to be unhealthy.                        LastKnownStatus: Amazon Route 53 uses the status of the health check from the last time ttttCloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known status, ttttthe default status for the health check is healthy.Type: StringValid Values: Healthy | Unhealthy | LastKnownStatus               Required: No",
+					"description": "When CloudWatch has insufficient data about the metric to determine the alarm state, the status tttthat you want Amazon Route 53 to assign to the health check:                        Healthy: Amazon Route 53 considers the health check to be healthy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -320,7 +320,7 @@
 				{
 					"in": "body",
 					"name": "Inverted",
-					"description": "Specify whether you want Amazon Route 53 to invert the status of a health check, for example, totttconsider a health check unhealthy when it otherwise would be considered healthy.Type: BooleanRequired: No",
+					"description": "Specify whether you want Amazon Route 53 to invert the status of a health check, for example, totttconsider a health check unhealthy when it otherwise would be considered healthy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -328,7 +328,7 @@
 				{
 					"in": "body",
 					"name": "IPAddress",
-					"description": "The IPv4 or IPv6 IP address for the endpoint that you want Amazon Route 53 to perform health checks on.tttIf you dont specify a value for IPAddress, Amazon Route 53 sends a DNS request to resolve tttthe domain name that you specify in FullyQualifiedDomainName at the interval that you tttspecify in RequestInterval. Using an IP address that is returned by DNS, Amazon Route 53 thentttchecks the health of the endpoint.If the endpoint is an EC2 instance, we recommend that you create an Elastic IP address, tttassociate it with your EC2 instance, and specify the Elastic IP address for IPAddress. tttThis ensures that the IP address of your instance never changes. For more information, see tttElastic IP Addresses (EIP) tttin the Amazon EC2 User Guide for Linux Instances.NoteIf a health check already has a value for IPAddress, you can change thetttvalue. However, you cant update an existing health check to add or remove the value of IPAddress. For more information, see UpdateHealthCheck:FullyQualifiedDomainName.Constraints: Amazon Route 53 cant check the health of endpoints for which the IP address is in local, private, non-routable, or tttmulticast ranges. For more information about IP addresses for which you cant create health checks, see the following tttdocuments:                        RFC 5735, Special Use IPv4 Addresses                                             RFC 6598, IANA-Reserved IPv4 Prefix for Shared Address Space                                             RFC 5156, Special-Use IPv6 Addresses                     Type: StringLength Constraints: Maximum length of 45.Pattern: (^((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))$|^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$)               Required: No",
+					"description": "The IPv4 or IPv6 IP address for the endpoint that you want Amazon Route 53 to perform health checks on",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -336,7 +336,7 @@
 				{
 					"in": "body",
 					"name": "Port",
-					"description": "The port on the endpoint on which you want Amazon Route 53 to perform health checks.Type: IntegerValid Range: Minimum value of 1. Maximum value of 65535.Required: No",
+					"description": "The port on the endpoint on which you want Amazon Route 53 to perform health checks",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -344,7 +344,7 @@
 				{
 					"in": "body",
 					"name": "Regions",
-					"description": "A complex type that contains one Region element for each region from which you wanttttAmazon Route 53 health checkers to check the specified endpoint.Type: array of StringsArray Members: Minimum number of 1 item. Maximum number of 64 items.Length Constraints: Minimum length of 1. Maximum length of 64.Valid Values: us-east-1 | us-west-1 | us-west-2 | eu-west-1 | ap-southeast-1 | ap-southeast-2 | ap-northeast-1 | sa-east-1               Required: No",
+					"description": "A complex type that contains one Region element for each region from which you wanttttAmazon Route 53 health checkers to check the specified endpoint",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -352,7 +352,7 @@
 				{
 					"in": "body",
 					"name": "ResourcePath",
-					"description": "The path that you want Amazon Route 53 to request when performing health checks. The path can betttany value for which your endpoint will return an HTTP status code of 2xx or 3xx when thetttendpoint is healthy, for example the file /docs/route53-health-check.html. Specify this value only if you want to change it.Type: StringLength Constraints: Maximum length of 255.Required: No",
+					"description": "The path that you want Amazon Route 53 to request when performing health checks",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -360,7 +360,7 @@
 				{
 					"in": "body",
 					"name": "SearchString",
-					"description": "If the value of Type is HTTP_STR_MATCH orttttHTTP_STR_MATCH, the string that you want Amazon Route 53 to search for in the responsetttbody from the specified resource. If the string appears in the response body, Amazon Route 53 considerstttthe resource healthy. (You cant change the value of Type when you update attthealth check.)Type: StringLength Constraints: Maximum length of 255.Required: No",
+					"description": "If the value of Type is HTTP_STR_MATCH orttttHTTP_STR_MATCH, the string that you want Amazon Route 53 to search for in the responsetttbody from the specified resource",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -368,7 +368,7 @@
 				{
 					"in": "body",
 					"name": "UpdateHealthCheckRequest",
-					"description": "Root level tag for the UpdateHealthCheckRequest parameters.Required: Yes",
+					"description": "Root level tag for the UpdateHealthCheckRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -389,7 +389,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "HealthCheckId",
-					"description": "The ID for the health check for which you want the last failure reason. When youtttcreated the health check, CreateHealthCheck returned the ID in the response, intttthe HealthCheckId element.Length Constraints: Maximum length of 64.",
+					"description": "The ID for the health check for which you want the last failure reason",
 					"type": "string"
 				}],
 				"responses": {
@@ -408,7 +408,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "HealthCheckId",
-					"description": "If you want Amazon Route 53 to return this resource record set in response to a DNS query onlytttwhen a health check is passing, include the HealthCheckId element and specify thetttID of the applicable health check.Amazon Route 53 determines whether a resource record set is healthy by periodically sending atttrequest to the endpoint that is specified in the health check. If that endpoint returns antttHTTP status code of 2xx or 3xx, the endpoint is healthy. If the endpoint returns an HTTPtttstatus code of 400 or greater, or if the endpoint doesnt respond for a certain amount ofttttime, Amazon Route 53 considers the endpoint unhealthy and also considers the resource record settttunhealthy.The HealthCheckId element is only useful when Amazon Route 53 is choosing betweenttttwo or more resource record sets to respond to a DNS query, and you want Amazon Route 53 to base thetttchoice in part on the status of a health check. Configuring health checks only makes sense intttthe following configurations:Youre checking the health of the resource record sets in a weighted, latency,tttttgeolocation, or failover resource record set, and you specify health check IDs for all oftttttthe resource record sets. If the health check for one resource record set specifies antttttendpoint that is not healthy, Amazon Route 53 stops responding to queries using the value for thattttttresource record set.You set EvaluateTargetHealth to true for the resourcetttttrecord sets in an alias, weighted alias, latency alias, geolocation alias, or failovertttttalias resource record set, and you specify health check IDs for all of the resource recordtttttsets that are referenced by the alias resource record sets. For more information abouttttttthis configuration, see EvaluateTargetHealth.Amazon Route 53 doesnt check the health of the endpoint specified in the resource recordtttttset, for example, the endpoint specified by the IP address in the Valuetttttelement. When you add a HealthCheckId element to a resource record set, Amazon Route 53tttttchecks the health of the endpoint that you specified in the health check.For geolocation resource record sets, if an endpoint is unhealthy, Amazon Route 53 looks for atttresource record set for the larger, associated geographic region. For example, suppose youttthave resource record sets for a state in the United States, for the United States, for NorthtttAmerica, and for all locations. If the endpoint for the state resource record set istttunhealthy, Amazon Route 53 checks the resource record sets for the United States, for North America, andtttfor all locations (a resource record set for which the value of CountryCode isttt*), in that order, until it finds a resource record set for which the endpoint isttthealthy.If your health checks specify the endpoint only by domain name, we recommend that youtttcreate a separate health check for each endpoint. For example, create a health check for eachtttHTTP server that is serving content for www.example.com. For the value ofttttFullyQualifiedDomainName, specify the domain name of the server (such asttttus-east-1-www.example.com), not the name of the resource record setsttt(example.com).ImportantIn this configuration, if you create a health check for which the value oftttttFullyQualifiedDomainName matches the name of the resource record sets andttttthen associate the health check with those resource record sets, health check results willttttbe unpredictable.Length Constraints: Maximum length of 64.",
+					"description": "If you want Amazon Route 53 to return this resource record set in response to a DNS query onlytttwhen a health check is passing, include the HealthCheckId element and specify thetttID of the applicable health check",
 					"type": "string"
 				}],
 				"responses": {
@@ -427,7 +427,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "marker",
-					"description": "If the response to a ListHealthChecks is more than one page, marker is thettthealth check ID for the first health check on the next page of results. For more information,tttsee ListHealthChecks:MaxItems.Length Constraints: Maximum length of 64.",
+					"description": "If the response to a ListHealthChecks is more than one page, marker is thettthealth check ID for the first health check on the next page of results",
 					"type": "string"
 				}],
 				"responses": {
@@ -459,7 +459,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "CallerReference",
-					"description": "A unique string that identifies the request and that allows failedtttCreateHostedZone requests to be retried without the risk of executing thetttoperation twice. You must use a unique CallerReference string every time youtttcreate a hosted zone. CallerReference can be any unique string, for example, atttdate/time stamp.Type: StringLength Constraints: Minimum length of 1. Maximum length of 128.Required: Yes",
+					"description": "A unique string that identifies the request and that allows failedtttCreateHostedZone requests to be retried without the risk of executing thetttoperation twice",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -467,7 +467,7 @@
 				{
 					"in": "body",
 					"name": "CreateHostedZoneRequest",
-					"description": "Root level tag for the CreateHostedZoneRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateHostedZoneRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -483,7 +483,7 @@
 				{
 					"in": "body",
 					"name": "DelegationSetId",
-					"description": "If you want to associate a reusable delegation set with this hosted zone, the ID thattttAmazon Route 53 assigned to the reusable delegation set when you created it. For more information abouttttreusable delegation sets, see CreateReusableDelegationSet.TypeString",
+					"description": "If you want to associate a reusable delegation set with this hosted zone, the ID thattttAmazon Route 53 assigned to the reusable delegation set when you created it",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -491,7 +491,7 @@
 				{
 					"in": "body",
 					"name": "HostedZoneConfig",
-					"description": "(Optional) A complex type that contains an optional comment about your hosted zone. Iftttyou dont want to specify a comment, omit both the HostedZoneConfig andtttComment elements.Type: HostedZoneConfig objectRequired: No",
+					"description": "(Optional) A complex type that contains an optional comment about your hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -499,7 +499,7 @@
 				{
 					"in": "body",
 					"name": "Name",
-					"description": "The name of the domain. For resource record types that include a domain name, specify atttfully qualified domain name, for example, www.example.com. The trailingtttdot is optional; Amazon Route 53 assumes that the domain name is fully qualified. This means that Amazon Route 53ttttreats www.example.com (without a trailing dot) andtttwww.example.com. (with a trailing dot) as identical.If youre creating a public hosted zone, this is the name you have registered with yourtttDNS registrar. If your domain name is registered with a registrar other than Amazon Route 53, change thetttname servers for your domain to the set of NameServers thattttCreateHostedZone returns in the DelegationSet element.Type: StringLength Constraints: Maximum length of 1024.Required: Yes",
+					"description": "The name of the domain",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -515,7 +515,7 @@
 				{
 					"in": "body",
 					"name": "VPC",
-					"description": "The VPC that you want your hosted zone to be associated with. By providing thistttparameter, your newly created hosted cant be resolved anywhere other than the giventttVPC.Type: VPC objectRequired: No",
+					"description": "The VPC that you want your hosted zone to be associated with",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -536,7 +536,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "delegationsetid",
-					"description": "If youre using reusable delegation sets and you want to list all of the hosted zones that are associated tttwith a reusable delegation set, specify the ID of that reusable delegation set. Length Constraints: Maximum length of 32.",
+					"description": "If you're using reusable delegation sets and you want to list all of the hosted zones that are associated tttwith a reusable delegation set, specify the ID of that reusable delegation set",
 					"type": "string"
 				}],
 				"responses": {
@@ -555,7 +555,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the hosted zone you want to delete.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the hosted zone you want to delete",
 					"type": "string"
 				}],
 				"responses": {
@@ -572,7 +572,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the hosted zone for which you want to get a list of the name servers in thetttdelegation set.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the hosted zone for which you want to get a list of the name servers in thetttdelegation set",
 					"type": "string"
 				}],
 				"responses": {
@@ -589,7 +589,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "Comment",
-					"description": "The new comment for the hosted zone. If you dont specify a value forttttComment, Amazon Route 53 deletes the existing value of the Comment element,tttif any.Type: StringLength Constraints: Maximum length of 256.Required: No",
+					"description": "The new comment for the hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -597,13 +597,13 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID for the hosted zone for which you want to update the comment.Length Constraints: Maximum length of 32.",
+					"description": "The ID for the hosted zone for which you want to update the comment",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "UpdateHostedZoneCommentRequest",
-					"description": "Root level tag for the UpdateHostedZoneCommentRequest parameters.Required: Yes",
+					"description": "Root level tag for the UpdateHostedZoneCommentRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -624,7 +624,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "AssociateVPCWithHostedZoneRequest",
-					"description": "Root level tag for the AssociateVPCWithHostedZoneRequest parameters.Required: Yes",
+					"description": "Root level tag for the AssociateVPCWithHostedZoneRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -632,7 +632,7 @@
 				{
 					"in": "body",
 					"name": "Comment",
-					"description": "Optional: A comment about the association request.Type: StringRequired: No",
+					"description": "Optional: A comment about the association request",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -640,13 +640,13 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the private hosted zone that you want to associate an Amazon VPC with.Note that you cant associate a VPC with a hosted zone that doesnt have an existingtttVPC association.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the private hosted zone that you want to associate an Amazon VPC with",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "VPC",
-					"description": "A complex type that contains information about the VPC that you want to associate with a private hosted zone.Type: VPC objectRequired: Yes",
+					"description": "A complex type that contains information about the VPC that you want to associate with a private hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -667,7 +667,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "CreateVPCAssociationAuthorizationRequest",
-					"description": "Root level tag for the CreateVPCAssociationAuthorizationRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateVPCAssociationAuthorizationRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -675,13 +675,13 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the private hosted zone that you want to authorize associating a VPC with.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the private hosted zone that you want to authorize associating a VPC with",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "VPC",
-					"description": "A complex type that contains the VPC ID and region for the VPC that you want to authorize associating tttwith your hosted zone.Type: VPC objectRequired: Yes",
+					"description": "A complex type that contains the VPC ID and region for the VPC that you want to authorize associating tttwith your hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -702,7 +702,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the hosted zone for which you want a list of VPCs that can be associated with the hosted zone.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the hosted zone for which you want a list of VPCs that can be associated with the hosted zone",
 					"type": "string"
 				}],
 				"responses": {
@@ -721,7 +721,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "DeleteVPCAssociationAuthorizationRequest",
-					"description": "Root level tag for the DeleteVPCAssociationAuthorizationRequest parameters.Required: Yes",
+					"description": "Root level tag for the DeleteVPCAssociationAuthorizationRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -729,13 +729,13 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "When removing authorization to associate a VPC that was created by one AWS account with a hosted zone tttthat was created with a different AWS account, the ID of the hosted zone.Length Constraints: Maximum length of 32.",
+					"description": "When removing authorization to associate a VPC that was created by one AWS account with a hosted zone tttthat was created with a different AWS account, the ID of the hosted zone",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "VPC",
-					"description": "When removing authorization to associate a VPC that was created by one AWS account with a hosted zone tttthat was created with a different AWS account, a complex type that includes the ID and region of the VPC.Type: VPC objectRequired: Yes",
+					"description": "When removing authorization to associate a VPC that was created by one AWS account with a hosted zone tttthat was created with a different AWS account, a complex type that includes the ID and region of the VPC",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -756,7 +756,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "Comment",
-					"description": "Optional: A comment about the disassociation request.Type: StringRequired: No",
+					"description": "Optional: A comment about the disassociation request",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -764,7 +764,7 @@
 				{
 					"in": "body",
 					"name": "DisassociateVPCFromHostedZoneRequest",
-					"description": "Root level tag for the DisassociateVPCFromHostedZoneRequest parameters.Required: Yes",
+					"description": "Root level tag for the DisassociateVPCFromHostedZoneRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -772,13 +772,13 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the private hosted zone that you want to disassociate a VPC from.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the private hosted zone that you want to disassociate a VPC from",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "VPC",
-					"description": "A complex type that contains information about the VPC that youre disassociatingtttfrom the specified hosted zone.Type: VPC objectRequired: Yes",
+					"description": "A complex type that contains information about the VPC that you're disassociatingtttfrom the specified hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -799,7 +799,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the hosted zone that contains the resource record sets that you want totttget.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the hosted zone that contains the resource record sets that you want totttget",
 					"type": "string"
 				}],
 				"responses": {
@@ -818,7 +818,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "ChangeBatch",
-					"description": "A complex type that contains an optional comment and the Changestttelement.Type: ChangeBatch objectRequired: Yes",
+					"description": "A complex type that contains an optional comment and the Changestttelement",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -826,7 +826,7 @@
 				{
 					"in": "body",
 					"name": "ChangeResourceRecordSetsRequest",
-					"description": "Root level tag for the ChangeResourceRecordSetsRequest parameters.Required: Yes",
+					"description": "Root level tag for the ChangeResourceRecordSetsRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -834,7 +834,7 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the hosted zone that contains the resource record sets that you want totttchange.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the hosted zone that contains the resource record sets that you want totttchange",
 					"type": "string"
 				}],
 				"responses": {
@@ -866,7 +866,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "dnsname",
-					"description": "(Optional) For your first request to ListHostedZonesByName, include thettttdnsname parameter only if you want to specify the name of the first hosted zonetttin the response. If you dont include the dnsname parameter, Amazon Route 53 returns all oftttthe hosted zones that were created by the current AWS account, in ASCII order. Fortttsubsequent requests, include both dnsname and hostedzoneidtttparameters. For dnsname, specify the value of NextDNSName from thetttprevious response.Length Constraints: Maximum length of 1024.",
+					"description": "(Optional) For your first request to ListHostedZonesByName, include thettttdnsname parameter only if you want to specify the name of the first hosted zonetttin the response",
 					"type": "string"
 				}],
 				"responses": {
@@ -885,7 +885,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "ListTagsForResourcesRequest",
-					"description": "Root level tag for the ListTagsForResourcesRequest parameters.Required: Yes",
+					"description": "Root level tag for the ListTagsForResourcesRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -893,7 +893,7 @@
 				{
 					"in": "body",
 					"name": "ResourceIds",
-					"description": "A complex type that contains the ResourceId element for each resource for which youtttwant to get a list of tags.Type: array of StringsArray Members: Minimum number of 1 item. Maximum number of 10 items.Length Constraints: Maximum length of 64.Required: Yes",
+					"description": "A complex type that contains the ResourceId element for each resource for which youtttwant to get a list of tags",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -901,7 +901,7 @@
 				{
 					"in": "path",
 					"name": "ResourceType",
-					"description": "The type of the resources.The resource type for health checks is healthcheck.The resource type for hosted zones is hostedzone.Valid Values: healthcheck | hostedzone",
+					"description": "The type of the resources",
 					"type": "string"
 				}],
 				"responses": {
@@ -920,7 +920,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "ResourceId",
-					"description": "The ID of the resource for which you want to retrieve tags.Length Constraints: Maximum length of 64.",
+					"description": "The ID of the resource for which you want to retrieve tags",
 					"type": "string"
 				}],
 				"responses": {
@@ -937,7 +937,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "AddTags",
-					"description": "A complex type that contains a list of the tags that you want to add to the specifiedttthealth check or hosted zone and/or the tags for which you want to edit the Valuetttelement.You can add a maximum of 10 tags to a health check or a hosted zone.Type: array of Tag objectsArray Members: Minimum number of 1 item. Maximum number of 10 items.Required: No",
+					"description": "A complex type that contains a list of the tags that you want to add to the specifiedttthealth check or hosted zone and/or the tags for which you want to edit the Valuetttelement",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -945,7 +945,7 @@
 				{
 					"in": "body",
 					"name": "ChangeTagsForResourceRequest",
-					"description": "Root level tag for the ChangeTagsForResourceRequest parameters.Required: Yes",
+					"description": "Root level tag for the ChangeTagsForResourceRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -953,7 +953,7 @@
 				{
 					"in": "body",
 					"name": "RemoveTagKeys",
-					"description": "A complex type that contains a list of the tags that you want to delete from thetttspecified health check or hosted zone. You can specify up to 10 keys.Type: array of StringsArray Members: Minimum number of 1 item. Maximum number of 10 items.Length Constraints: Maximum length of 128.Required: No",
+					"description": "A complex type that contains a list of the tags that you want to delete from thetttspecified health check or hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -961,7 +961,7 @@
 				{
 					"in": "path",
 					"name": "ResourceId",
-					"description": "The ID of the resource for which you want to add, change, or delete tags.Length Constraints: Maximum length of 64.",
+					"description": "The ID of the resource for which you want to add, change, or delete tags",
 					"type": "string"
 				}],
 				"responses": {
@@ -980,7 +980,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "edns0clientsubnetip",
-					"description": "If the resolver that you specified for resolverip supports EDNS0, specify the IP address of a client tttin the applicable location.Length Constraints: Maximum length of 45.Pattern: (^((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))$|^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$)",
+					"description": "If the resolver that you specified for resolverip supports EDNS0, specify the IP address of a client tttin the applicable location",
 					"type": "string"
 				}],
 				"responses": {
@@ -999,7 +999,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "maxitems",
-					"description": "(Optional) The maximum number of traffic policies to be included in the response bodytttfor this request. If you have more than MaxItems traffic policies, the value oftttthe IsTruncated element in the response is true, and the value oftttthe TrafficPolicyIdMarker element is the ID of the first traffic policy in thetttnext group of MaxItems traffic policies.",
+					"description": "(Optional) The maximum number of traffic policies to be included in the response bodytttfor this request",
 					"type": "string"
 				}],
 				"responses": {
@@ -1018,7 +1018,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "Specify the value of Id of the traffic policy for which you want to listtttall versions.Length Constraints: Maximum length of 36.",
+					"description": "Specify the value of Id of the traffic policy for which you want to listtttall versions",
 					"type": "string"
 				}],
 				"responses": {
@@ -1037,7 +1037,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "Comment",
-					"description": "(Optional) Any comments that you want to include about the traffic policy.Type: StringLength Constraints: Maximum length of 1024.Required: No",
+					"description": "(Optional) Any comments that you want to include about the traffic policy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1045,7 +1045,7 @@
 				{
 					"in": "body",
 					"name": "CreateTrafficPolicyRequest",
-					"description": "Root level tag for the CreateTrafficPolicyRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateTrafficPolicyRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1053,7 +1053,7 @@
 				{
 					"in": "body",
 					"name": "Document",
-					"description": "The definition of this traffic policy in JSON format. For more information, see tttTraffic Policy Document Format.Type: StringLength Constraints: Maximum length of 102400.Required: Yes",
+					"description": "The definition of this traffic policy in JSON format",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1061,7 +1061,7 @@
 				{
 					"in": "body",
 					"name": "Name",
-					"description": "The name of the traffic policy.Type: StringLength Constraints: Maximum length of 512.Required: Yes",
+					"description": "The name of the traffic policy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1082,7 +1082,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "Comment",
-					"description": "The comment that you specified in the CreateTrafficPolicyVersion request,tttif any.Type: StringLength Constraints: Maximum length of 1024.Required: No",
+					"description": "The comment that you specified in the CreateTrafficPolicyVersion request,tttif any",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1090,7 +1090,7 @@
 				{
 					"in": "body",
 					"name": "CreateTrafficPolicyVersionRequest",
-					"description": "Root level tag for the CreateTrafficPolicyVersionRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateTrafficPolicyVersionRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1098,7 +1098,7 @@
 				{
 					"in": "body",
 					"name": "Document",
-					"description": "The definition of this version of the traffic policy, in JSON format. You specified thetttJSON in the CreateTrafficPolicyVersion request. For more information about thetttJSON format, see CreateTrafficPolicy.Type: StringLength Constraints: Maximum length of 102400.Required: Yes",
+					"description": "The definition of this version of the traffic policy, in JSON format",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1106,7 +1106,7 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the traffic policy for which you want to create a new version.Length Constraints: Maximum length of 36.",
+					"description": "The ID of the traffic policy for which you want to create a new version",
 					"type": "string"
 				}],
 				"responses": {
@@ -1125,7 +1125,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the traffic policy that you want to delete.Length Constraints: Maximum length of 36.",
+					"description": "The ID of the traffic policy that you want to delete",
 					"type": "string"
 				}],
 				"responses": {
@@ -1142,7 +1142,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the traffic policy that you want to get information about.Length Constraints: Maximum length of 36.",
+					"description": "The ID of the traffic policy that you want to get information about",
 					"type": "string"
 				}],
 				"responses": {
@@ -1159,7 +1159,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "Comment",
-					"description": "The new comment for the specified traffic policy and version.Type: StringLength Constraints: Maximum length of 1024.Required: Yes",
+					"description": "The new comment for the specified traffic policy and version",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1167,13 +1167,13 @@
 				{
 					"in": "path",
 					"name": "Id",
-					"description": "The value of Id for the traffic policy for which you want to update thetttcomment.Length Constraints: Maximum length of 36.",
+					"description": "The value of Id for the traffic policy for which you want to update thetttcomment",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "UpdateTrafficPolicyCommentRequest",
-					"description": "Root level tag for the UpdateTrafficPolicyCommentRequest parameters.Required: Yes",
+					"description": "Root level tag for the UpdateTrafficPolicyCommentRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1194,7 +1194,7 @@
 				"parameters": [{
 					"in": "body",
 					"name": "CreateTrafficPolicyInstanceRequest",
-					"description": "Root level tag for the CreateTrafficPolicyInstanceRequest parameters.Required: Yes",
+					"description": "Root level tag for the CreateTrafficPolicyInstanceRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1202,7 +1202,7 @@
 				{
 					"in": "body",
 					"name": "HostedZoneId",
-					"description": "The ID of the hosted zone in which you want Amazon Route 53 to create resource record sets bytttusing the configuration in a traffic policy.Type: StringLength Constraints: Maximum length of 32.Required: Yes",
+					"description": "The ID of the hosted zone in which you want Amazon Route 53 to create resource record sets bytttusing the configuration in a traffic policy",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1210,7 +1210,7 @@
 				{
 					"in": "body",
 					"name": "Name",
-					"description": "The domain name (such as example.com) or subdomain name (such as www.example.com) fortttwhich Amazon Route 53 responds to DNS queries by using the resource record sets that Amazon Route 53 creates fortttthis traffic policy instance.Type: StringLength Constraints: Maximum length of 1024.Required: Yes",
+					"description": "The domain name (such as example",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1218,7 +1218,7 @@
 				{
 					"in": "body",
 					"name": "TrafficPolicyId",
-					"description": "The ID of the traffic policy that you want to use to create resource record sets in thetttspecified hosted zone.Type: StringLength Constraints: Maximum length of 36.Required: Yes",
+					"description": "The ID of the traffic policy that you want to use to create resource record sets in thetttspecified hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1226,7 +1226,7 @@
 				{
 					"in": "body",
 					"name": "TrafficPolicyVersion",
-					"description": "The version of the traffic policy that you want to use to create resource record setstttin the specified hosted zone.Type: IntegerValid Range: Minimum value of 1. Maximum value of 1000.Required: Yes",
+					"description": "The version of the traffic policy that you want to use to create resource record setstttin the specified hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1234,7 +1234,7 @@
 				{
 					"in": "body",
 					"name": "TTL",
-					"description": "(Optional) The TTL that you want Amazon Route 53 to assign to all of the resource record setstttthat it creates in the specified hosted zone.Type: LongValid Range: Minimum value of 0. Maximum value of 2147483647.Required: Yes",
+					"description": "(Optional) The TTL that you want Amazon Route 53 to assign to all of the resource record setstttthat it creates in the specified hosted zone",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1255,7 +1255,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the traffic policy instance that you want to delete. ImportantWhen you delete a traffic policy instance, Amazon Route 53 also deletes all of the resourcettttrecord sets that were created when you created the traffic policy instance.Length Constraints: Maximum length of 36.",
+					"description": "The ID of the traffic policy instance that you want to delete",
 					"type": "string"
 				}],
 				"responses": {
@@ -1272,7 +1272,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the traffic policy instance that you want to get information about.Length Constraints: Maximum length of 36.",
+					"description": "The ID of the traffic policy instance that you want to get information about",
 					"type": "string"
 				}],
 				"responses": {
@@ -1289,13 +1289,13 @@
 				"parameters": [{
 					"in": "path",
 					"name": "Id",
-					"description": "The ID of the traffic policy instance that you want to update.Length Constraints: Maximum length of 36.",
+					"description": "The ID of the traffic policy instance that you want to update",
 					"type": "string"
 				},
 				{
 					"in": "body",
 					"name": "TrafficPolicyId",
-					"description": "The ID of the traffic policy that you want Amazon Route 53 to use to update resource record setstttfor the specified traffic policy instance.Type: StringLength Constraints: Maximum length of 36.Required: Yes",
+					"description": "The ID of the traffic policy that you want Amazon Route 53 to use to update resource record setstttfor the specified traffic policy instance",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1303,7 +1303,7 @@
 				{
 					"in": "body",
 					"name": "TrafficPolicyVersion",
-					"description": "The version of the traffic policy that you want Amazon Route 53 to use to update resource recordtttsets for the specified traffic policy instance.Type: IntegerValid Range: Minimum value of 1. Maximum value of 1000.Required: Yes",
+					"description": "The version of the traffic policy that you want Amazon Route 53 to use to update resource recordtttsets for the specified traffic policy instance",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1311,7 +1311,7 @@
 				{
 					"in": "body",
 					"name": "TTL",
-					"description": "The TTL that you want Amazon Route 53 to assign to all of the updated resource recordtttsets.Type: LongValid Range: Minimum value of 0. Maximum value of 2147483647.Required: Yes",
+					"description": "The TTL that you want Amazon Route 53 to assign to all of the updated resource recordtttsets",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1319,7 +1319,7 @@
 				{
 					"in": "body",
 					"name": "UpdateTrafficPolicyInstanceRequest",
-					"description": "Root level tag for the UpdateTrafficPolicyInstanceRequest parameters.Required: Yes",
+					"description": "Root level tag for the UpdateTrafficPolicyInstanceRequest parameters",
 					"schema": {
 						"$ref": "#/definitions/holder"
 					}
@@ -1353,7 +1353,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "id",
-					"description": "The ID of the hosted zone for which you want to list traffic policytttinstances.Length Constraints: Maximum length of 32.",
+					"description": "The ID of the hosted zone for which you want to list traffic policytttinstances",
 					"type": "string"
 				}],
 				"responses": {
@@ -1372,37 +1372,37 @@
 				"parameters": [{
 					"in": "query",
 					"name": "CapacityId",
-					"description": "The ID that identifies the provisioned capacity unit.",
+					"description": "The ID that identifies the provisioned capacity unit",
 					"type": "string"
 				},
 				{
 					"in": "query",
 					"name": "ExpirationDate",
-					"description": "The date that the provisioned capacity unit expires, in Coordinated                            Universal Time (UTC).",
+					"description": "The date that the provisioned capacity unit expires, in Coordinated                            Universal Time (UTC)",
 					"type": "string"
 				},
 				{
 					"in": "path",
 					"name": "hostedzoneid",
-					"description": "For the first request to ListTrafficPolicyInstancesByPolicy, omit thistttvalue.If the value of IsTruncated in the previous response wasttttrue, HostedZoneIdMarker is the ID of the hosted zone for the firstttttraffic policy instance in the next group of MaxItems traffic policytttinstances.If the value of IsTruncated in the previous response wasttttfalse, there are no more traffic policy instances to get for this hostedtttzone.If the value of IsTruncated in the previous response wasttttfalse, omit this value.Length Constraints: Maximum length of 32.",
+					"description": "For the first request to ListTrafficPolicyInstancesByPolicy, omit thistttvalue",
 					"type": "string"
 				},
 				{
 					"in": "query",
 					"name": "StartDate",
-					"description": "The date that the provisioned capacity unit was purchased, in Coordinated                            Universal Time (UTC).",
+					"description": "The date that the provisioned capacity unit was purchased, in Coordinated                            Universal Time (UTC)",
 					"type": "string"
 				},
 				{
 					"in": "query",
 					"name": "TagKeys",
-					"description": "A list of tag keys. Each corresponding tag is removed from the vault.",
+					"description": "A list of tag keys",
 					"type": "string"
 				},
 				{
 					"in": "query",
 					"name": "Tags",
-					"description": "The tags attached to the vault. Each tag is composed of a key and a                        value.",
+					"description": "The tags attached to the vault",
 					"type": "string"
 				}],
 				"responses": {
@@ -1421,7 +1421,7 @@
 				"parameters": [{
 					"in": "path",
 					"name": "hostedzoneid",
-					"description": "For the first request to ListTrafficPolicyInstances, omit thistttvalue.If the value of IsTruncated in the previous response wasttttrue, you have more traffic policy instances. To get the next group ofttttMaxItems traffic policy instances, submit anotherttttListTrafficPolicyInstances request. For the value ofttttHostedZoneIdMarker, specify the value of HostedZoneIdMarker fromtttthe previous response, which is the hosted zone ID of the first traffic policy instance in thetttnext group of MaxItems traffic policy instances.If the value of IsTruncated in the previous response wasttttfalse, there are no more traffic policy instances to get.Length Constraints: Maximum length of 32.",
+					"description": "For the first request to ListTrafficPolicyInstances, omit thistttvalue",
 					"type": "string"
 				}],
 				"responses": {

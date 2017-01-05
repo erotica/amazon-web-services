@@ -133,9 +133,9 @@ title: Amazon Web Services
                                     {{ thisname }} == {{ pathname }}<br />
 
                                     {% if thisname == pathname %}
-                                      {% assign openapi_spec_json = thisentry %}
-                                      IN!!!
-                                      {{ entry }}
+                                      {% assign openapi_spec_json = entry[1] %}
+                                      IN2!!!
+                                      {{ entry[1] }}
                                     {% endif %}
 
                                   {% endfor %}

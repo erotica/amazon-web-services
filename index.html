@@ -169,6 +169,9 @@ title: Amazon Web Services
                                         {% for path in spec.paths %}
 
                                           {% assign method_json = path[1] %}
+
+                                          method_json: {{ method_json }}<br />
+
                                           {% for method in method_json %}
 
                                             {% assign tagarray = method[1].tags %}

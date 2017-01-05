@@ -10,7 +10,7 @@ title: Amazon Web Services
 {% for api in apijson.include %}
 
   {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}
-  {% assign path = path  | replace: '/apis.yaml','' %}
+  {% assign path = path  | replace: '/apis.json','' %}
 
   {% for api in contents %}
 
@@ -119,7 +119,7 @@ title: Amazon Web Services
                                   {% assign openapi_spec_url = property.url %}
                                   {% assign pathname = openapi_spec_url | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/','' %}
                                   {% assign pathplusfolder = path | append:'/' %}
-                                  {% assign pathname = pathname | replace: '.yaml','' %}
+                                  {% assign pathname = pathname | replace: '.json','' %}
                                   {% assign pathname = pathname | replace: pathplusfolder,'' %}
                                   {% assign pathname = pathname | replace: '-api-openapi-spec','' %}
 

@@ -3,7 +3,7 @@ layout: page
 title: Amazon Web Services
 ---
 
-<strong>debug 1: </strong>
+<strong>debug 2: </strong>
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
@@ -28,7 +28,7 @@ title: Amazon Web Services
 
         {% if item_name == 'apis' %}
           {% assign api_json_content = item[1] %}
-          {{ api_json_content }}<br /><hr />          
+          {{ api_json_content }}<br /><hr />
         {% endif %}
       {% endfor %}
 

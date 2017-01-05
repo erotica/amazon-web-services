@@ -125,6 +125,7 @@ title: Amazon Web Services
                                 {% if property.type == 'x-openapi-spec' %}
 
                                   {% assign openapi_spec_url = property.url %}
+
                                   openapi_spec_url: {{ openapi_spec_url }}<br />
 
                                   {% assign pathname = openapi_spec_url | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/,'' %}
@@ -136,7 +137,7 @@ title: Amazon Web Services
                                   {% assign pathname = pathname | replace: '/','.' %}
 
                                   pathname2: {{ pathname }}<br />
-                                  
+
                                   {% for entry in apicommons %}
                                     {% assign thisname = entry[0] %}
                                     {% assign thisentry = entry[1] %}

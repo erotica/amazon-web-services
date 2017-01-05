@@ -31,6 +31,7 @@ title: Amazon Web Services
           {% assign api_name = apijson.name %}
           {% assign api_description = apijson.description %}
           {% assign api_image = apijson.image %}
+          {% assign api_json_url = apijson.url %}
 
           <!-- APIs.json -->
           <table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
@@ -90,7 +91,7 @@ title: Amazon Web Services
             <tr>
               <td>
 
-                <h3>{{ api_name }}<h3>
+                <h3>{{ api_name }} (<a href="{{ api_json_url }}">APIs.json</a>)<h3>
                 <p><img src="{{ api_image }}" width="100" style="padding: 10px;" align="left" /></p>
                 <p style="font-size: 11px;">{{ api_description }}<p>
 

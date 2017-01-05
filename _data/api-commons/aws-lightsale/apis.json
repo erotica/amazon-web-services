@@ -1,0 +1,32 @@
+{
+	"name": "AWS Lightsale",
+	"description": "Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers. Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the Lightsail console or by using the API or command-line interface (CLI).",
+	"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-lightsail.png",
+	"tags": ["Amazon Web Services"],
+	"created": "2017-01-04",
+	"modified": "2017-01-04",
+	"url": "https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-lightsale/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [{
+		"name": "Amazon Lightsale API",
+		"description": "Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers. Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP - for a low, predictable price. You manage those Lightsail servers through the Lightsail console or by using the API or command-line interface (CLI).",
+		"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/aws-lightsail.png",
+		"humanURL": "https://amazonlightsail.com/",
+		"baseURL": "https://amazonlightsail.com/",
+		"tags": ["Amazon Web Services"],
+		"properties": [{
+			"type": "x-openapi-spec",
+			"url": "https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-lightsale/amazon-lightsale-api-openapi-spec.json"
+		}]
+	}],
+	"x-common": [{
+		"type": "x-website",
+		"url": "https://amazonlightsail.com/"
+	}],
+	"include": [],
+	"maintainers": [{
+		"FN": "Kin Lane",
+		"x-twitter": "apievangelist",
+		"email": "info@apievangelist.com"
+	}]
+}

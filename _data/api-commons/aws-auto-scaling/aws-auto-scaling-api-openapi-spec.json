@@ -11,9 +11,9 @@
 	"paths": {
 		"/?Action=AttachInstances&k=1": {
 			"get": {
-				"summary": "Attaches one or more EC2 instances to the specified Auto Scaling group.",
+				"summary": " Attach Instances ",
 				"description": "Attaches one or more EC2 instances to the specified Auto Scaling group.",
-				"operationId": "AttachInstances",
+				"operationId": "attachInstances",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -36,9 +36,9 @@
 		},
 		"/?Action=AttachLoadBalancers&k=1": {
 			"get": {
-				"summary": "Attaches one or more Classic load balancers to the specified Auto Scaling group.",
+				"summary": " Attach Load Balancers ",
 				"description": "Attaches one or more Classic load balancers to the specified Auto Scaling group.",
-				"operationId": "AttachLoadBalancers",
+				"operationId": "attachLoadBalancers",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -61,9 +61,9 @@
 		},
 		"/?Action=AttachLoadBalancerTargetGroups&k=1": {
 			"get": {
-				"summary": "Attaches one or more target groups to the specified Auto Scaling group.",
+				"summary": " Attach Load Balancer Target Groups ",
 				"description": "Attaches one or more target groups to the specified Auto Scaling group.",
-				"operationId": "AttachLoadBalancerTargetGroups",
+				"operationId": "attachLoadBalancerTargetGroups",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -86,9 +86,9 @@
 		},
 		"/?Action=CompleteLifecycleAction&k=1": {
 			"get": {
-				"summary": "Completes the lifecycle action for the specified token or instance with the specified result.",
+				"summary": " Complete Lifecycle Action ",
 				"description": "Completes the lifecycle action for the specified token or instance with the specified result.",
-				"operationId": "CompleteLifecycleAction",
+				"operationId": "completeLifecycleAction",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -129,9 +129,9 @@
 		},
 		"/?Action=CreateAutoScalingGroup&k=1": {
 			"get": {
-				"summary": "Creates an Auto Scaling group with the specified name and attributes.",
+				"summary": " Create Auto Scaling Group ",
 				"description": "Creates an Auto Scaling group with the specified name and attributes.",
-				"operationId": "CreateAutoScalingGroup",
+				"operationId": "createAutoScalingGroup",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -244,9 +244,9 @@
 		},
 		"/?Action=CreateLaunchConfiguration&k=1": {
 			"get": {
-				"summary": "Creates a launch configuration.",
+				"summary": " Create Launch Configuration ",
 				"description": "Creates a launch configuration.",
-				"operationId": "CreateLaunchConfiguration",
+				"operationId": "createLaunchConfiguration",
 				"parameters": [{
 					"in": "query",
 					"name": "AssociatePublicIpAddress",
@@ -365,9 +365,9 @@
 		},
 		"/?Action=CreateOrUpdateTags&k=1": {
 			"get": {
-				"summary": "Creates or updates tags for the specified Auto Scaling group.",
+				"summary": " Create Or Update Tags ",
 				"description": "Creates or updates tags for the specified Auto Scaling group.",
-				"operationId": "CreateOrUpdateTags",
+				"operationId": "createOrUpdateTags",
 				"parameters": [{
 					"in": "query",
 					"name": "Tags.member.N",
@@ -384,9 +384,9 @@
 		},
 		"/?Action=DeleteAutoScalingGroup&k=1": {
 			"get": {
-				"summary": "Deletes the specified Auto Scaling group.",
+				"summary": " Delete Auto Scaling Group ",
 				"description": "Deletes the specified Auto Scaling group.",
-				"operationId": "DeleteAutoScalingGroup",
+				"operationId": "deleteAutoScalingGroup",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -409,9 +409,9 @@
 		},
 		"/?Action=DeleteLaunchConfiguration&k=1": {
 			"get": {
-				"summary": "Deletes the specified launch configuration.",
+				"summary": " Delete Launch Configuration ",
 				"description": "Deletes the specified launch configuration.",
-				"operationId": "DeleteLaunchConfiguration",
+				"operationId": "deleteLaunchConfiguration",
 				"parameters": [{
 					"in": "query",
 					"name": "LaunchConfigurationName",
@@ -428,9 +428,9 @@
 		},
 		"/?Action=DeleteLifecycleHook&k=1": {
 			"get": {
-				"summary": "Deletes the specified lifecycle hook.",
+				"summary": " Delete Lifecycle Hook ",
 				"description": "Deletes the specified lifecycle hook.",
-				"operationId": "DeleteLifecycleHook",
+				"operationId": "deleteLifecycleHook",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -453,9 +453,9 @@
 		},
 		"/?Action=DeleteNotificationConfiguration&k=1": {
 			"get": {
-				"summary": "Deletes the specified notification.",
+				"summary": " Delete Notification Configuration ",
 				"description": "Deletes the specified notification.",
-				"operationId": "DeleteNotificationConfiguration",
+				"operationId": "deleteNotificationConfiguration",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -478,9 +478,9 @@
 		},
 		"/?Action=DeletePolicy&k=1": {
 			"get": {
-				"summary": "Deletes the specified Auto Scaling policy.",
+				"summary": " Delete Policy ",
 				"description": "Deletes the specified Auto Scaling policy.",
-				"operationId": "DeletePolicy",
+				"operationId": "deletePolicy",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -503,9 +503,9 @@
 		},
 		"/?Action=DeleteScheduledAction&k=1": {
 			"get": {
-				"summary": "Deletes the specified scheduled action.",
+				"summary": " Delete Scheduled Action ",
 				"description": "Deletes the specified scheduled action.",
-				"operationId": "DeleteScheduledAction",
+				"operationId": "deleteScheduledAction",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -528,9 +528,9 @@
 		},
 		"/?Action=DeleteTags&k=1": {
 			"get": {
-				"summary": "Deletes the specified tags.",
+				"summary": " Delete Tags ",
 				"description": "Deletes the specified tags.",
-				"operationId": "DeleteTags",
+				"operationId": "deleteTags",
 				"parameters": [{
 					"in": "query",
 					"name": "Tags.member.N",
@@ -547,9 +547,9 @@
 		},
 		"/?Action=DescribeAccountLimits&k=1": {
 			"get": {
-				"summary": "Describes the current Auto Scaling resource limits for your AWS account.",
+				"summary": " Describe Account Limits ",
 				"description": "Describes the current Auto Scaling resource limits for your AWS account.",
-				"operationId": "DescribeAccountLimits",
+				"operationId": "describeAccountLimits",
 				"parameters": [{
 					"in": "query",
 					"name": "MaxNumberOfAutoScalingGroups",
@@ -584,9 +584,9 @@
 		},
 		"/?Action=DescribeAdjustmentTypes&k=1": {
 			"get": {
-				"summary": "Describes the policy adjustment types for use with.",
+				"summary": " Describe Adjustment Types ",
 				"description": "Describes the policy adjustment types for use with.",
-				"operationId": "DescribeAdjustmentTypes",
+				"operationId": "describeAdjustmentTypes",
 				"parameters": [{
 					"in": "query",
 					"name": "AdjustmentTypes.member.N",
@@ -603,9 +603,9 @@
 		},
 		"/?Action=DescribeAutoScalingGroups&k=1": {
 			"get": {
-				"summary": "Describes one or more Auto Scaling groups.",
+				"summary": " Describe Auto Scaling Groups ",
 				"description": "Describes one or more Auto Scaling groups.",
-				"operationId": "DescribeAutoScalingGroups",
+				"operationId": "describeAutoScalingGroups",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupNames.member.N",
@@ -634,9 +634,9 @@
 		},
 		"/?Action=DescribeAutoScalingInstances&k=1": {
 			"get": {
-				"summary": "Describes one or more Auto Scaling instances.",
+				"summary": " Describe Auto Scaling Instances ",
 				"description": "Describes one or more Auto Scaling instances.",
-				"operationId": "DescribeAutoScalingInstances",
+				"operationId": "describeAutoScalingInstances",
 				"parameters": [{
 					"in": "query",
 					"name": "InstanceIds.member.N",
@@ -665,9 +665,9 @@
 		},
 		"/?Action=DescribeAutoScalingNotificationTypes&k=1": {
 			"get": {
-				"summary": "Describes the notification types that are supported by Auto Scaling.",
+				"summary": " Describe Auto Scaling Notification Types ",
 				"description": "Describes the notification types that are supported by Auto Scaling.",
-				"operationId": "DescribeAutoScalingNotificationTypes",
+				"operationId": "describeAutoScalingNotificationTypes",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingNotificationTypes.member.N",
@@ -684,9 +684,9 @@
 		},
 		"/?Action=DescribeLaunchConfigurations&k=1": {
 			"get": {
-				"summary": "Describes one or more launch configurations.",
+				"summary": " Describe Launch Configurations ",
 				"description": "Describes one or more launch configurations.",
-				"operationId": "DescribeLaunchConfigurations",
+				"operationId": "describeLaunchConfigurations",
 				"parameters": [{
 					"in": "query",
 					"name": "LaunchConfigurationNames.member.N",
@@ -715,9 +715,9 @@
 		},
 		"/?Action=DescribeLifecycleHooks&k=1": {
 			"get": {
-				"summary": "Describes the lifecycle hooks for the specified Auto Scaling group.",
+				"summary": " Describe Lifecycle Hooks ",
 				"description": "Describes the lifecycle hooks for the specified Auto Scaling group.",
-				"operationId": "DescribeLifecycleHooks",
+				"operationId": "describeLifecycleHooks",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -740,9 +740,9 @@
 		},
 		"/?Action=DescribeLifecycleHookTypes&k=1": {
 			"get": {
-				"summary": "Describes the available types of lifecycle hooks.",
+				"summary": " Describe Lifecycle Hook Types ",
 				"description": "Describes the available types of lifecycle hooks.",
-				"operationId": "DescribeLifecycleHookTypes",
+				"operationId": "describeLifecycleHookTypes",
 				"parameters": [{
 					"in": "query",
 					"name": "LifecycleHookTypes.member.N",
@@ -759,9 +759,9 @@
 		},
 		"/?Action=DescribeLoadBalancers&k=1": {
 			"get": {
-				"summary": "Describes the load balancers for the specified Auto Scaling group.",
+				"summary": " Describe Load Balancers ",
 				"description": "Describes the load balancers for the specified Auto Scaling group.",
-				"operationId": "DescribeLoadBalancers",
+				"operationId": "describeLoadBalancers",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -790,9 +790,9 @@
 		},
 		"/?Action=DescribeLoadBalancerTargetGroups&k=1": {
 			"get": {
-				"summary": "Describes the target groups for the specified Auto Scaling group.",
+				"summary": " Describe Load Balancer Target Groups ",
 				"description": "Describes the target groups for the specified Auto Scaling group.",
-				"operationId": "DescribeLoadBalancerTargetGroups",
+				"operationId": "describeLoadBalancerTargetGroups",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -821,9 +821,9 @@
 		},
 		"/?Action=DescribeMetricCollectionTypes&k=1": {
 			"get": {
-				"summary": "Describes the available CloudWatch metrics for Auto Scaling.",
+				"summary": " Describe Metric Collection Types ",
 				"description": "Describes the available CloudWatch metrics for Auto Scaling.",
-				"operationId": "DescribeMetricCollectionTypes",
+				"operationId": "describeMetricCollectionTypes",
 				"parameters": [{
 					"in": "query",
 					"name": "Granularities.member.N",
@@ -846,9 +846,9 @@
 		},
 		"/?Action=DescribeNotificationConfigurations&k=1": {
 			"get": {
-				"summary": "Describes the notification actions associated with the specified Auto Scaling group.",
+				"summary": " Describe Notification Configurations ",
 				"description": "Describes the notification actions associated with the specified Auto Scaling group.",
-				"operationId": "DescribeNotificationConfigurations",
+				"operationId": "describeNotificationConfigurations",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupNames.member.N",
@@ -877,9 +877,9 @@
 		},
 		"/?Action=DescribePolicies&k=1": {
 			"get": {
-				"summary": "Describes the policies for the specified Auto Scaling group.",
+				"summary": " Describe Policies ",
 				"description": "Describes the policies for the specified Auto Scaling group.",
-				"operationId": "DescribePolicies",
+				"operationId": "describePolicies",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -920,9 +920,9 @@
 		},
 		"/?Action=DescribeScalingActivities&k=1": {
 			"get": {
-				"summary": "Describes one or more scaling activities for the specified Auto Scaling group.",
+				"summary": " Describe Scaling Activities ",
 				"description": "Describes one or more scaling activities for the specified Auto Scaling group.",
-				"operationId": "DescribeScalingActivities",
+				"operationId": "describeScalingActivities",
 				"parameters": [{
 					"in": "query",
 					"name": "ActivityIds.member.N",
@@ -957,9 +957,9 @@
 		},
 		"/?Action=DescribeScalingProcessTypes&k=1": {
 			"get": {
-				"summary": "Describes the scaling process types for use with.",
+				"summary": " Describe Scaling Process Types ",
 				"description": "Describes the scaling process types for use with.",
-				"operationId": "DescribeScalingProcessTypes",
+				"operationId": "describeScalingProcessTypes",
 				"parameters": [{
 					"in": "query",
 					"name": "Processes.member.N",
@@ -976,9 +976,9 @@
 		},
 		"/?Action=DescribeScheduledActions&k=1": {
 			"get": {
-				"summary": "Describes the actions scheduled for your Auto Scaling group that haven't run.",
+				"summary": " Describe Scheduled Actions ",
 				"description": "Describes the actions scheduled for your Auto Scaling group that havent run.",
-				"operationId": "DescribeScheduledActions",
+				"operationId": "describeScheduledActions",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1025,9 +1025,9 @@
 		},
 		"/?Action=DescribeTags&k=1": {
 			"get": {
-				"summary": "Describes the specified tags.",
+				"summary": " Describe Tags ",
 				"description": "Describes the specified tags.",
-				"operationId": "DescribeTags",
+				"operationId": "describeTags",
 				"parameters": [{
 					"in": "query",
 					"name": "Filters.member.N",
@@ -1056,9 +1056,9 @@
 		},
 		"/?Action=DescribeTerminationPolicyTypes&k=1": {
 			"get": {
-				"summary": "Describes the termination policies supported by Auto Scaling.",
+				"summary": " Describe Termination Policy Types ",
 				"description": "Describes the termination policies supported by Auto Scaling.",
-				"operationId": "DescribeTerminationPolicyTypes",
+				"operationId": "describeTerminationPolicyTypes",
 				"parameters": [{
 					"in": "query",
 					"name": "TerminationPolicyTypes.member.N",
@@ -1075,9 +1075,9 @@
 		},
 		"/?Action=DetachInstances&k=1": {
 			"get": {
-				"summary": "Removes one or more instances from the specified Auto Scaling group.",
+				"summary": " Detach Instances ",
 				"description": "Removes one or more instances from the specified Auto Scaling group.",
-				"operationId": "DetachInstances",
+				"operationId": "detachInstances",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1106,9 +1106,9 @@
 		},
 		"/?Action=DetachLoadBalancers&k=1": {
 			"get": {
-				"summary": "Detaches one or more Classic load balancers from the specified Auto Scaling group.",
+				"summary": " Detach Load Balancers ",
 				"description": "Detaches one or more Classic load balancers from the specified Auto Scaling group.",
-				"operationId": "DetachLoadBalancers",
+				"operationId": "detachLoadBalancers",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1131,9 +1131,9 @@
 		},
 		"/?Action=DetachLoadBalancerTargetGroups&k=1": {
 			"get": {
-				"summary": "Detaches one or more target groups from the specified Auto Scaling group.",
+				"summary": " Detach Load Balancer Target Groups ",
 				"description": "Detaches one or more target groups from the specified Auto Scaling group.",
-				"operationId": "DetachLoadBalancerTargetGroups",
+				"operationId": "detachLoadBalancerTargetGroups",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1156,9 +1156,9 @@
 		},
 		"/?Action=DisableMetricsCollection&k=1": {
 			"get": {
-				"summary": "Disables group metrics for the specified Auto Scaling group.",
+				"summary": " Disable Metrics Collection ",
 				"description": "Disables group metrics for the specified Auto Scaling group.",
-				"operationId": "DisableMetricsCollection",
+				"operationId": "disableMetricsCollection",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1181,9 +1181,9 @@
 		},
 		"/?Action=EnableMetricsCollection&k=1": {
 			"get": {
-				"summary": "Enables group metrics for the specified Auto Scaling group.",
+				"summary": " Enable Metrics Collection ",
 				"description": "Enables group metrics for the specified Auto Scaling group.",
-				"operationId": "EnableMetricsCollection",
+				"operationId": "enableMetricsCollection",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1212,9 +1212,9 @@
 		},
 		"/?Action=EnterStandby&k=1": {
 			"get": {
-				"summary": "Moves the specified instances into Standby mode.",
+				"summary": " Enter Standby ",
 				"description": "Moves the specified instances into Standby mode.",
-				"operationId": "EnterStandby",
+				"operationId": "enterStandby",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1243,9 +1243,9 @@
 		},
 		"/?Action=ExecutePolicy&k=1": {
 			"get": {
-				"summary": "Executes the specified policy.",
+				"summary": " Execute Policy ",
 				"description": "Executes the specified policy.",
-				"operationId": "ExecutePolicy",
+				"operationId": "executePolicy",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1286,9 +1286,9 @@
 		},
 		"/?Action=ExitStandby&k=1": {
 			"get": {
-				"summary": "Moves the specified instances out of Standby mode.",
+				"summary": " Exit Standby ",
 				"description": "Moves the specified instances out of Standby mode.",
-				"operationId": "ExitStandby",
+				"operationId": "exitStandby",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1311,9 +1311,9 @@
 		},
 		"/?Action=PutLifecycleHook&k=1": {
 			"get": {
-				"summary": "Creates or updates a lifecycle hook for the specified Auto Scaling Group.",
+				"summary": " Put Lifecycle Hook ",
 				"description": "Creates or updates a lifecycle hook for the specified Auto Scaling Group.",
-				"operationId": "PutLifecycleHook",
+				"operationId": "putLifecycleHook",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1372,9 +1372,9 @@
 		},
 		"/?Action=PutNotificationConfiguration&k=1": {
 			"get": {
-				"summary": "Configures an Auto Scaling group to send notifications when specified events take place.",
+				"summary": " Put Notification Configuration ",
 				"description": "Configures an Auto Scaling group to send notifications when specified events take place.",
-				"operationId": "PutNotificationConfiguration",
+				"operationId": "putNotificationConfiguration",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1403,9 +1403,9 @@
 		},
 		"/?Action=PutScalingPolicy&k=1": {
 			"get": {
-				"summary": "Creates or updates a policy for an Auto Scaling group.",
+				"summary": " Put Scaling Policy ",
 				"description": "Creates or updates a policy for an Auto Scaling group.",
-				"operationId": "PutScalingPolicy",
+				"operationId": "putScalingPolicy",
 				"parameters": [{
 					"in": "query",
 					"name": "AdjustmentType",
@@ -1482,9 +1482,9 @@
 		},
 		"/?Action=PutScheduledUpdateGroupAction&k=1": {
 			"get": {
-				"summary": "Creates or updates a scheduled scaling action for an Auto Scaling group.",
+				"summary": " Put Scheduled Update Group Action ",
 				"description": "Creates or updates a scheduled scaling action for an Auto Scaling group.",
-				"operationId": "PutScheduledUpdateGroupAction",
+				"operationId": "putScheduledUpdateGroupAction",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1549,9 +1549,9 @@
 		},
 		"/?Action=RecordLifecycleActionHeartbeat&k=1": {
 			"get": {
-				"summary": "Records a heartbeat for the lifecycle action associated with the specified token or instance.",
+				"summary": " Record Lifecycle Action Heartbeat ",
 				"description": "Records a heartbeat for the lifecycle action associated with the specified token or instance.",
-				"operationId": "RecordLifecycleActionHeartbeat",
+				"operationId": "recordLifecycleActionHeartbeat",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1586,9 +1586,9 @@
 		},
 		"/?Action=ResumeProcesses&k=1": {
 			"get": {
-				"summary": "Resumes the specified suspended Auto Scaling processes, or all suspended process, for the specified Auto Scaling group.",
+				"summary": " Resume Processes ",
 				"description": "Resumes the specified suspended Auto Scaling processes, or all suspended process, for the specified Auto Scaling group.",
-				"operationId": "ResumeProcesses",
+				"operationId": "resumeProcesses",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1611,9 +1611,9 @@
 		},
 		"/?Action=SetDesiredCapacity&k=1": {
 			"get": {
-				"summary": "Sets the size of the specified Auto Scaling group.",
+				"summary": " Set Desired Capacity ",
 				"description": "Sets the size of the specified Auto Scaling group.",
-				"operationId": "SetDesiredCapacity",
+				"operationId": "setDesiredCapacity",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1642,9 +1642,9 @@
 		},
 		"/?Action=SetInstanceHealth&k=1": {
 			"get": {
-				"summary": "Sets the health status of the specified instance.",
+				"summary": " Set Instance Health ",
 				"description": "Sets the health status of the specified instance.",
-				"operationId": "SetInstanceHealth",
+				"operationId": "setInstanceHealth",
 				"parameters": [{
 					"in": "query",
 					"name": "HealthStatus",
@@ -1673,9 +1673,9 @@
 		},
 		"/?Action=SetInstanceProtection&k=1": {
 			"get": {
-				"summary": "Updates the instance protection settings of the specified instances.",
+				"summary": " Set Instance Protection ",
 				"description": "Updates the instance protection settings of the specified instances.",
-				"operationId": "SetInstanceProtection",
+				"operationId": "setInstanceProtection",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1704,9 +1704,9 @@
 		},
 		"/?Action=SuspendProcesses&k=1": {
 			"get": {
-				"summary": "Suspends the specified Auto Scaling processes, or all processes, for the specified Auto Scaling group.",
+				"summary": " Suspend Processes ",
 				"description": "Suspends the specified Auto Scaling processes, or all processes, for the specified Auto Scaling group.",
-				"operationId": "SuspendProcesses",
+				"operationId": "suspendProcesses",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",
@@ -1729,9 +1729,9 @@
 		},
 		"/?Action=TerminateInstanceInAutoScalingGroup&k=1": {
 			"get": {
-				"summary": "Terminates the specified instance and optionally adjusts the desired group size.",
+				"summary": " Terminate Instance In Auto Scaling Group ",
 				"description": "Terminates the specified instance and optionally adjusts the desired group size.",
-				"operationId": "TerminateInstanceInAutoScalingGroup",
+				"operationId": "terminateInstanceInAutoScalingGroup",
 				"parameters": [{
 					"in": "query",
 					"name": "InstanceId",
@@ -1754,9 +1754,9 @@
 		},
 		"/?Action=UpdateAutoScalingGroup&k=1": {
 			"get": {
-				"summary": "Updates the configuration for the specified Auto Scaling group.",
+				"summary": " Update Auto Scaling Group ",
 				"description": "Updates the configuration for the specified Auto Scaling group.",
-				"operationId": "UpdateAutoScalingGroup",
+				"operationId": "updateAutoScalingGroup",
 				"parameters": [{
 					"in": "query",
 					"name": "AutoScalingGroupName",

@@ -6,6 +6,8 @@ title: Amazon Web Services
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
 {% assign contents = site.data.api-commons %}
+{{ contents }}
+<hr />HERE!<hr />
 {% for api in index.include %}
 
   {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}
@@ -159,7 +161,7 @@ title: Amazon Web Services
                               <tr id="methods-for-{{ pathname }}">
                                 <td colspan="2">
                                   <ul>
-                                    
+
                                       {% for spec in openapi_spec_json %}
 
                                         {% assign spec_details = spec[1] %}

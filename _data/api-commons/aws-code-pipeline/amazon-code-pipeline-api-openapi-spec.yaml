@@ -1,0 +1,673 @@
+swagger: "2.0"
+info:
+  title: Amazon Code Pipeline API
+  version: 1.0.0
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /?Action=AcknowledgeJob&k=1:
+    get:
+      summary: Returns information about a specified job and whether that job has
+        been received byn            the job worker.
+      description: Returns information about a specified job and whether that job
+        has been received by            the job worker.
+      operationId: AcknowledgeJob
+      parameters:
+      - in: query
+        name: jobId
+        description: The unique system-generated ID of the job for which you want
+          to confirm            receipt.
+        type: string
+      - in: query
+        name: nonce
+        description: A system-generated random number that AWS CodePipeline uses to
+          ensure that the job            is being worked on by only one job worker.
+          Get this number from the response of the                PollForJobs request
+          that returned this job.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Jobs
+  /?Action=AcknowledgeThirdPartyJob&k=1:
+    get:
+      summary: Confirms a job worker has received the specified job.
+      description: Confirms a job worker has received the specified job.
+      operationId: AcknowledgeThirdPartyJob
+      parameters:
+      - in: query
+        name: clientToken
+        description: The clientToken portion of the clientId and clientToken pair
+          used to verify that            the calling entity is allowed access to the
+          job and its details.
+        type: string
+      - in: query
+        name: jobId
+        description: The unique system-generated ID of the job.
+        type: string
+      - in: query
+        name: nonce
+        description: A system-generated random number that AWS CodePipeline uses to
+          ensure that the job            is being worked on by only one job worker.
+          Get this number from the response to a GetThirdPartyJobDetails request.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Third Party Jobs
+  /?Action=CreateCustomActionType&k=1:
+    get:
+      summary: Creates a new custom action that can be used in all pipelines associated
+        with then            AWS account.
+      description: Creates a new custom action that can be used in all pipelines associated
+        with the            AWS account.
+      operationId: CreateCustomActionType
+      parameters:
+      - in: query
+        name: category
+        description: The category of the custom action, such as a build action or
+          a test            action.
+        type: string
+      - in: query
+        name: configurationProperties
+        description: The configuration properties for the custom action.
+        type: string
+      - in: query
+        name: inputArtifactDetails
+        description: Returns information about the details of an artifact.
+        type: string
+      - in: query
+        name: outputArtifactDetails
+        description: Returns information about the details of an artifact.
+        type: string
+      - in: query
+        name: provider
+        description: The provider of the service used in the custom action, such as
+          AWS            CodeDeploy.
+        type: string
+      - in: query
+        name: settings
+        description: Returns information about the settings for an action type.
+        type: string
+      - in: query
+        name: version
+        description: The version identifier of the custom action.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Action Types
+  /?Action=CreatePipeline&k=1:
+    get:
+      summary: Creates a pipeline.
+      description: Creates a pipeline.
+      operationId: CreatePipeline
+      parameters:
+      - in: query
+        name: pipeline
+        description: Represents the structure of actions and stages to be performed
+          in the            pipeline.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+  /?Action=DeleteCustomActionType&k=1:
+    get:
+      summary: Marks a custom action as deleted.
+      description: Marks a custom action as deleted.
+      operationId: DeleteCustomActionType
+      parameters:
+      - in: query
+        name: category
+        description: The category of the custom action that you want to delete, such
+          as source or            deploy.
+        type: string
+      - in: query
+        name: provider
+        description: The provider of the service used in the custom action, such as
+          AWS            CodeDeploy.
+        type: string
+      - in: query
+        name: version
+        description: The version of the custom action to delete.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Action Types
+  /?Action=DeletePipeline&k=1:
+    get:
+      summary: Deletes the specified pipeline.
+      description: Deletes the specified pipeline.
+      operationId: DeletePipeline
+      parameters:
+      - in: query
+        name: name
+        description: The name of the pipeline to be deleted.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+  /?Action=DisableStageTransition&k=1:
+    get:
+      summary: Prevents artifacts in a pipeline from transitioning to the next stage
+        in then            pipeline.
+      description: Prevents artifacts in a pipeline from transitioning to the next
+        stage in the            pipeline.
+      operationId: DisableStageTransition
+      parameters:
+      - in: query
+        name: pipelineName
+        description: The name of the pipeline in which you want to disable the flow
+          of artifacts from            one stage to another.
+        type: string
+      - in: query
+        name: reason
+        description: The reason given to the user why a stage is disabled, such as
+          waiting for manual            approval or manual tests. This message is
+          displayed in the pipeline console            UI.
+        type: string
+      - in: query
+        name: stageName
+        description: The name of the stage where you want to disable the inbound or
+          outbound transition            of artifacts.
+        type: string
+      - in: query
+        name: transitionType
+        description: Specifies whether artifacts will be prevented from transitioning
+          into the stage and            being processed by the actions in that stage
+          (inbound), or prevented from transitioning            from the stage after
+          they have been processed by the actions in that stage            (outbound).
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Stage
+  /?Action=EnableStageTransition&k=1:
+    get:
+      summary: Enables artifacts in a pipeline to transition to a stage in a pipeline.
+      description: Enables artifacts in a pipeline to transition to a stage in a pipeline.
+      operationId: EnableStageTransition
+      parameters:
+      - in: query
+        name: pipelineName
+        description: The name of the pipeline in which you want to enable the flow
+          of artifacts from one            stage to another.
+        type: string
+      - in: query
+        name: stageName
+        description: The name of the stage where you want to enable the transition
+          of artifacts, either            into the stage (inbound) or from that stage
+          to the next stage (outbound).
+        type: string
+      - in: query
+        name: transitionType
+        description: Specifies whether artifacts will be allowed to enter the stage
+          and be processed by            the actions in that stage (inbound) or whether
+          already-processed artifacts will be            allowed to transition to
+          the next stage (outbound).
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Stage
+  /?Action=GetJobDetails&k=1:
+    get:
+      summary: Returns information about a job.
+      description: Returns information about a job.
+      operationId: GetJobDetails
+      parameters:
+      - in: query
+        name: jobId
+        description: The unique system-generated ID for the job.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Jobs
+  /?Action=GetPipeline&k=1:
+    get:
+      summary: Returns the metadata, structure, stages, and actions of a pipeline.
+      description: Returns the metadata, structure, stages, and actions of a pipeline.
+      operationId: GetPipeline
+      parameters:
+      - in: query
+        name: name
+        description: The name of the pipeline for which you want to get information.
+          Pipeline names must            be unique under an Amazon Web Services (AWS)
+          user account.
+        type: string
+      - in: query
+        name: version
+        description: The version number of the pipeline. If you do not specify a version,
+          defaults to            the most current version.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+  /?Action=GetPipelineExecution&k=1:
+    get:
+      summary: Returns information about an execution of a pipeline, including details
+        aboutn            artifacts, the pipeline execution ID, and the name, version,
+        and status of then            pipeline.
+      description: Returns information about an execution of a pipeline, including
+        details about            artifacts, the pipeline execution ID, and the name,
+        version, and status of the            pipeline.
+      operationId: GetPipelineExecution
+      parameters:
+      - in: query
+        name: pipelineExecutionId
+        description: The ID of the pipeline execution about which you want to get
+          execution            details.
+        type: string
+      - in: query
+        name: pipelineName
+        description: The name of the pipeline about which you want to get execution
+          details.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+  /?Action=GetPipelineState&k=1:
+    get:
+      summary: Returns information about the state of a pipeline, including the stages
+        andn            actions.
+      description: Returns information about the state of a pipeline, including the
+        stages and            actions.
+      operationId: GetPipelineState
+      parameters:
+      - in: query
+        name: name
+        description: The name of the pipeline about which you want to get information.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+  /?Action=GetThirdPartyJobDetails&k=1:
+    get:
+      summary: Requests the details of a job for a third party action.
+      description: Requests the details of a job for a third party action.
+      operationId: GetThirdPartyJobDetails
+      parameters:
+      - in: query
+        name: clientToken
+        description: The clientToken portion of the clientId and clientToken pair
+          used to verify that            the calling entity is allowed access to the
+          job and its details.
+        type: string
+      - in: query
+        name: jobId
+        description: The unique system-generated ID used for identifying the job.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Third Party Jobs
+  /?Action=ListActionTypes&k=1:
+    get:
+      summary: Gets a summary of all AWS CodePipeline action types associated with
+        yourn            account.
+      description: Gets a summary of all AWS CodePipeline action types associated
+        with your            account.
+      operationId: ListActionTypes
+      parameters:
+      - in: query
+        name: actionOwnerFilter
+        description: Filters the list of action types to those created by a specified
+          entity.
+        type: string
+      - in: query
+        name: nextToken
+        description: An identifier that was returned from the previous list action
+          types call, which can            be used to return the next set of action
+          types in the list.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Action Types
+  /?Action=ListPipelines&k=1:
+    get:
+      summary: Gets a summary of all of the pipelines associated with your account.
+      description: Gets a summary of all of the pipelines associated with your account.
+      operationId: ListPipelines
+      parameters:
+      - in: query
+        name: nextToken
+        description: An identifier that was returned from the previous list pipelines
+          call, which can be            used to return the next set of pipelines in
+          the list.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+  /?Action=PollForJobs&k=1:
+    get:
+      summary: Returns information about any jobs for AWS CodePipeline to act upon.
+      description: Returns information about any jobs for AWS CodePipeline to act
+        upon.
+      operationId: PollForJobs
+      parameters:
+      - in: query
+        name: actionTypeId
+        description: Represents information about an action type.
+        type: string
+      - in: query
+        name: maxBatchSize
+        description: The maximum number of jobs to return in a poll for jobs call.
+        type: string
+      - in: query
+        name: queryParam
+        description: A map of property names and values. For an action type with no
+          queryable            properties, this value must be null or an empty map.
+          For an action type with a queryable            property, you must supply
+          that property as a key in the map. Only jobs whose action            configuration
+          matches the mapped value will be returned.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Jobs
+  /?Action=PollForThirdPartyJobs&k=1:
+    get:
+      summary: Determines whether there are any third party jobs for a job worker
+        to act on.
+      description: Determines whether there are any third party jobs for a job worker
+        to act on.
+      operationId: PollForThirdPartyJobs
+      parameters:
+      - in: query
+        name: actionTypeId
+        description: Represents information about an action type.
+        type: string
+      - in: query
+        name: maxBatchSize
+        description: The maximum number of jobs to return in a poll for jobs call.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Third Party Jobs
+  /?Action=PutActionRevision&k=1:
+    get:
+      summary: Provides information to AWS CodePipeline about new revisions to a source.
+      description: Provides information to AWS CodePipeline about new revisions to
+        a source.
+      operationId: PutActionRevision
+      parameters:
+      - in: query
+        name: actionName
+        description: The name of the action that will process the revision.
+        type: string
+      - in: query
+        name: actionRevision
+        description: Represents information about the version (or revision) of an
+          action.
+        type: string
+      - in: query
+        name: pipelineName
+        description: The name of the pipeline that will start processing the revision
+          to the            source.
+        type: string
+      - in: query
+        name: stageName
+        description: The name of the stage that contains the action that will act
+          upon the            revision.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Action Revision
+  /?Action=PutApprovalResult&k=1:
+    get:
+      summary: Provides the response to a manual approval request to AWS CodePipeline.
+      description: Provides the response to a manual approval request to AWS CodePipeline.
+      operationId: PutApprovalResult
+      parameters:
+      - in: query
+        name: actionName
+        description: The name of the action for which approval is requested.
+        type: string
+      - in: query
+        name: pipelineName
+        description: The name of the pipeline that contains the action.
+        type: string
+      - in: query
+        name: result
+        description: Represents information about the result of the approval request.
+        type: string
+      - in: query
+        name: stageName
+        description: The name of the stage that contains the action.
+        type: string
+      - in: query
+        name: token
+        description: The system-generated token used to identify a unique approval
+          request. The token            for each open approval request can be obtained
+          using the GetPipelineState action and is used to validate that the approval            request
+          corresponding to this token is still valid.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Approvals
+  /?Action=PutJobFailureResult&k=1:
+    get:
+      summary: Represents the failure of a job as returned to the pipeline by a job
+        worker.
+      description: Represents the failure of a job as returned to the pipeline by
+        a job worker.
+      operationId: PutJobFailureResult
+      parameters:
+      - in: query
+        name: failureDetails
+        description: The details about the failure of a job.
+        type: string
+      - in: query
+        name: jobId
+        description: The unique system-generated ID of the job that failed. This is
+          the same ID returned            from PollForJobs.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Jobs
+  /?Action=PutJobSuccessResult&k=1:
+    get:
+      summary: Represents the success of a job as returned to the pipeline by a job
+        worker.
+      description: Represents the success of a job as returned to the pipeline by
+        a job worker.
+      operationId: PutJobSuccessResult
+      parameters:
+      - in: query
+        name: continuationToken
+        description: A token generated by a job worker, such as an AWS CodeDeploy
+          deployment ID, that a            successful job provides to identify a custom
+          action in progress. Future jobs will use            this token in order
+          to identify the running instance of the action. It can be reused to            return
+          additional information about the progress of the custom action. When the
+          action            is complete, no continuation token should be supplied.
+        type: string
+      - in: query
+        name: currentRevision
+        description: The ID of the current revision of the artifact successfully worked
+          upon by the            job.
+        type: string
+      - in: query
+        name: executionDetails
+        description: The execution details of the successful job, such as the actions
+          taken by the job            worker.
+        type: string
+      - in: query
+        name: jobId
+        description: The unique system-generated ID of the job that succeeded. This
+          is the same ID            returned from PollForJobs.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Jobs
+  /?Action=PutThirdPartyJobFailureResult&k=1:
+    get:
+      summary: Represents the failure of a third party job as returned to the pipeline
+        by a jobn            worker.
+      description: Represents the failure of a third party job as returned to the
+        pipeline by a job            worker.
+      operationId: PutThirdPartyJobFailureResult
+      parameters:
+      - in: query
+        name: clientToken
+        description: The clientToken portion of the clientId and clientToken pair
+          used to verify that            the calling entity is allowed access to the
+          job and its details.
+        type: string
+      - in: query
+        name: failureDetails
+        description: Represents information about failure details.
+        type: string
+      - in: query
+        name: jobId
+        description: The ID of the job that failed. This is the same ID returned from            PollForThirdPartyJobs.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Third Party Jobs
+  /?Action=PutThirdPartyJobSuccessResult&k=1:
+    get:
+      summary: Represents the success of a third party job as returned to the pipeline
+        by a jobn            worker.
+      description: Represents the success of a third party job as returned to the
+        pipeline by a job            worker.
+      operationId: PutThirdPartyJobSuccessResult
+      parameters:
+      - in: query
+        name: clientToken
+        description: The clientToken portion of the clientId and clientToken pair
+          used to verify that            the calling entity is allowed access to the
+          job and its details.
+        type: string
+      - in: query
+        name: continuationToken
+        description: A token generated by a job worker, such as an AWS CodeDeploy
+          deployment ID, that a            successful job provides to identify a partner
+          action in progress. Future jobs will use            this token in order
+          to identify the running instance of the action. It can be reused to            return
+          additional information about the progress of the partner action. When the
+          action            is complete, no continuation token should be supplied.
+        type: string
+      - in: query
+        name: currentRevision
+        description: Represents information about a current revision.
+        type: string
+      - in: query
+        name: executionDetails
+        description: The details of the actions taken and results produced on an artifact
+          as it passes            through stages in the pipeline.
+        type: string
+      - in: query
+        name: jobId
+        description: The ID of the job that successfully completed. This is the same
+          ID returned from            PollForThirdPartyJobs.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Third Party Jobs
+  /?Action=RetryStageExecution&k=1:
+    get:
+      summary: Resumes the pipeline execution by retrying the last failed actions
+        in an            stage.
+      description: Resumes the pipeline execution by retrying the last failed actions
+        in a            stage.
+      operationId: RetryStageExecution
+      parameters:
+      - in: query
+        name: pipelineExecutionId
+        description: The ID of the pipeline execution in the failed stage to be retried.
+          Use the GetPipelineState action to retrieve the current pipelineExecutionId
+          of            the failed stage
+        type: string
+      - in: query
+        name: pipelineName
+        description: The name of the pipeline that contains the failed stage.
+        type: string
+      - in: query
+        name: retryMode
+        description: The scope of the retry attempt. Currently, the only supported
+          value is            FAILED_ACTIONS.
+        type: string
+      - in: query
+        name: stageName
+        description: The name of the failed stage to be retried.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Stage Execution
+  /?Action=StartPipelineExecution&k=1:
+    get:
+      summary: Starts the specified pipeline.
+      description: Starts the specified pipeline.
+      operationId: StartPipelineExecution
+      parameters:
+      - in: query
+        name: name
+        description: The name of the pipeline to start.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipeline Execution
+  /?Action=UpdatePipeline&k=1:
+    get:
+      summary: Updates a specified pipeline with edits or changes to its structure.
+      description: Updates a specified pipeline with edits or changes to its structure.
+      operationId: UpdatePipeline
+      parameters:
+      - in: query
+        name: pipeline
+        description: The name of the pipeline to be updated.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Pipelines
+definitions: []

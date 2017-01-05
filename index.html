@@ -124,7 +124,6 @@ title: Amazon Web Services
                                   {% assign pathplusfolder = path | append:'/' %}
                                   {% assign pathname = pathname | replace: '.json','' %}
                                   {% assign pathname = pathname | replace: pathplusfolder,'' %}
-                                  {% assign pathname = pathname | replace: '-api-openapi-spec','' %}
 
                                   {% for entry in contents[path] %}
 

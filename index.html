@@ -3,7 +3,7 @@ layout: page
 title: Amazon Web Services
 ---
 
-<strong>debug 9: </strong>
+<strong>debug 10: </strong>
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
@@ -13,6 +13,16 @@ title: Amazon Web Services
 
 {% for api in apijson.include %}
 
-  {{ api.name }} - {{ api.url }}<br />
+  {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}
 
+  {{ api.name }} - {{ path }}<br />
+
+{% endfor %}
+
+----
+
+{% assign contents = site.data.api-commons %}
+
+{% for api in contents %}
+  {{ api }} <br />
 {% endfor %}

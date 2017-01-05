@@ -172,8 +172,6 @@ title: Amazon Web Services
 
                                           {% assign method_json = path[1] %}
 
-                                          method_json: {{ method_json }}<br />
-
                                           {% for method in method_json %}
 
                                             {% assign tagarray = method[1].tags %}
@@ -196,13 +194,13 @@ title: Amazon Web Services
 
                                             {% assign summary = method[1].summary %}
 
-                                              <tr>
-                                                <td style="padding-left: 20px; font-size: 12px;">{{ summary }}</td>
-                                                <td style="font-size: 12px;">{{ path[0] }}</td>
-                                                <td align="center" style="padding: 5px; width: 75px; background-color:#{{ back_color }}; font-weight: bold; font-size: 11px; color: #FFF;">
-                                                  {{ verb }}
-                                                </td>
-                                              </tr>
+                                            <tr>
+                                              <td style="padding-left: 20px; font-size: 12px;">{{ summary }}</td>
+                                              <td style="font-size: 12px;">{{ path[0] }}</td>
+                                              <td align="center" style="padding: 5px; width: 75px; background-color:#{{ back_color }}; font-weight: bold; font-size: 11px; color: #FFF;">
+                                                {{ verb }}
+                                              </td>
+                                            </tr>
 
                                           {% endfor %}
                                         {% endfor %}

@@ -8,7 +8,7 @@
 	"url": "https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-s3/apis.json",
 	"specificationVersion": "0.14",
 	"apis": [{
-		"name": "Amazon S3",
+		"name": "AWS S3",
 		"description": "Amazon Simple Storage Service (Amazon S3) is object storage with a simple web service interface to store and retrieve any amount of data from anywhere on the web",
 		"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Storage-Content-Delivery_AmazonS3.png",
 		"humanURL": "https://aws.amazon.com/s3/",
@@ -16,7 +16,7 @@
 		"tags": ["Amazon Web Services"],
 		"properties": [{
 			"type": "x-openapi-spec",
-			"url": "https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-s3/amazon-s3-openapi-spec.json"
+			"url": "https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-s3/aws-s3-openapi-spec.json"
 		}]
 	}],
 	"x-common": [{

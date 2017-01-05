@@ -1,0 +1,290 @@
+swagger: "2.0"
+info:
+  title: AWS Security Token Service API
+  version: 1.0.0
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /?Action=AssumeRole&k=1:
+    get:
+      summary: ' Assume Role '
+      description: Returns a set of temporary security credentials (consisting of
+        an access key ID, a      secret access key, and a security token) that you
+        can use to access AWS resources that you      might not normally have access
+        to.
+      operationId: assumeRole
+      parameters:
+      - in: query
+        name: DurationSeconds
+        description: The duration, in seconds, of the role session. The value can
+          range from 900 seconds (15      minutes) to 3600 seconds (1 hour). By default,
+          the value is set to 3600 seconds.
+        type: string
+      - in: query
+        name: ExternalId
+        description: A unique identifier that is used by third parties when assuming
+          roles in their      customers accounts. For each role that the third party
+          can assume, they should instruct their      customers to ensure the roles
+          trust policy checks for the external ID that the third party      generated.
+          Each time the third party assumes the role, they should pass the customers      external
+          ID. The external ID is useful in order to help third parties bind a role
+          to the      customer who created it. For more information about the external
+          ID, see How to        Use an External ID When Granting Access to Your AWS
+          Resources to a Third Party in      the IAM User Guide.
+        type: string
+      - in: query
+        name: Policy
+        description: An IAM policy in JSON format.
+        type: string
+      - in: query
+        name: RoleArn
+        description: The Amazon Resource Name (ARN) of the role to assume.
+        type: string
+      - in: query
+        name: RoleSessionName
+        description: An identifier for the assumed role session.
+        type: string
+      - in: query
+        name: SerialNumber
+        description: The identification number of the MFA device that is associated
+          with the user who is      making the AssumeRole call. Specify this value
+          if the trust policy of the role      being assumed includes a condition
+          that requires MFA authentication. The value is either the      serial number
+          for a hardware device (such as GAHT12345678) or an Amazon Resource      Name
+          (ARN) for a virtual device (such as      arn:aws:iam::123456789012:mfa/user).
+        type: string
+      - in: query
+        name: TokenCode
+        description: The value provided by the MFA device, if the trust policy of
+          the role being assumed      requires MFA (that is, if the policy includes
+          a condition that tests for MFA). If the role      being assumed requires
+          MFA and if the TokenCode value is missing or expired, the        AssumeRole
+          call returns an access denied error.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Roles
+  /?Action=AssumeRoleWithSAML&k=1:
+    get:
+      summary: ' Assume Role With S A M L '
+      description: Returns a set of temporary security credentials for users who have
+        been authenticated      via a SAML authentication response.
+      operationId: assumeRoleWithSAML
+      parameters:
+      - in: query
+        name: DurationSeconds
+        description: The duration, in seconds, of the role session. The value can
+          range from 900 seconds (15      minutes) to 3600 seconds (1 hour). By default,
+          the value is set to 3600 seconds. An expiration      can also be specified
+          in the SAML authentication responses SessionNotOnOrAfter      value. The
+          actual expiration time is whichever value is shorter.
+        type: string
+      - in: query
+        name: Policy
+        description: An IAM policy in JSON format.
+        type: string
+      - in: query
+        name: PrincipalArn
+        description: The Amazon Resource Name (ARN) of the SAML provider in IAM that
+          describes the      IdP.
+        type: string
+      - in: query
+        name: RoleArn
+        description: The Amazon Resource Name (ARN) of the role that the caller is
+          assuming.
+        type: string
+      - in: query
+        name: SAMLAssertion
+        description: The base-64 encoded SAML authentication response provided by
+          the IdP.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Roles
+  /?Action=AssumeRoleWithWebIdentity&k=1:
+    get:
+      summary: ' Assume Role With Web Identity '
+      description: Returns a set of temporary security credentials for users who have
+        been authenticated      in a mobile or web application with a web identity
+        provider, such as Amazon Cognito, Login with Amazon,      Facebook, Google,
+        or any OpenID Connect-compatible identity provider.
+      operationId: assumeRoleWithWebIdentity
+      parameters:
+      - in: query
+        name: DurationSeconds
+        description: The duration, in seconds, of the role session. The value can
+          range from 900 seconds (15      minutes) to 3600 seconds (1 hour). By default,
+          the value is set to 3600 seconds.
+        type: string
+      - in: query
+        name: Policy
+        description: An IAM policy in JSON format.
+        type: string
+      - in: query
+        name: ProviderId
+        description: The fully qualified host component of the domain name of the
+          identity      provider.
+        type: string
+      - in: query
+        name: RoleArn
+        description: The Amazon Resource Name (ARN) of the role that the caller is
+          assuming.
+        type: string
+      - in: query
+        name: RoleSessionName
+        description: An identifier for the assumed role session. Typically, you pass
+          the name or identifier      that is associated with the user who is using
+          your application. That way, the temporary      security credentials that
+          your application will use are associated with that user. This      session
+          name is included as part of the ARN and assumed role ID in the        AssumedRoleUser
+          response element.
+        type: string
+      - in: query
+        name: WebIdentityToken
+        description: The OAuth 2.0 access token or OpenID Connect ID token that is
+          provided by the identity      provider. Your application must get this token
+          by authenticating the user who is using your      application with a web
+          identity provider before the application makes an        AssumeRoleWithWebIdentity
+          call.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Roles
+  /?Action=DecodeAuthorizationMessage&k=1:
+    get:
+      summary: ' Decode Authorization Message '
+      description: Decodes additional information about the authorization status of
+        a request from an      encoded message returned in response to an AWS request.
+      operationId: decodeAuthorizationMessage
+      parameters:
+      - in: query
+        name: EncodedMessage
+        description: The encoded message that was returned with the response.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Roles
+  /?Action=GetCallerIdentity&k=1:
+    get:
+      summary: ' Get Caller Identity '
+      description: Returns details about the IAM identity whose credentials are used
+        to call the      API.
+      operationId: getCallerIdentity
+      parameters:
+      - in: query
+        name: Account
+        description: The AWS account ID number of the account that owns or contains
+          the calling      entity.
+        type: string
+      - in: query
+        name: Arn
+        description: The AWS ARN associated with the calling entity.
+        type: string
+      - in: query
+        name: UserId
+        description: The unique identifier of the calling entity. The exact value
+          depends on the type of      entity making the call. The values returned
+          are those listed in the aws:userid column in the Principal        table
+          found on the Policy Variables reference page      in the IAM User Guide.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Identity
+  /?Action=GetFederationToken&k=1:
+    get:
+      summary: ' Get Federation Token '
+      description: Returns a set of temporary security credentials (consisting of
+        an access key ID, a      secret access key, and a security token) for a federated
+        user.
+      operationId: getFederationToken
+      parameters:
+      - in: query
+        name: DurationSeconds
+        description: The duration, in seconds, that the session should last. Acceptable
+          durations for      federation sessions range from 900 seconds (15 minutes)
+          to 129600 seconds (36 hours), with      43200 seconds (12 hours) as the
+          default. Sessions obtained using AWS account (root)      credentials are
+          restricted to a maximum of 3600 seconds (one hour). If the specified duration      is
+          longer than one hour, the session obtained by using AWS account (root) credentials      defaults
+          to one hour.
+        type: string
+      - in: query
+        name: Name
+        description: The name of the federated user. The name is used as an identifier
+          for the temporary      security credentials (such as Bob). For example,
+          you can reference the federated      user name in a resource-based policy,
+          such as in an Amazon S3 bucket policy.
+        type: string
+      - in: query
+        name: Policy
+        description: An IAM policy in JSON format that is passed with the GetFederationToken      call
+          and evaluated along with the policy or policies that are attached to the
+          IAM user whose      credentials are used to call GetFederationToken. The
+          passed policy is used to      scope down the permissions that are available
+          to the IAM user, by allowing only a subset of      the permissions that
+          are granted to the IAM user. The passed policy cannot grant more      permissions
+          than those granted to the IAM user. The final permissions for the federated
+          user      are the most restrictive set based on the intersection of the
+          passed policy and the IAM user      policy.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - 'Federation Token '
+  /?Action=GetSessionToken&k=1:
+    get:
+      summary: ' Get Session Token '
+      description: Returns a set of temporary credentials for an AWS account or IAM
+        user.
+      operationId: getSessionToken
+      parameters:
+      - in: query
+        name: DurationSeconds
+        description: The duration, in seconds, that the credentials should remain
+          valid. Acceptable      durations for IAM user sessions range from 900 seconds
+          (15 minutes) to 129600 seconds (36      hours), with 43200 seconds (12 hours)
+          as the default. Sessions for AWS account owners are      restricted to a
+          maximum of 3600 seconds (one hour). If the duration is longer than one hour,      the
+          session for AWS account owners defaults to one hour.
+        type: string
+      - in: query
+        name: SerialNumber
+        description: The identification number of the MFA device that is associated
+          with the IAM user who      is making the GetSessionToken call. Specify this
+          value if the IAM user has a      policy that requires MFA authentication.
+          The value is either the serial number for a hardware      device (such as
+          GAHT12345678) or an Amazon Resource Name (ARN) for a virtual      device
+          (such as arn:aws:iam::123456789012:mfa/user). You can find the device for      an
+          IAM user by going to the AWS Management Console and viewing the users security
+          credentials.
+        type: string
+      - in: query
+        name: TokenCode
+        description: The value provided by the MFA device, if MFA is required. If
+          any policy requires the      IAM user to submit an MFA code, specify this
+          value. If MFA authentication is required, and      the user does not provide
+          a code when requesting a set of temporary security credentials, the      user
+          will receive an access denied response when requesting resources that require
+          MFA      authentication.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - 'Session Token '
+definitions: []

@@ -44,7 +44,7 @@
 				"tags": ["Objects"]
 			},
 			"put": {
-				"summary": "PUT Bucket cors",
+				"summary": "PUT Bucket CORS",
 				"description": "Sets the cors configuration for your bucket",
 				"operationId": "put-bucket-cors",
 				"responses": {
@@ -81,7 +81,7 @@
 		},
 		"/?acl": {
 			"get": {
-				"summary": "GET Bucket acl",
+				"summary": "GET Bucket ACL",
 				"description": "This implementation of the GET operation uses the aclsubresource to return the access control list (ACL) of a bucket",
 				"operationId": "get-bucket-acl",
 				"responses": {
@@ -92,7 +92,7 @@
 				"tags": ["ACL"]
 			},
 			"put": {
-				"summary": "PUT Bucket acl",
+				"summary": "PUT Bucket ACL",
 				"description": "This implementation of the PUT operation uses the aclsubresource to set the permissions on an existing bucket using access control lists(ACL)",
 				"operationId": "put-bucket-acl",
 				"parameters": [{
@@ -203,7 +203,7 @@
 		},
 		"/?cors": {
 			"delete": {
-				"summary": "DELETE Bucket cors",
+				"summary": "DELETE Bucket CORS",
 				"description": "Deletes the cors configuration information set for the bucket",
 				"operationId": "delete-bucket-cors",
 				"responses": {
@@ -214,7 +214,7 @@
 				"tags": ["CORS"]
 			},
 			"get": {
-				"summary": "GET Bucket cors",
+				"summary": "GET Bucket CORS",
 				"description": "Returns the cors configuration information set for thebucket",
 				"operationId": "get-bucket-cors",
 				"responses": {
@@ -290,7 +290,7 @@
 		},
 		"/?inventory&amp;id=inventory-configuration-ID": {
 			"delete": {
-				"summary": "DELETE Bucket inventorynttconfiguration",
+				"summary": "DELETE Bucket inventory configuration",
 				"description": "This implementation of the DELETE operation deletes an inventory configuration(identified by the inventory configuration ID) from the bucket",
 				"operationId": "delete-bucket-inventoryconfiguration",
 				"parameters": [{
@@ -977,7 +977,7 @@
 				"tags": ["Objects"]
 			},
 			"put": {
-				"summary": "PUT Object acl",
+				"summary": "PUT Object ACL",
 				"description": "This implementation of the PUT operation uses the aclsubresource to set the access control list (ACL) permissions for an object that alreadyexists in a bucket",
 				"operationId": "put-object-acl",
 				"parameters": [{

@@ -162,9 +162,6 @@ title: Amazon Web Services
                               </tr>
                               <tr id="methods-for-{{ pathname }}">
                                 <td colspan="2">
-
-{{ openapi_spec_json }}
-
                                   <table width="95%" border="0" style="margin-left: 15px; margin-right: 15px;">
                                     {% assign taglist = '' %}
                                     {% for spec in openapi_spec_json %}
@@ -190,7 +187,13 @@ title: Amazon Web Services
                                       </tr>
 
                                       {% for spec in openapi_spec_json %}
+
+                                      spec: {{ spec }}<br />
+
                                         {% for path in spec.paths %}
+
+                                            path: {{ path }}<br />
+
                                           {% assign method_json = path[1] %}
                                           {% for method in method_json %}
 

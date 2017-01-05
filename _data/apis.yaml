@@ -7,7 +7,6 @@ specificationVersion: "0.14"
 apis: []
 tags:
 - Amazon Web Services
-- Amazon Web Services
 include:
 - name: Amazon EC2
   url: https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/amazon-ec2/apis.yaml

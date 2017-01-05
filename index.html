@@ -168,9 +168,11 @@ title: Amazon Web Services
 
                                         {% for path in spec.paths %}
 
-                                          {% assign method_json = path[1] %}
 
-                                          method_json: {{ method_json }}<br />
+                                          path: {{ path }}<br />
+
+
+                                          {% assign method_json = path[1] %}
 
                                           {% for method in method_json %}
 

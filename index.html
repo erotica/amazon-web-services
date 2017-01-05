@@ -127,7 +127,7 @@ title: Amazon Web Services
                                   {% assign pathplusfolder = path | append:'/' %}
                                   {% assign pathname = pathname | replace: '.yaml','' %}
                                   {% assign pathname = pathname | replace: pathplusfolder,'' %}
-                                  {% assign pathname = pathname | replace: '-openapi-spec','' %}
+                                  {% assign pathname = pathname | replace: '-api-openapi-spec','' %}
 
                                   {% for entry in contents %}
                                     {% assign thisname = entry[0] %}

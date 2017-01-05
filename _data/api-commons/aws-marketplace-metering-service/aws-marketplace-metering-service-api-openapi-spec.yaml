@@ -1,0 +1,49 @@
+swagger: "2.0"
+info:
+  title: AWS Marketplace Metering Service API
+  version: 1.0.0
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /?Action=MeterUsage&k=1:
+    get:
+      summary: Meter Usage
+      description: API to emit metering records.
+      operationId: MeterUsage
+      parameters:
+      - in: query
+        name: DryRun
+        description: Checks whether you have the permissions required for the action,
+          but does not make the request. If you have the permissions, the request
+          returns DryRunOperation; otherwise, it returns UnauthorizedException.
+        type: string
+      - in: query
+        name: ProductCode
+        description: Product code is used to uniquely identify a product in AWS Marketplace.
+          The product code should be the same as the one used during the publishing
+          of a new product.
+        type: string
+      - in: query
+        name: Timestamp
+        description: Timestamp of the hour, recorded in UTC. The seconds and milliseconds
+          portions of the timestamp will be ignored.
+        type: string
+      - in: query
+        name: UsageDimension
+        description: It will be one of the fcp dimension name provided during the
+          publishing of the product.
+        type: string
+      - in: query
+        name: UsageQuantity
+        description: Consumption value for the hour.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Meter Usage
+definitions: []

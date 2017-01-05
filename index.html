@@ -6,8 +6,7 @@ title: Amazon Web Services
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
 {% assign contents = site.data.api-commons %}
-{{ contents }}
-<hr />
+
 {% for api in apijson.include %}
 
   {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}

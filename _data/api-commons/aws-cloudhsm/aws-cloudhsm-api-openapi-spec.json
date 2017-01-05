@@ -11,9 +11,9 @@
 	"paths": {
 		"/?Action=AddTagsToResource&k=1": {
 			"get": {
-				"summary": "Adds or overwrites one or more tags for the specified AWS CloudHSM resource.",
+				"summary": " Add Tags To Resource ",
 				"description": "Adds or overwrites one or more tags for the specified AWS CloudHSM resource.",
-				"operationId": "AddTagsToResource",
+				"operationId": "addTagsToResource",
 				"parameters": [{
 					"in": "query",
 					"name": "ResourceArn",
@@ -36,9 +36,9 @@
 		},
 		"/?Action=CreateHapg&k=1": {
 			"get": {
-				"summary": "Creates a high-availability partition group.",
+				"summary": " Create Hapg ",
 				"description": "Creates a high-availability partition group.",
-				"operationId": "CreateHapg",
+				"operationId": "createHapg",
 				"parameters": [{
 					"in": "query",
 					"name": "Label",
@@ -55,9 +55,9 @@
 		},
 		"/?Action=CreateHsm&k=1": {
 			"get": {
-				"summary": "Creates an uninitialized HSM instance.",
+				"summary": " Create HSM ",
 				"description": "Creates an uninitialized HSM instance.",
-				"operationId": "CreateHsm",
+				"operationId": "createHsm",
 				"parameters": [{
 					"in": "query",
 					"name": "ClientToken",
@@ -116,9 +116,9 @@
 		},
 		"/?Action=CreateLunaClient&k=1": {
 			"get": {
-				"summary": "Creates an HSM client.",
+				"summary": " Create Luna Client ",
 				"description": "Creates an HSM client.",
-				"operationId": "CreateLunaClient",
+				"operationId": "createLunaClient",
 				"parameters": [{
 					"in": "query",
 					"name": "Certificate",
@@ -141,9 +141,9 @@
 		},
 		"/?Action=DeleteHapg&k=1": {
 			"get": {
-				"summary": "Deletes a high-availability partition group.",
+				"summary": " Delete HAPG ",
 				"description": "Deletes a high-availability partition group.",
-				"operationId": "DeleteHapg",
+				"operationId": "deleteHapg",
 				"parameters": [{
 					"in": "query",
 					"name": "HapgArn",
@@ -160,9 +160,9 @@
 		},
 		"/?Action=DeleteHsm&k=1": {
 			"get": {
-				"summary": "Deletes an HSM.",
+				"summary": " Delete HSM ",
 				"description": "Deletes an HSM.",
-				"operationId": "DeleteHsm",
+				"operationId": "deleteHsm",
 				"parameters": [{
 					"in": "query",
 					"name": "HsmArn",
@@ -179,9 +179,9 @@
 		},
 		"/?Action=DeleteLunaClient&k=1": {
 			"get": {
-				"summary": "Deletes a client.",
+				"summary": " Delete Luna Client ",
 				"description": "Deletes a client.",
-				"operationId": "DeleteLunaClient",
+				"operationId": "deleteLunaClient",
 				"parameters": [{
 					"in": "query",
 					"name": "ClientArn",
@@ -198,9 +198,9 @@
 		},
 		"/?Action=DescribeHapg&k=1": {
 			"get": {
-				"summary": "Retrieves information about a high-availability partition group.",
+				"summary": " Describe HAPG ",
 				"description": "Retrieves information about a high-availability partition group.",
-				"operationId": "DescribeHapg",
+				"operationId": "describeHapg",
 				"parameters": [{
 					"in": "query",
 					"name": "HapgArn",
@@ -217,9 +217,9 @@
 		},
 		"/?Action=DescribeHsm&k=1": {
 			"get": {
-				"summary": "Retrieves information about an HSM.",
+				"summary": " Describe HSM",
 				"description": "Retrieves information about an HSM.",
-				"operationId": "DescribeHsm",
+				"operationId": "describeHsm",
 				"parameters": [{
 					"in": "query",
 					"name": "HsmArn",
@@ -242,9 +242,9 @@
 		},
 		"/?Action=DescribeLunaClient&k=1": {
 			"get": {
-				"summary": "Retrieves information about an HSM client.",
+				"summary": " Describe Luna Client ",
 				"description": "Retrieves information about an HSM client.",
-				"operationId": "DescribeLunaClient",
+				"operationId": "describeLunaClient",
 				"parameters": [{
 					"in": "query",
 					"name": "CertificateFingerprint",
@@ -267,9 +267,9 @@
 		},
 		"/?Action=GetConfig&k=1": {
 			"get": {
-				"summary": "Gets the configuration files necessary to connect to all high availability partitionn      groups the client is associated with.",
+				"summary": " Get Config ",
 				"description": "Gets the configuration files necessary to connect to all high availability partition      groups the client is associated with.",
-				"operationId": "GetConfig",
+				"operationId": "getConfig",
 				"parameters": [{
 					"in": "query",
 					"name": "ClientArn",
@@ -298,9 +298,9 @@
 		},
 		"/?Action=ListAvailableZones&k=1": {
 			"get": {
-				"summary": "Lists the Availability Zones that have available AWS CloudHSM capacity.",
+				"summary": " List Available Zones ",
 				"description": "Lists the Availability Zones that have available AWS CloudHSM capacity.",
-				"operationId": "ListAvailableZones",
+				"operationId": "listAvailableZones",
 				"parameters": [{
 					"in": "query",
 					"name": "AZList",
@@ -317,9 +317,9 @@
 		},
 		"/?Action=ListHapgs&k=1": {
 			"get": {
-				"summary": "Lists the high-availability partition groups for the account.",
+				"summary": " List HAPG ",
 				"description": "Lists the high-availability partition groups for the account.",
-				"operationId": "ListHapgs",
+				"operationId": "listHapgs",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -336,9 +336,9 @@
 		},
 		"/?Action=ListHsms&k=1": {
 			"get": {
-				"summary": "Retrieves the identifiers of all of the HSMs provisioned for the currentn      customer.",
+				"summary": " List HSM ",
 				"description": "Retrieves the identifiers of all of the HSMs provisioned for the current      customer.",
-				"operationId": "ListHsms",
+				"operationId": "listHsms",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -355,9 +355,9 @@
 		},
 		"/?Action=ListLunaClients&k=1": {
 			"get": {
-				"summary": "Lists all of the clients.",
+				"summary": " List Luna Clients ",
 				"description": "Lists all of the clients.",
-				"operationId": "ListLunaClients",
+				"operationId": "listLunaClients",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -374,9 +374,9 @@
 		},
 		"/?Action=ListTagsForResource&k=1": {
 			"get": {
-				"summary": "Returns a list of all tags for the specified AWS CloudHSM resource.",
+				"summary": " List Tags For Resource ",
 				"description": "Returns a list of all tags for the specified AWS CloudHSM resource.",
-				"operationId": "ListTagsForResource",
+				"operationId": "listTagsForResource",
 				"parameters": [{
 					"in": "query",
 					"name": "ResourceArn",
@@ -393,9 +393,9 @@
 		},
 		"/?Action=ModifyHapg&k=1": {
 			"get": {
-				"summary": "Modifies an existing high-availability partition group.",
+				"summary": " Modify HAPG ",
 				"description": "Modifies an existing high-availability partition group.",
-				"operationId": "ModifyHapg",
+				"operationId": "modifyHapg",
 				"parameters": [{
 					"in": "query",
 					"name": "HapgArn",
@@ -424,9 +424,9 @@
 		},
 		"/?Action=ModifyHsm&k=1": {
 			"get": {
-				"summary": "Modifies an HSM.",
+				"summary": " Modify HSM ",
 				"description": "Modifies an HSM.",
-				"operationId": "ModifyHsm",
+				"operationId": "modifyHsm",
 				"parameters": [{
 					"in": "query",
 					"name": "EniIp",
@@ -473,9 +473,9 @@
 		},
 		"/?Action=ModifyLunaClient&k=1": {
 			"get": {
-				"summary": "Modifies the certificate used by the client.",
+				"summary": " Modify Luna Client ",
 				"description": "Modifies the certificate used by the client.",
-				"operationId": "ModifyLunaClient",
+				"operationId": "modifyLunaClient",
 				"parameters": [{
 					"in": "query",
 					"name": "Certificate",
@@ -498,9 +498,9 @@
 		},
 		"/?Action=RemoveTagsFromResource&k=1": {
 			"get": {
-				"summary": "Removes one or more tags from the specified AWS CloudHSM resource.",
+				"summary": " Remove Tags From Resource ",
 				"description": "Removes one or more tags from the specified AWS CloudHSM resource.",
-				"operationId": "RemoveTagsFromResource",
+				"operationId": "removeTagsFromResource",
 				"parameters": [{
 					"in": "query",
 					"name": "ResourceArn",

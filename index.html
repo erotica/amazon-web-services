@@ -92,7 +92,7 @@ title: Amazon Web Services
 
                 <h3>{{ api_name }}<h3>
                 <p><img src="{{ api_image }}" width="100" style="padding: 10px;" align="left" /></p>
-                <p>{{ api_description }}<p>
+                <p style="font-size: 11px;">{{ api_description }}<p>
 
                 <table width="100%" border="0" style="padding-top: 10px;">
                   <tr>
@@ -149,7 +149,7 @@ title: Amazon Web Services
                               {% endfor %}
 
                               <tr style="background-color: #FFF;">
-                                <td align="left" style="font-size: 18px; font-weight: bold; padding: 10px;">{{ api.name }}</td>
+                                <td align="left" style="font-size: 20px; font-weight: bold; padding: 10px;">{{ api.name }}</td>
                                 <td align="right" style="padding: 10px;">
                                   {% if openapi_spec_url != null and openapi_spec_url != empty %}
                                     (<a href="{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>)
@@ -190,7 +190,7 @@ title: Amazon Web Services
                                             {% assign summary = method[1].summary %}
                                             {% assign description = method[1].description %}
 
-                                            <li><strong>{{ summary }}</strong> - {{ description }}</li>
+                                            <li style="font-size: 11px;"><strong>{{ summary }}</strong> - {{ description }}</li>
 
                                           {% endfor %}
                                         {% endfor %}

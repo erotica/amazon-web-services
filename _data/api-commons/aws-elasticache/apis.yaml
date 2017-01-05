@@ -1,0 +1,57 @@
+name: AWS ElastiCache
+description: Amazon ElastiCache is a web service that makes it easy to deploy, operate,
+  and scale an in-memory data store or cache inu0026nbsp;the cloud. The service improves
+  the performance of web applications by allowing you to retrieve information from
+  fast, managed, in-memory data stores, instead of relying entirely on slower disk-based
+  databases. Amazon ElastiCache supports two open-source in-memory engines:nnRedisu0026nbsp;-
+  a fast, open source, in-memory data store and cache.u0026nbsp;Amazon ElastiCache
+  for Redisu0026nbsp;is a Redis-compatible in-memory service that delivers the ease-of-use
+  and power of Redis along with the availability, reliability and performance suitable
+  for the most demanding applications. Both single-node and up to 15-shard clusters
+  are available, enabling scalability to up to 3.55 TiB of in-memory data. ElastiCache
+  for Redis is fully managed, scalable, and secure - making it an ideal candidate
+  to power high-performance use cases such as Web, Mobile Apps, Gaming, Ad-Tech, and
+  IoT.nnnMemcached - a widely adopted memory object caching system. ElastiCache is
+  protocol compliant with Memcached, so popular tools that you use today with existing
+  Memcached environments will work seamlessly with the service.nnAmazon ElastiCache
+  automatically detects and replaces failed nodes, reducing the overhead associated
+  with self-managed infrastructures and provides a resilient system that mitigates
+  the risk of overloaded databases, which slow website and application load times.
+  Through integration withu0026nbsp;Amazon CloudWatch, Amazon ElastiCache provides
+  enhanced visibility into key performance metrics associated with your Redis or Memcached
+  nodes.nUsing Amazon ElastiCache, you can add an in-memory layer to your infrastructure
+  in a matter of minutes by using theu0026nbsp;AWS Management Console.
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonElasticCache.png
+tags:
+- Amazon Web Services
+created: "2017-01-04"
+modified: "2017-01-04"
+url: https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-elasticache/apis.yaml
+specificationVersion: "0.14"
+apis:
+- name: Amazon ElastiCache API
+  description: ""
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Database_AmazonElasticCache.png
+  humanURL: ""
+  baseURL: ""
+  tags:
+  - Amazon Web Services
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/aws-elasticache/amazon-elasticache-api-openapi-spec.yaml
+x-common:
+- type: x-documentation
+  url: http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/Welcome.html
+- type: x-faq
+  url: https://aws.amazon.com/elasticache/faqs/
+- type: x-getting-started
+  url: https://aws.amazon.com/elasticache/getting-started/
+- type: x-dedicated-plans--pricing-page
+  url: https://aws.amazon.com/elasticache/pricing/
+- type: x-website
+  url: https://aws.amazon.com/elasticache/
+include: []
+maintainers:
+- FN: Kin Lane
+  x-twitter: apievangelist
+  email: info@apievangelist.com

@@ -30,6 +30,8 @@ title: Amazon Web Services
     {% assign twitter_url = '' %}
     {% assign website_url = '' %}
 
+    {{ apijson }}<br /><br />
+
     {% for common in apijson.x-common %}
 
       {% if common.type == 'x-getting-started' %}

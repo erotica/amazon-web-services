@@ -132,8 +132,6 @@ title: Amazon Web Services
                                   {% for entry in contents %}
                                     {% assign thisname = entry[0] %}
                                     {% assign thisentry = entry[1] %}
-
-                                    <br />{{ thisname }} == {{ pathname }}<br /><br />
                                     {% if thisname == pathname %}
                                       {% assign openapi_spec_json = thisentry %}
                                     {% endif %}
@@ -164,6 +162,9 @@ title: Amazon Web Services
                               </tr>
                               <tr id="methods-for-{{ pathname }}">
                                 <td colspan="2">
+
+{{ openapi_spec_json }}
+
                                   <table width="95%" border="0" style="margin-left: 15px; margin-right: 15px;">
                                     {% assign taglist = '' %}
                                     {% for spec in openapi_spec_json %}

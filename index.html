@@ -28,6 +28,10 @@ title: Amazon Web Services
 
           {% assign apijson = item[1] %}
 
+          {% assign api_name = apijson.name %}
+          {% assign api_description = apijson.description %}
+          {% assign api_image = apijson.image %}
+
           <!-- APIs.json -->
           <table cellpadding="3" cellspacing="2" width="100%" border="0" style="margin-top: 0px;">
 
@@ -81,17 +85,15 @@ title: Amazon Web Services
               {% assign support_url = common.url %}
             {% endif %}
 
-            {% if common.type == 'x-api-plan' %}
-              {% assign api_plan_url = common.url %}
-            {% endif %}
-            {% if common.type == 'x-rate-limit' %}
-              {% assign rate_limit_url = common.url %}
-            {% endif %}
-
           {% endfor %}
 
             <tr>
               <td>
+
+                <h3>{{ api_name }}<h3>
+                <p><img src="{{ api_image }}" width="100%" style="padding: 10px;" align="left" /></p>
+                <p><strong>{{ api_description }}</strong><p>              
+
                 <table width="100%" border="0" style="padding-top: 10px;">
                   <tr>
                   <td align="center" style="margin-left: 90px; margin-right: 90px;">

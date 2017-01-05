@@ -126,6 +126,9 @@ title: Amazon Web Services
                                   {% for entry in contents %}
                                     {% assign thisname = entry[0] %}
                                     {% assign thisentry = entry[1] %}
+
+                                    {{ thisname }} == {{ pathname }}<br />
+
                                     {% if thisname == pathname %}
                                       {% assign openapi_spec_json = thisentry %}
                                     {% endif %}

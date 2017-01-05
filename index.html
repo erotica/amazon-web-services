@@ -12,7 +12,7 @@ title: Amazon Web Services
   {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}
   {% assign path = path  | replace: '/apis.json','' %}
 
-  {{ path }}<br />
+  path: {{ path }}<br />
 
   {% for api in contents %}
 
@@ -20,7 +20,7 @@ title: Amazon Web Services
     {% assign folder = api[1] %}
     {% if api_name == path %}
 
-    {{ api_name }}<br />
+    name: {{ api_name }}<br />
 
       <!--- Begin --->
 

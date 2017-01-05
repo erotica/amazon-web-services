@@ -168,8 +168,6 @@ title: Amazon Web Services
 
                                           {% for method in method_json %}
 
-                                            {{ method }}
-
                                             {% assign tagarray = method[1].tags %}
                                             {% assign tag = tagarray[0] %}
 
@@ -191,7 +189,7 @@ title: Amazon Web Services
                                             {% assign summary = method[1].summary %}
                                             {% assign description = method[1].description %}
 
-                                            <li>{{ summary }} - {{ description }}</li>
+                                            <li><strong>{{ summary }}</strong> - {{ description }}</li>
 
                                           {% endfor %}
                                         {% endfor %}

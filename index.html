@@ -126,14 +126,19 @@ title: Amazon Web Services
                                   {% assign pathname = pathname | replace: pathplusfolder,'' %}
                                   {% assign pathname = pathname | replace: '-api-openapi-spec','' %}
 
-                                  {% for entry in contents %}
+                                  {% for entry in contents[path] %}
+
                                     {% assign thisname = entry[0] %}
                                     {% assign thisentry = entry[1] %}
+
                                     {{ thisname }} == {{ pathname }}<br />
+
                                     {% if thisname == pathname %}
                                       {% assign openapi_spec_json = thisentry %}
                                     {% endif %}
+
                                   {% endfor %}
+
                                 {% endif %}
 
                                 {% if property.type == 'x-postman %}
@@ -151,7 +156,7 @@ title: Amazon Web Services
                               {% endfor %}
 
                               <tr style="background-color: #FFF;">
-                                <td align="left" style="font-size: 16px; font-weight: bold; padding: 10px;">API Resources Available</td>
+                                <td align="left" style="font-size: 16px; font-weight: bold; padding: 10px;">{{ api.name }}</td>
                                 <td align="right" style="padding: 10px;">
                                   {% if openapi_spec_url != null and openapi_spec_url != empty %}
                                     (<a href="{{ openapi_spec_url }}" target="_blank" title="View OpenAPI Spec" style="font-size: 16px; font-weight: normal;">OpenAPI Spec</a>)
@@ -161,7 +166,7 @@ title: Amazon Web Services
                               <tr id="methods-for-{{ pathname }}">
                                 <td colspan="2">
                                   <ul>
-                                    
+
                                       {% for spec in openapi_spec_json %}
 
                                         {% assign spec_details = spec[1] %}

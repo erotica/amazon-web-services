@@ -26,8 +26,10 @@ title: Amazon Web Services
 
         {% assign item_name = item[0] %}
 
-        {{ item_name }}<br /><hr />
-
+        {% if item_name == 'apis' %}
+          {% assign api_json_content = item[1] %}
+          {{ api_json_content }}<br /><hr />          
+        {% endif %}
       {% endfor %}
 
       <!--- END --->

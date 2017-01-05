@@ -22,8 +22,8 @@ title: Amazon Web Services
   {% for api in contents %}
     {% assign api_name = api[0] %}
 
-    {{ api_name }} - {% if api_name == path %}MATCH{% endif %}<br />
-    
+    {{ api_name }} ({{ path }})- {% if api_name == path %}MATCH{% endif %}<br />
+
   {% endfor %}
 
 {% endfor %}

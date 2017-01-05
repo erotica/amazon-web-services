@@ -168,8 +168,6 @@ title: Amazon Web Services
 
                                         {% assign spec_details = spec[1] %}
 
-                                        spec: {{ spec_details }}
-
                                         {% for path in spec_details.paths %}
 
                                           {% assign method_json = path[1] %}
@@ -198,7 +196,6 @@ title: Amazon Web Services
 
                                             {% assign summary = method[1].summary %}
 
-                                            {% if tag == grouptag %}
                                               <tr>
                                                 <td style="padding-left: 20px; font-size: 12px;">{{ summary }}</td>
                                                 <td style="font-size: 12px;">{{ path[0] }}</td>
@@ -206,7 +203,6 @@ title: Amazon Web Services
                                                   {{ verb }}
                                                 </td>
                                               </tr>
-                                            {% endif %}
 
                                           {% endfor %}
                                         {% endfor %}

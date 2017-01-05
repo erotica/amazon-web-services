@@ -206,3 +206,9 @@ building_block_footer: I am always adding to, and shifting my lists of the commo
 patent_title: API Definition Patents
 patent_desc: I have been tracking on API related patents for some years, trying to understand how APIs are being referenced in patents, and in some cases the focus of the patent. Here are the patents I've tagged as being DNS related from the companies who are doing interesting things with DNS APIs.
 patent_footer: I tend to process the new patent filings and publications every couple of weeks. When ready I try to publish them along with my research.
+
+# doc colors
+get_color: 009900;
+post_color: 0000ff;
+put_color: FF0080;
+delete_color: FF9900;

@@ -3,12 +3,12 @@ layout: page
 title: Amazon Web Services
 ---
 
-<strong>debug 4: </strong>
+<strong>debug 6: </strong>
 
 {% assign index = site.data.apis %}
-{% assign apijson = index[0] %}
-{{ index }}
-{% for api in index.include %}
+{% assign apijson = index %}
+{{ apijson }}
+{% for api in apijson.include %}
 
   {{ api.name }} - {{ api.url }}<br />
 

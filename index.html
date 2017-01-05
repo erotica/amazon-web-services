@@ -7,6 +7,10 @@ title: Amazon Web Services
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
+
+{{ apijson.name }}<br />
+{{ apijson.image }}<br />
+
 {% for api in apijson.include %}
 
   {{ api.name }} - {{ api.url }}<br />

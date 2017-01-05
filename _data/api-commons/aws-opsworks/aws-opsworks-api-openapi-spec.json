@@ -2306,7 +2306,7 @@
 				{
 					"in": "query",
 					"name": "Shortname",
-					"description": "For custom layers only, use this parameter to specify the layers short name, which is used internally by AWS OpsWorks Stacks and by Chef. The short name is also used as the name for the directory where your app files are installed. It can have a maximum of 200 characters and must be in the following format: /\A[a-z0-9\-\_\.]+\Z/.",
+					"description": "For custom layers only, use this parameter to specify the layers short name, which is used internally by AWS OpsWorks Stacks and by Chef. The short name is also used as the name for the directory where your app files are installed. It can have a maximum of 200 characters and must be in the following format.",
 					"type": "string"
 				},
 				{

@@ -11,9 +11,9 @@
 	"paths": {
 		"/?Action=CancelUpdateStack&k=1": {
 			"get": {
-				"summary": "Cancels an update on the specified stack.",
+				"summary": " Cancel Update Stack ",
 				"description": "Cancels an update on the specified stack.",
-				"operationId": "CancelUpdateStack",
+				"operationId": "cancelUpdateStack",
 				"parameters": [{
 					"in": "query",
 					"name": "StackName",
@@ -30,9 +30,9 @@
 		},
 		"/?Action=ContinueUpdateRollback&k=1": {
 			"get": {
-				"summary": "For a specified stack that is in the UPDATE_ROLLBACK_FAILED state, continues rolling it backn         to the UPDATE_ROLLBACK_COMPLETE state.",
+				"summary": " Continue Update Rollback ",
 				"description": "For a specified stack that is in the UPDATE_ROLLBACK_FAILED state, continues rolling it back         to the UPDATE_ROLLBACK_COMPLETE state.",
-				"operationId": "ContinueUpdateRollback",
+				"operationId": "continueUpdateRollback",
 				"parameters": [{
 					"in": "query",
 					"name": "ResourcesToSkip.member.N",
@@ -61,9 +61,9 @@
 		},
 		"/?Action=CreateChangeSet&k=1": {
 			"get": {
-				"summary": "Creates a list of changes for a stack.",
+				"summary": " Create Change Set ",
 				"description": "Creates a list of changes for a stack.",
-				"operationId": "CreateChangeSet",
+				"operationId": "createChangeSet",
 				"parameters": [{
 					"in": "query",
 					"name": "Capabilities.member.N",
@@ -158,9 +158,9 @@
 		},
 		"/?Action=CreateStack&k=1": {
 			"get": {
-				"summary": "Creates a stack as specified in the template.",
+				"summary": " Create Stack ",
 				"description": "Creates a stack as specified in the template.",
-				"operationId": "CreateStack",
+				"operationId": "createStack",
 				"parameters": [{
 					"in": "query",
 					"name": "Capabilities.member.N",
@@ -255,9 +255,9 @@
 		},
 		"/?Action=DeleteChangeSet&k=1": {
 			"get": {
-				"summary": "Deletes the specified change set.",
+				"summary": " Delete Change Set ",
 				"description": "Deletes the specified change set.",
-				"operationId": "DeleteChangeSet",
+				"operationId": "deleteChangeSet",
 				"parameters": [{
 					"in": "query",
 					"name": "ChangeSetName",
@@ -280,9 +280,9 @@
 		},
 		"/?Action=DeleteStack&k=1": {
 			"get": {
-				"summary": "Deletes a specified stack.",
+				"summary": " Delete Stack ",
 				"description": "Deletes a specified stack.",
-				"operationId": "DeleteStack",
+				"operationId": "deleteStack",
 				"parameters": [{
 					"in": "query",
 					"name": "RetainResources.member.N",
@@ -311,9 +311,9 @@
 		},
 		"/?Action=DescribeAccountLimits&k=1": {
 			"get": {
-				"summary": "Retrieves your account's AWS CloudFormation limits, such as the maximum number of stacks that you can create in your account.",
+				"summary": " Describe Account Limits ",
 				"description": "Retrieves your accounts AWS CloudFormation limits, such as the maximum number of stacks that you can create in your account.",
-				"operationId": "DescribeAccountLimits",
+				"operationId": "describeAccountLimits",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -330,9 +330,9 @@
 		},
 		"/?Action=DescribeChangeSet&k=1": {
 			"get": {
-				"summary": "Returns the inputs for the change set and a list of changes that AWS CloudFormation will make if you execute the change set.",
+				"summary": " Describe Change Set ",
 				"description": "Returns the inputs for the change set and a list of changes that AWS CloudFormation will make if you execute the change set.",
-				"operationId": "DescribeChangeSet",
+				"operationId": "describeChangeSet",
 				"parameters": [{
 					"in": "query",
 					"name": "ChangeSetName",
@@ -361,9 +361,9 @@
 		},
 		"/?Action=DescribeStackEvents&k=1": {
 			"get": {
-				"summary": "Returns all stack related events for a specified stack in reverse chronological order.",
+				"summary": " Describe Stack Events ",
 				"description": "Returns all stack related events for a specified stack in reverse chronological order.",
-				"operationId": "DescribeStackEvents",
+				"operationId": "describeStackEvents",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -386,9 +386,9 @@
 		},
 		"/?Action=DescribeStackResource&k=1": {
 			"get": {
-				"summary": "Returns a description of the specified resource in the specified stack.",
+				"summary": " Describe Stack Resource ",
 				"description": "Returns a description of the specified resource in the specified stack.",
-				"operationId": "DescribeStackResource",
+				"operationId": "describeStackResource",
 				"parameters": [{
 					"in": "query",
 					"name": "LogicalResourceId",
@@ -411,9 +411,9 @@
 		},
 		"/?Action=DescribeStackResources&k=1": {
 			"get": {
-				"summary": "Returns AWS resource descriptions for running and deleted stacks.",
+				"summary": " Describe Stack Resources ",
 				"description": "Returns AWS resource descriptions for running and deleted stacks.",
-				"operationId": "DescribeStackResources",
+				"operationId": "describeStackResources",
 				"parameters": [{
 					"in": "query",
 					"name": "LogicalResourceId",
@@ -442,9 +442,9 @@
 		},
 		"/?Action=DescribeStacks&k=1": {
 			"get": {
-				"summary": "Returns the description for the specified stack; if no stack name was specified, then it returns the description for all the stacks created.",
+				"summary": " Describe Stacks ",
 				"description": "Returns the description for the specified stack; if no stack name was specified, then it returns the description for all the stacks created.",
-				"operationId": "DescribeStacks",
+				"operationId": "describeStacks",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -467,9 +467,9 @@
 		},
 		"/?Action=EstimateTemplateCost&k=1": {
 			"get": {
-				"summary": "Returns the estimated monthly cost of a template.",
+				"summary": " Estimate Template Cost ",
 				"description": "Returns the estimated monthly cost of a template.",
-				"operationId": "EstimateTemplateCost",
+				"operationId": "estimateTemplateCost",
 				"parameters": [{
 					"in": "query",
 					"name": "Parameters.member.N",
@@ -498,9 +498,9 @@
 		},
 		"/?Action=ExecuteChangeSet&k=1": {
 			"get": {
-				"summary": "Updates a stack using the input information that was provided when the specified change set was created.",
+				"summary": " Execute Change Set ",
 				"description": "Updates a stack using the input information that was provided when the specified change set was created.",
-				"operationId": "ExecuteChangeSet",
+				"operationId": "executeChangeSet",
 				"parameters": [{
 					"in": "query",
 					"name": "ChangeSetName",
@@ -523,9 +523,9 @@
 		},
 		"/?Action=GetStackPolicy&k=1": {
 			"get": {
-				"summary": "Returns the stack policy for a specified stack.",
+				"summary": " Get Stack Policy ",
 				"description": "Returns the stack policy for a specified stack.",
-				"operationId": "GetStackPolicy",
+				"operationId": "getStackPolicy",
 				"parameters": [{
 					"in": "query",
 					"name": "StackName",
@@ -542,9 +542,9 @@
 		},
 		"/?Action=GetTemplate&k=1": {
 			"get": {
-				"summary": "Returns the template body for a specified stack.",
+				"summary": " Get Template ",
 				"description": "Returns the template body for a specified stack.",
-				"operationId": "GetTemplate",
+				"operationId": "getTemplate",
 				"parameters": [{
 					"in": "query",
 					"name": "ChangeSetName",
@@ -573,9 +573,9 @@
 		},
 		"/?Action=GetTemplateSummary&k=1": {
 			"get": {
-				"summary": "Returns information about a new or existing template.",
+				"summary": " Get Template Summary ",
 				"description": "Returns information about a new or existing template.",
-				"operationId": "GetTemplateSummary",
+				"operationId": "getTemplateSummary",
 				"parameters": [{
 					"in": "query",
 					"name": "StackName",
@@ -604,9 +604,9 @@
 		},
 		"/?Action=ListChangeSets&k=1": {
 			"get": {
-				"summary": "Returns the ID and status of each active change set for a stack.",
+				"summary": " List Change Sets ",
 				"description": "Returns the ID and status of each active change set for a stack.",
-				"operationId": "ListChangeSets",
+				"operationId": "listChangeSets",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -629,9 +629,9 @@
 		},
 		"/?Action=ListExports&k=1": {
 			"get": {
-				"summary": "Lists all exported output values in the account and region in which you call this action.",
+				"summary": " List Exports ",
 				"description": "Lists all exported output values in the account and region in which you call this action.",
-				"operationId": "ListExports",
+				"operationId": "listExports",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -648,9 +648,9 @@
 		},
 		"/?Action=ListImports&k=1": {
 			"get": {
-				"summary": "Lists all stacks that are importing an exported output value.",
+				"summary": " List Imports ",
 				"description": "Lists all stacks that are importing an exported output value.",
-				"operationId": "ListImports",
+				"operationId": "listImports",
 				"parameters": [{
 					"in": "query",
 					"name": "ExportName",
@@ -673,9 +673,9 @@
 		},
 		"/?Action=ListStackResources&k=1": {
 			"get": {
-				"summary": "Returns descriptions of all resources of the specified stack.",
+				"summary": " List Stack Resources ",
 				"description": "Returns descriptions of all resources of the specified stack.",
-				"operationId": "ListStackResources",
+				"operationId": "listStackResources",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -698,9 +698,9 @@
 		},
 		"/?Action=ListStacks&k=1": {
 			"get": {
-				"summary": "Returns the summary information for stacks whose status matches the specified StackStatusFilter.",
+				"summary": " List Stacks ",
 				"description": "Returns the summary information for stacks whose status matches the specified StackStatusFilter.",
-				"operationId": "ListStacks",
+				"operationId": "listStacks",
 				"parameters": [{
 					"in": "query",
 					"name": "NextToken",
@@ -723,9 +723,9 @@
 		},
 		"/?Action=SetStackPolicy&k=1": {
 			"get": {
-				"summary": "Sets a stack policy for a specified stack.",
+				"summary": " Set Stack Policy ",
 				"description": "Sets a stack policy for a specified stack.",
-				"operationId": "SetStackPolicy",
+				"operationId": "setStackPolicy",
 				"parameters": [{
 					"in": "query",
 					"name": "StackName",
@@ -754,9 +754,9 @@
 		},
 		"/?Action=SignalResource&k=1": {
 			"get": {
-				"summary": "Sends a signal to the specified resource with a success or failure status.",
+				"summary": " Signal Resource ",
 				"description": "Sends a signal to the specified resource with a success or failure status.",
-				"operationId": "SignalResource",
+				"operationId": "signalResource",
 				"parameters": [{
 					"in": "query",
 					"name": "LogicalResourceId",
@@ -791,9 +791,9 @@
 		},
 		"/?Action=UpdateStack&k=1": {
 			"get": {
-				"summary": "Updates a stack as specified in the template.",
+				"summary": " Update Stack ",
 				"description": "Updates a stack as specified in the template.",
-				"operationId": "UpdateStack",
+				"operationId": "updateStack",
 				"parameters": [{
 					"in": "query",
 					"name": "Capabilities.member.N",
@@ -888,9 +888,9 @@
 		},
 		"/?Action=ValidateTemplate&k=1": {
 			"get": {
-				"summary": "Validates a specified template.",
+				"summary": " Validate Template ",
 				"description": "Validates a specified template.",
-				"operationId": "ValidateTemplate",
+				"operationId": "validateTemplate",
 				"parameters": [{
 					"in": "query",
 					"name": "TemplateBody",

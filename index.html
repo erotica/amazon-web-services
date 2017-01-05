@@ -163,12 +163,8 @@ title: Amazon Web Services
                               <tr id="methods-for-{{ pathname }}">
                                 <td colspan="2">
                                   <ul>
-                                      --{{ openapi_spec_json }}--
-                                      {% for spec in openapi_spec_json %}
 
-                                        {% assign spec_details = spec[1] %}
-
-                                        {% for path in spec_details.paths %}
+                                        {% for path in openapi_spec_json.paths %}
 
                                           {% assign method_json = path[1] %}
 
@@ -198,7 +194,6 @@ title: Amazon Web Services
 
                                           {% endfor %}
                                         {% endfor %}
-                                      {% endfor %}
 
                                   </ul>
                                 </td>

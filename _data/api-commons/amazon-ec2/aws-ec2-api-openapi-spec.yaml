@@ -13,7 +13,8 @@ paths:
   /?Action=AcceptReservedInstancesExchangeQuote&k=1:
     get:
       summary: Accept Reserved Instances Exchange Quote
-      description: Accept Reserved Instances Exchange Quote
+      description: Accepts the Convertible Reserved Instance exchange quote described
+        in the GetReservedInstancesExchangeQuote call.
       operationId: acceptreservedinstancesexchangequote
       parameters:
       - in: query
@@ -27,7 +28,7 @@ paths:
       - Reserved Instances
   /?Action=AcceptVpcPeeringConnection&k=1:
     get:
-      summary: Accept a VPC peering connection request.
+      summary: Accept Vpc Peering Connection
       description: Accept a VPC peering connection request.
       operationId: acceptvpcpeeringconnection
       parameters:
@@ -58,7 +59,7 @@ paths:
       - VPC Peering Connection
   /?Action=AllocateAddress&k=1:
     get:
-      summary: Acquires an Elastic IP address.
+      summary: Allocate Address
       description: Acquires an Elastic IP address.
       operationId: allocateaddress
       parameters:
@@ -112,7 +113,7 @@ paths:
       - IP Address
   /?Action=AllocateHosts&k=1:
     get:
-      summary: Allocates a Dedicated Host to your account.
+      summary: Allocate Hosts
       description: Allocates a Dedicated Host to your account.
       operationId: allocatehosts
       parameters:
@@ -145,7 +146,7 @@ paths:
       - Host
   /?Action=AssignIpv6Addresses&k=1:
     get:
-      summary: Assigns one or more IPv6 addresses to the specified network interface.
+      summary: Assign Ipv6 Addresses
       description: Assigns one or more IPv6 addresses to the specified network interface.
       operationId: assignipv6addresses
       parameters:
@@ -178,8 +179,7 @@ paths:
       - IP Address
   /?Action=AssignPrivateIpAddresses&k=1:
     get:
-      summary: Assigns one or more secondary private IP addresses to the specified
-        network interface.
+      summary: Assign Private Ip Addresses
       description: Assigns one or more secondary private IP addresses to the specified
         network interface.
       operationId: assignprivateipaddresses
@@ -210,7 +210,7 @@ paths:
       - IP Address
   /?Action=AssociateAddress&k=1:
     get:
-      summary: Associates an Elastic IP address with an instance or a network interface.
+      summary: Associate Address
       description: Associates an Elastic IP address with an instance or a network
         interface.
       operationId: associateaddress
@@ -241,8 +241,7 @@ paths:
       - IP Address
   /?Action=AssociateDhcpOptions&k=1:
     get:
-      summary: Associates a set of DHCP options (that you've previously created) with
-        the specified VPC, or associates no DHCP options with the VPC.
+      summary: Associate Dhcp Options
       description: Associates a set of DHCP options (that youve previously created)
         with the specified VPC, or associates no DHCP options with the VPC.
       operationId: associatedhcpoptions
@@ -265,7 +264,7 @@ paths:
       - DHCP
   /?Action=AssociateRouteTable&k=1:
     get:
-      summary: Associates a subnet with a route table.
+      summary: Associate Route Table
       description: Associates a subnet with a route table.
       operationId: associateroutetable
       parameters:
@@ -323,7 +322,7 @@ paths:
       - Route Table
   /?Action=AssociateSubnetCidrBlock&k=1:
     get:
-      summary: Associates a CIDR block with your subnet.
+      summary: Associate Subnet Cidr Block
       description: Associates a CIDR block with your subnet.
       operationId: associatesubnetcidrblock
       parameters:
@@ -359,7 +358,7 @@ paths:
       - CIDR Block
   /?Action=AssociateVpcCidrBlock&k=1:
     get:
-      summary: Associates a CIDR block with your VPC.
+      summary: Associate Vpc Cidr Block
       description: Associates a CIDR block with your VPC.
       operationId: associatevpccidrblock
       parameters:
@@ -396,8 +395,7 @@ paths:
       - CIDR Block
   /?Action=AttachClassicLinkVpc&k=1:
     get:
-      summary: Links an EC2-Classic instance to a ClassicLink-enabled VPC through
-        one or more of the VPC'sntttsecurity groups.
+      summary: Attach Classic Link Vpc
       description: Links an EC2-Classic instance to a ClassicLink-enabled VPC through
         one or more of the VPCstttsecurity groups.
       operationId: attachclassiclinkvpc
@@ -438,8 +436,7 @@ paths:
       - VPC Link
   /?Action=AttachInternetGateway&k=1:
     get:
-      summary: Attaches an Internet gateway to a VPC, enabling connectivity between
-        the Internetnttttand the VPC.
+      summary: Attach Internet Gateway
       description: Attaches an Internet gateway to a VPC, enabling connectivity between
         the Internetttttand the VPC.
       operationId: attachinternetgateway
@@ -468,7 +465,7 @@ paths:
       - Internet Gateway
   /?Action=AttachNetworkInterface&k=1:
     get:
-      summary: Attaches a network interface to an instance.
+      summary: Attach Network Interface
       description: Attaches a network interface to an instance.
       operationId: attachnetworkinterface
       parameters:
@@ -532,8 +529,7 @@ paths:
       - Network Interface
   /?Action=AttachVolume&k=1:
     get:
-      summary: Attaches an EBS volume to a running or stopped instance and exposes
-        it to the instance withn      the specified device name.
+      summary: Attach Volume
       description: Attaches an EBS volume to a running or stopped instance and exposes
         it to the instance with      the specified device name.
       operationId: attachvolume
@@ -608,7 +604,7 @@ paths:
       - Drive Volume
   /?Action=AttachVpnGateway&k=1:
     get:
-      summary: Attaches a virtual private gateway to a VPC.
+      summary: Attach Vpn Gateway
       description: Attaches a virtual private gateway to a VPC.
       operationId: attachvpngateway
       parameters:
@@ -634,8 +630,7 @@ paths:
       - VPN Gateway
   /?Action=AuthorizeSecurityGroupEgress (EC2-VPC only)&k=1:
     get:
-      summary: '[EC2-VPC only] Adds one or more egress rules to a security group for
-        use with a VPC.'
+      summary: Authorize Security Group Egress ( E C2- V P C only)
       description: '[EC2-VPC only] Adds one or more egress rules to a security group
         for use with a VPC.'
       operationId: authorizesecuritygroupegress-ec2vpc-only
@@ -714,7 +709,7 @@ paths:
       - Security Group
   /?Action=AuthorizeSecurityGroupIngress&k=1:
     get:
-      summary: Adds one or more ingress rules to a security group.
+      summary: Authorize Security Group Ingress
       description: Adds one or more ingress rules to a security group.
       operationId: authorizesecuritygroupingress
       parameters:
@@ -744,7 +739,7 @@ paths:
       - Security Group
   /?Action=BundleInstance&k=1:
     get:
-      summary: Bundles an Amazon instance store-backed Windows instance.
+      summary: Bundle Instance
       description: Bundles an Amazon instance store-backed Windows instance.
       operationId: bundleinstance
       parameters:
@@ -766,7 +761,7 @@ paths:
       - Bundle Instance
   /?Action=CancelBundleTask&k=1:
     get:
-      summary: Cancels a bundling operation for an instance store-backed Windows instance.
+      summary: Cancel Bundle Task
       description: Cancels a bundling operation for an instance store-backed Windows
         instance.
       operationId: cancelbundletask
@@ -793,7 +788,7 @@ paths:
       - Bundle Task
   /?Action=CancelConversionTask&k=1:
     get:
-      summary: Cancels an active conversion task.
+      summary: Cancel Conversion Task
       description: Cancels an active conversion task.
       operationId: cancelconversiontask
       responses:
@@ -803,7 +798,7 @@ paths:
       - Bundle Task
   /?Action=CancelExportTask&k=1:
     get:
-      summary: Cancels an active export task.
+      summary: Cancel Export Task
       description: Cancels an active export task.
       operationId: cancelexporttask
       parameters:
@@ -831,7 +826,7 @@ paths:
       - Export Task
   /?Action=CancelImportTask&k=1:
     get:
-      summary: Cancels an in-process import virtual machine or import snapshot task.
+      summary: Cancel Import Task
       description: Cancels an in-process import virtual machine or import snapshot
         task.
       operationId: cancelimporttask
@@ -854,8 +849,7 @@ paths:
       - Import Task
   /?Action=CancelReservedInstancesListing&k=1:
     get:
-      summary: Cancels the specified Reserved Instance listing in the Reserved Instance
-        Marketplace.
+      summary: Cancel Reserved Instances Listing
       description: Cancels the specified Reserved Instance listing in the Reserved
         Instance Marketplace.
       operationId: cancelreservedinstanceslisting
@@ -889,7 +883,7 @@ paths:
       - Reserved Instance
   /?Action=CancelSpotFleetRequests&k=1:
     get:
-      summary: Cancels the specified Spot fleet requests.
+      summary: Cancel Spot Fleet Requests
       description: Cancels the specified Spot fleet requests.
       operationId: cancelspotfleetrequests
       parameters:
@@ -922,7 +916,7 @@ paths:
       - Spot Fleet
   /?Action=CancelSpotInstanceRequests&k=1:
     get:
-      summary: Cancels one or more Spot instance requests.
+      summary: Cancel Spot Instance Requests
       description: Cancels one or more Spot instance requests.
       operationId: cancelspotinstancerequests
       parameters:
@@ -949,7 +943,7 @@ paths:
       - Spot Instance
   /?Action=ConfirmProductInstance&k=1:
     get:
-      summary: Determines whether a product code is associated with an instance.
+      summary: Confirm Product Instance
       description: Determines whether a product code is associated with an instance.
       operationId: confirmproductinstance
       parameters:
@@ -978,8 +972,7 @@ paths:
       - Product Instance
   /?Action=CopyImage&k=1:
     get:
-      summary: Initiates the copy of an AMI from the specified source region to the
-        current region.
+      summary: Copy Image
       description: Initiates the copy of an AMI from the specified source region to
         the current region.
       operationId: copyimage
@@ -1021,8 +1014,7 @@ paths:
       - Server Image
   /?Action=CopySnapshot&k=1:
     get:
-      summary: Copies a point-in-time snapshot of an EBS volume and stores it in Amazon
-        S3.
+      summary: Copy Snapshot
       description: Copies a point-in-time snapshot of an EBS volume and stores it
         in Amazon S3.
       operationId: copysnapshot
@@ -1049,7 +1041,7 @@ paths:
       - Drive Snapshot
   /?Action=CreateCustomerGateway&k=1:
     get:
-      summary: Provides information to AWS about your VPN customer gateway device.
+      summary: Create Customer Gateway
       description: Provides information to AWS about your VPN customer gateway device.
       operationId: createcustomergateway
       parameters:
@@ -1071,7 +1063,7 @@ paths:
       - Gateway
   /?Action=CreateDhcpOptions&k=1:
     get:
-      summary: Creates a set of DHCP options for your VPC.
+      summary: Create Dhcp Options
       description: Creates a set of DHCP options for your VPC.
       operationId: createdhcpoptions
       parameters:
@@ -1093,7 +1085,7 @@ paths:
       - DHCP
   /?Action=CreateEgressOnlyInternetGateway&k=1:
     get:
-      summary: '[IPv6 only] Creates an egress-only Internet gateway for your VPC.'
+      summary: Create Egress Only Internet Gateway
       description: '[IPv6 only] Creates an egress-only Internet gateway for your VPC.'
       operationId: createegressonlyinternetgateway
       parameters:
@@ -1111,8 +1103,7 @@ paths:
       - Internet Gateway
   /?Action=CreateFlowLogs&k=1:
     get:
-      summary: Creates one or more flow logs to capture IP traffic for a specific
-        network interface, subnet, or VPC.
+      summary: Create Flow Logs
       description: Creates one or more flow logs to capture IP traffic for a specific
         network interface, subnet, or VPC.
       operationId: createflowlogs
@@ -1128,8 +1119,7 @@ paths:
       - Flow Logs
   /?Action=CreateImage&k=1:
     get:
-      summary: Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance
-        that is either running or stopped.
+      summary: Create Image
       description: Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance
         that is either running or stopped.
       operationId: createimage
@@ -1152,7 +1142,7 @@ paths:
       - Server Image
   /?Action=CreateInstanceExportTask&k=1:
     get:
-      summary: Exports a running or stopped instance to an S3 bucket.
+      summary: Create Instance Export Task
       description: Exports a running or stopped instance to an S3 bucket.
       operationId: createinstanceexporttask
       parameters:
@@ -1167,7 +1157,7 @@ paths:
       - Export Task
   /?Action=CreateInternetGateway&k=1:
     get:
-      summary: Creates an Internet gateway for use with a VPC.
+      summary: Create Internet Gateway
       description: Creates an Internet gateway for use with a VPC.
       operationId: createinternetgateway
       parameters:
@@ -1189,7 +1179,7 @@ paths:
       - Internet Gateway
   /?Action=CreateKeyPair&k=1:
     get:
-      summary: Creates a 2048-bit RSA key pair with the specified name.
+      summary: Create Key Pair
       description: Creates a 2048-bit RSA key pair with the specified name.
       operationId: createkeypair
       parameters:
@@ -1211,7 +1201,7 @@ paths:
       - Key Pair
   /?Action=CreateNatGateway&k=1:
     get:
-      summary: Creates a NAT gateway in the specified subnet.
+      summary: Create Nat Gateway
       description: Creates a NAT gateway in the specified subnet.
       operationId: createnatgateway
       parameters:
@@ -1226,7 +1216,7 @@ paths:
       - Gateway
   /?Action=CreateNetworkAcl&k=1:
     get:
-      summary: Creates a network ACL in a VPC.
+      summary: Create Network Acl
       description: Creates a network ACL in a VPC.
       operationId: createnetworkacl
       parameters:
@@ -1294,8 +1284,7 @@ paths:
       - VPC ACL
   /?Action=CreateNetworkAclEntry&k=1:
     get:
-      summary: Creates an entry (a rule) in a network ACL with the specified rule
-        number.
+      summary: Create Network Acl Entry
       description: Creates an entry (a rule) in a network ACL with the specified rule
         number.
       operationId: createnetworkaclentry
@@ -1318,7 +1307,7 @@ paths:
       - VPC ACL
   /?Action=CreateNetworkInterface&k=1:
     get:
-      summary: Creates a network interface in the specified subnet.
+      summary: Create Network Interface
       description: Creates a network interface in the specified subnet.
       operationId: createnetworkinterface
       parameters:
@@ -1340,7 +1329,7 @@ paths:
       - Network Interface
   /?Action=CreatePlacementGroup&k=1:
     get:
-      summary: Creates a placement group that you launch cluster instances into.
+      summary: Create Placement Group
       description: Creates a placement group that you launch cluster instances into.
       operationId: createplacementgroup
       parameters:
@@ -1362,8 +1351,7 @@ paths:
       - Placement Group
   /?Action=CreateReservedInstancesListing&k=1:
     get:
-      summary: Creates a listing for Amazon EC2 Standard Reserved Instances to be
-        sold in the Reserved InstancentttMarketplace.
+      summary: Create Reserved Instances Listing
       description: Creates a listing for Amazon EC2 Standard Reserved Instances to
         be sold in the Reserved InstancetttMarketplace.
       operationId: createreservedinstanceslisting
@@ -1400,7 +1388,7 @@ paths:
       - Reserved Instance
   /?Action=CreateRoute&k=1:
     get:
-      summary: Creates a route in a route table within a VPC.
+      summary: Create Route
       description: Creates a route in a route table within a VPC.
       operationId: createroute
       parameters:
@@ -1422,7 +1410,7 @@ paths:
       - Route Table
   /?Action=CreateRouteTable&k=1:
     get:
-      summary: Creates a route table for the specified VPC.
+      summary: Create Route Table
       description: Creates a route table for the specified VPC.
       operationId: createroutetable
       parameters:
@@ -1454,7 +1442,7 @@ paths:
       - Route Table
   /?Action=CreateSecurityGroup&k=1:
     get:
-      summary: Creates a security group.
+      summary: Create Security Group
       description: Creates a security group.
       operationId: createsecuritygroup
       parameters:
@@ -1481,7 +1469,7 @@ paths:
       - Security Group
   /?Action=CreateSnapshot&k=1:
     get:
-      summary: Creates a snapshot of an EBS volume and stores it in Amazon S3.
+      summary: Create Snapshot
       description: Creates a snapshot of an EBS volume and stores it in Amazon S3.
       operationId: createsnapshot
       parameters:
@@ -1545,8 +1533,7 @@ paths:
       - Snapshot
   /?Action=CreateSpotDatafeedSubscription&k=1:
     get:
-      summary: Creates a data feed for Spot instances, enabling you to view Spot instance
-        usage logs.
+      summary: Create Spot Datafeed Subscription
       description: Creates a data feed for Spot instances, enabling you to view Spot
         instance usage logs.
       operationId: createspotdatafeedsubscription
@@ -1565,7 +1552,7 @@ paths:
       - Subnet
   /?Action=CreateSubnet&k=1:
     get:
-      summary: Creates a subnet in an existing VPC.
+      summary: Create Subnet
       description: Creates a subnet in an existing VPC.
       operationId: createsubnet
       parameters:
@@ -1587,8 +1574,7 @@ paths:
       - Subnet
   /?Action=CreateTags&k=1:
     get:
-      summary: Adds or overwrites one or more tags for the specified Amazon EC2 resource
-        orn         resources.
+      summary: Create Tags
       description: Adds or overwrites one or more tags for the specified Amazon EC2
         resource or         resources.
       operationId: createtags
@@ -1619,8 +1605,7 @@ paths:
       - Tags
   /?Action=CreateVolume&k=1:
     get:
-      summary: Creates an EBS volume that can be attached to an instance in the same
-        Availability Zone.
+      summary: Create Volume
       description: Creates an EBS volume that can be attached to an instance in the
         same Availability Zone.
       operationId: createvolume
@@ -1643,7 +1628,7 @@ paths:
       - Volume
   /?Action=CreateVpc&k=1:
     get:
-      summary: Creates a VPC with the specified IPv4 CIDR block.
+      summary: Create Vpc
       description: Creates a VPC with the specified IPv4 CIDR block.
       operationId: createvpc
       parameters:
@@ -1665,7 +1650,7 @@ paths:
       - VPC
   /?Action=CreateVpcEndpoint&k=1:
     get:
-      summary: Creates a VPC endpoint for a specified AWS service.
+      summary: Create Vpc Endpoint
       description: Creates a VPC endpoint for a specified AWS service.
       operationId: createvpcendpoint
       parameters:
@@ -1687,8 +1672,7 @@ paths:
       - VPC Endpoint
   /?Action=CreateVpcPeeringConnection&k=1:
     get:
-      summary: 'Requests a VPC peering connection between two VPCs: a requester VPC
-        that you own and a peer VPC with which to create the connection.'
+      summary: Create Vpc Peering Connection
       description: 'Requests a VPC peering connection between two VPCs: a requester
         VPC that you own and a peer VPC with which to create the connection.'
       operationId: createvpcpeeringconnection
@@ -1711,8 +1695,7 @@ paths:
       - VPC Peering Connection
   /?Action=CreateVpnConnection&k=1:
     get:
-      summary: Creates a VPN connection between an existing virtual private gateway
-        and a VPN customern            gateway.
+      summary: Create Vpn Connection
       description: Creates a VPN connection between an existing virtual private gateway
         and a VPN customer            gateway.
       operationId: createvpnconnection
@@ -1733,8 +1716,7 @@ paths:
       - VPC Connection
   /?Action=CreateVpnConnectionRoute&k=1:
     get:
-      summary: Creates a static route associated with a VPN connection between an
-        existing virtual private gateway and a VPN customer gateway.
+      summary: Create Vpn Connection Route
       description: Creates a static route associated with a VPN connection between
         an existing virtual private gateway and a VPN customer gateway.
       operationId: createvpnconnectionroute
@@ -1757,7 +1739,7 @@ paths:
       - VPC Connection Route
   /?Action=CreateVpnGateway&k=1:
     get:
-      summary: Creates a virtual private gateway.
+      summary: Create Vpn Gateway
       description: Creates a virtual private gateway.
       operationId: createvpngateway
       parameters:
@@ -1779,7 +1761,7 @@ paths:
       - VPN Gateway
   /?Action=DeleteCustomerGateway&k=1:
     get:
-      summary: Deletes the specified customer gateway.
+      summary: Delete Customer Gateway
       description: Deletes the specified customer gateway.
       operationId: deletecustomergateway
       parameters:
@@ -1805,7 +1787,7 @@ paths:
       - Customer Gateway
   /?Action=DeleteDhcpOptions&k=1:
     get:
-      summary: Deletes the specified set of DHCP options.
+      summary: Delete Dhcp Options
       description: Deletes the specified set of DHCP options.
       operationId: deletedhcpoptions
       parameters:
@@ -1831,7 +1813,7 @@ paths:
       - DHCP
   /?Action=DeleteEgressOnlyInternetGateway&k=1:
     get:
-      summary: Deletes an egress-only Internet gateway.
+      summary: Delete Egress Only Internet Gateway
       description: Deletes an egress-only Internet gateway.
       operationId: deleteegressonlyinternetgateway
       parameters:
@@ -1853,7 +1835,7 @@ paths:
       - Internet Gateway
   /?Action=DeleteFlowLogs&k=1:
     get:
-      summary: Deletes one or more flow logs.
+      summary: Delete Flow Logs
       description: Deletes one or more flow logs.
       operationId: deleteflowlogs
       parameters:
@@ -1885,7 +1867,7 @@ paths:
       - FLow Logs
   /?Action=DeleteInternetGateway&k=1:
     get:
-      summary: Deletes the specified Internet gateway.
+      summary: Delete Internet Gateway
       description: Deletes the specified Internet gateway.
       operationId: deleteinternetgateway
       parameters:
@@ -1918,8 +1900,7 @@ paths:
       - Internet Gateway
   /?Action=DeleteKeyPair&k=1:
     get:
-      summary: Deletes the specified key pair, by removing the public key from Amazon
-        EC2.
+      summary: Delete Key Pair
       description: Deletes the specified key pair, by removing the public key from
         Amazon EC2.
       operationId: deletekeypair
@@ -1946,7 +1927,7 @@ paths:
       - Key Pair
   /?Action=DeleteNatGateway&k=1:
     get:
-      summary: Deletes the specified NAT gateway.
+      summary: Delete Nat Gateway
       description: Deletes the specified NAT gateway.
       operationId: deletenatgateway
       parameters:
@@ -1975,7 +1956,7 @@ paths:
       - Gateway
   /?Action=DeleteNetworkAcl&k=1:
     get:
-      summary: Deletes the specified network ACL.
+      summary: Delete Network Acl
       description: Deletes the specified network ACL.
       operationId: deletenetworkacl
       parameters:
@@ -2005,8 +1986,7 @@ paths:
       - Network ACL
   /?Action=DeleteNetworkAclEntry&k=1:
     get:
-      summary: Deletes the specified ingress or egress entry (rule) from the specified
-        network ACL.
+      summary: Delete Network Acl Entry
       description: Deletes the specified ingress or egress entry (rule) from the specified
         network ACL.
       operationId: deletenetworkaclentry
@@ -2033,7 +2013,7 @@ paths:
       - Network ACL
   /?Action=DeleteNetworkInterface&k=1:
     get:
-      summary: Deletes the specified network interface.
+      summary: Delete Network Interface
       description: Deletes the specified network interface.
       operationId: deletenetworkinterface
       parameters:
@@ -2059,7 +2039,7 @@ paths:
       - Network Interface
   /?Action=DeletePlacementGroup&k=1:
     get:
-      summary: Deletes the specified placement group.
+      summary: Delete Placement Group
       description: Deletes the specified placement group.
       operationId: deleteplacementgroup
       parameters:
@@ -2085,7 +2065,7 @@ paths:
       - Placement Group
   /?Action=DeleteRoute&k=1:
     get:
-      summary: Deletes the specified route from the specified route table.
+      summary: Delete Route
       description: Deletes the specified route from the specified route table.
       operationId: deleteroute
       parameters:
@@ -2107,7 +2087,7 @@ paths:
       - Route
   /?Action=DeleteRouteTable&k=1:
     get:
-      summary: Deletes the specified route table.
+      summary: Delete Route Table
       description: Deletes the specified route table.
       operationId: deleteroutetable
       parameters:
@@ -2133,7 +2113,7 @@ paths:
       - Route Table
   /?Action=DeleteSecurityGroup&k=1:
     get:
-      summary: Deletes a security group.
+      summary: Delete Security Group
       description: Deletes a security group.
       operationId: deletesecuritygroup
       parameters:
@@ -2155,7 +2135,7 @@ paths:
       - Security  Group
   /?Action=DeleteSnapshot&k=1:
     get:
-      summary: Deletes the specified snapshot.
+      summary: Delete Snapshot
       description: Deletes the specified snapshot.
       operationId: deletesnapshot
       parameters:
@@ -2177,7 +2157,7 @@ paths:
       - Snapshot
   /?Action=DeleteSpotDatafeedSubscription&k=1:
     get:
-      summary: Deletes the data feed for Spot instances.
+      summary: Delete Spot Datafeed Subscription
       description: Deletes the data feed for Spot instances.
       operationId: deletespotdatafeedsubscription
       parameters:
@@ -2195,7 +2175,7 @@ paths:
       - Spot Data Feed Subscription
   /?Action=DeleteSubnet&k=1:
     get:
-      summary: Deletes the specified subnet.
+      summary: Delete Subnet
       description: Deletes the specified subnet.
       operationId: deletesubnet
       parameters:
@@ -2221,7 +2201,7 @@ paths:
       - Subnet
   /?Action=DeleteTags&k=1:
     get:
-      summary: Deletes the specified set of tags from the specified set of resources.
+      summary: Delete Tags
       description: Deletes the specified set of tags from the specified set of resources.
       operationId: deletetags
       parameters:
@@ -2253,7 +2233,7 @@ paths:
       - Tags
   /?Action=DeleteVolume&k=1:
     get:
-      summary: Deletes the specified EBS volume.
+      summary: Delete Volume
       description: Deletes the specified EBS volume.
       operationId: deletevolume
       parameters:
@@ -2279,7 +2259,7 @@ paths:
       - Volume
   /?Action=DeleteVpc&k=1:
     get:
-      summary: Deletes the specified VPC.
+      summary: Delete Vpc
       description: Deletes the specified VPC.
       operationId: deletevpc
       parameters:
@@ -2305,7 +2285,7 @@ paths:
       - VPC
   /?Action=DeleteVpcEndpoints&k=1:
     get:
-      summary: Deletes one or more specified VPC endpoints.
+      summary: Delete Vpc Endpoints
       description: Deletes one or more specified VPC endpoints.
       operationId: deletevpcendpoints
       parameters:
@@ -2342,7 +2322,7 @@ paths:
       - VPC Endpoints
   /?Action=DeleteVpcPeeringConnection&k=1:
     get:
-      summary: Deletes a VPC peering connection.
+      summary: Delete Vpc Peering Connection
       description: Deletes a VPC peering connection.
       operationId: deletevpcpeeringconnection
       parameters:
@@ -2368,7 +2348,7 @@ paths:
       - VPC Peering Connection
   /?Action=DeleteVpnConnection&k=1:
     get:
-      summary: Deletes the specified VPN connection.
+      summary: Delete Vpn Connection
       description: Deletes the specified VPN connection.
       operationId: deletevpnconnection
       parameters:
@@ -2388,8 +2368,7 @@ paths:
       - VPN Connection
   /?Action=DeleteVpnConnectionRoute&k=1:
     get:
-      summary: Deletes the specified static route associated with a VPN connection
-        between an existing virtual private gateway and a VPN customer gateway.
+      summary: Delete Vpn Connection Route
       description: Deletes the specified static route associated with a VPN connection
         between an existing virtual private gateway and a VPN customer gateway.
       operationId: deletevpnconnectionroute
@@ -2416,7 +2395,7 @@ paths:
       - VPN Connection Route
   /?Action=DeleteVpnGateway&k=1:
     get:
-      summary: Deletes the specified virtual private gateway.
+      summary: Delete Vpn Gateway
       description: Deletes the specified virtual private gateway.
       operationId: deletevpngateway
       parameters:
@@ -2442,7 +2421,7 @@ paths:
       - VPN Gateway
   /?Action=DeregisterImage&k=1:
     get:
-      summary: Deregisters the specified AMI.
+      summary: Deregister Image
       description: Deregisters the specified AMI.
       operationId: deregisterimage
       parameters:
@@ -2468,7 +2447,7 @@ paths:
       - Server Image
   /?Action=DescribeAccountAttributes&k=1:
     get:
-      summary: Describes attributes of your AWS account.
+      summary: Describe Account Attributes
       description: Describes attributes of your AWS account.
       operationId: describeaccountattributes
       parameters:
@@ -2529,7 +2508,7 @@ paths:
       - Account
   /?Action=DescribeAddresses&k=1:
     get:
-      summary: Describes one or more of your Elastic IP addresses.
+      summary: Describe Addresses
       description: Describes one or more of your Elastic IP addresses.
       operationId: describeaddresses
       parameters:
@@ -2567,8 +2546,7 @@ paths:
       - IP ADdress
   /?Action=DescribeAvailabilityZones&k=1:
     get:
-      summary: Describes one or more of the Availability Zones that are available
-        to you.
+      summary: Describe Availability Zones
       description: Describes one or more of the Availability Zones that are available
         to you.
       operationId: describeavailabilityzones
@@ -2595,7 +2573,7 @@ paths:
       - Availability Zones
   /?Action=DescribeBundleTasks&k=1:
     get:
-      summary: Describes one or more of your bundling tasks.
+      summary: Describe Bundle Tasks
       description: Describes one or more of your bundling tasks.
       operationId: describebundletasks
       parameters:
@@ -2627,7 +2605,7 @@ paths:
       - Bundle Task
   /?Action=DescribeClassicLinkInstances&k=1:
     get:
-      summary: Describes one or more of your linked EC2-Classic instances.
+      summary: Describe Classic Link Instances
       description: Describes one or more of your linked EC2-Classic instances.
       operationId: describeclassiclinkinstances
       parameters:
@@ -2654,7 +2632,7 @@ paths:
       - Server Instance
   /?Action=DescribeConversionTasks&k=1:
     get:
-      summary: Describes one or more of your conversion tasks.
+      summary: Describe Conversion Tasks
       description: Describes one or more of your conversion tasks.
       operationId: describeconversiontasks
       responses:
@@ -2664,7 +2642,7 @@ paths:
       - Version Tasks
   /?Action=DescribeCustomerGateways&k=1:
     get:
-      summary: Describes one or more of your VPN customer gateways.
+      summary: Describe Customer Gateways
       description: Describes one or more of your VPN customer gateways.
       operationId: describecustomergateways
       parameters:
@@ -2702,7 +2680,7 @@ paths:
       - Customer Gateways
   /?Action=DescribeDhcpOptions&k=1:
     get:
-      summary: Describes one or more of your DHCP options sets.
+      summary: Describe Dhcp Options
       description: Describes one or more of your DHCP options sets.
       operationId: describedhcpoptions
       parameters:
@@ -2734,7 +2712,7 @@ paths:
       - DHCP
   /?Action=DescribeEgressOnlyInternetGateways&k=1:
     get:
-      summary: Describes one or more of your egress-only Internet gateways.
+      summary: Describe Egress Only Internet Gateways
       description: Describes one or more of your egress-only Internet gateways.
       operationId: describeegressonlyinternetgateways
       parameters:
@@ -2760,7 +2738,7 @@ paths:
       - Internet Gateway
   /?Action=DescribeExportTasks&k=1:
     get:
-      summary: Describes one or more of your export tasks.
+      summary: Describe Export Tasks
       description: Describes one or more of your export tasks.
       operationId: describeexporttasks
       parameters:
@@ -2781,7 +2759,7 @@ paths:
       - Export Takss
   /?Action=DescribeFlowLogs&k=1:
     get:
-      summary: Describes one or more flow logs.
+      summary: Describe Flow Logs
       description: Describes one or more flow logs.
       operationId: describeflowlogs
       parameters:
@@ -2824,7 +2802,7 @@ paths:
       - Flow Logs
   /?Action=DescribeHostReservationOfferings&k=1:
     get:
-      summary: Describes the Dedicated Host Reservations that are available to purchase.
+      summary: Describe Host Reservation Offerings
       description: Describes the Dedicated Host Reservations that are available to
         purchase.
       operationId: describehostreservationofferings
@@ -2856,8 +2834,7 @@ paths:
       - Host Reservation
   /?Action=DescribeHostReservations&k=1:
     get:
-      summary: Describes Dedicated Host Reservations which are associated with Dedicated
-        Hosts inn            your account.
+      summary: Describe Host Reservations
       description: Describes Dedicated Host Reservations which are associated with
         Dedicated Hosts in            your account.
       operationId: describehostreservations
@@ -2878,7 +2855,7 @@ paths:
       - Host Reservation
   /?Action=DescribeHosts&k=1:
     get:
-      summary: Describes one or more of your Dedicated Hosts.
+      summary: Describe Hosts
       description: Describes one or more of your Dedicated Hosts.
       operationId: describehosts
       parameters:
@@ -2925,8 +2902,7 @@ paths:
       - Hosts
   /?Action=DescribeIdentityIdFormat&k=1:
     get:
-      summary: Describes the ID format settings for resources for the specified IAM
-        user, IAM role, or rootn      user.
+      summary: Describe Identity Id Format
       description: Describes the ID format settings for resources for the specified
         IAM user, IAM role, or root      user.
       operationId: describeidentityidformat
@@ -2943,8 +2919,7 @@ paths:
       - Identity Format
   /?Action=DescribeIdFormat&k=1:
     get:
-      summary: Describes the ID format settings for your resources on a per-region
-        basis, for example, to view which resource types are enabled for longer IDs.
+      summary: Describe Id Format
       description: Describes the ID format settings for your resources on a per-region
         basis, for example, to view which resource types are enabled for longer IDs.
       operationId: describeidformat
@@ -2972,7 +2947,7 @@ paths:
       - Identity Format
   /?Action=DescribeImageAttribute&k=1:
     get:
-      summary: Describes the specified attribute of the specified AMI.
+      summary: Describe Image Attribute
       description: Describes the specified attribute of the specified AMI.
       operationId: describeimageattribute
       parameters:
@@ -3012,8 +2987,7 @@ paths:
       - Server Image
   /?Action=DescribeImages&k=1:
     get:
-      summary: Describes one or more of the images (AMIs, AKIs, and ARIs) available
-        to you.
+      summary: Describe Images
       description: Describes one or more of the images (AMIs, AKIs, and ARIs) available
         to you.
       operationId: describeimages
@@ -3073,9 +3047,8 @@ paths:
       - Server Image
   /?Action=DescribeImportImageTasks&k=1:
     get:
-      summary: .Displays details about an import virtual machine or import snapshot
-        tasks that are already created.
-      description: .Displays details about an import virtual machine or import snapshot
+      summary: Describe Import Image Tasks
+      description: Displays details about an import virtual machine or import snapshot
         tasks that are already created.
       operationId: describeimportimagetasks
       responses:
@@ -3085,7 +3058,7 @@ paths:
       - Import Image Tasks
   /?Action=DescribeImportSnapshotTasks&k=1:
     get:
-      summary: Describes your import snapshot tasks.
+      summary: Describe Import Snapshot Tasks
       description: Describes your import snapshot tasks.
       operationId: describeimportsnapshottasks
       parameters:
@@ -3119,7 +3092,7 @@ paths:
       - Import Snapshot Takss
   /?Action=DescribeInstanceAttribute&k=1:
     get:
-      summary: Describes the specified attribute of the specified instance.
+      summary: Describe Instance Attribute
       description: Describes the specified attribute of the specified instance.
       operationId: describeinstanceattribute
       parameters:
@@ -3157,7 +3130,7 @@ paths:
       - Server Instance
   /?Action=DescribeInstances&k=1:
     get:
-      summary: Describes one or more of your instances.
+      summary: Describe Instances
       description: Describes one or more of your instances.
       operationId: describeinstances
       parameters:
@@ -3199,7 +3172,7 @@ paths:
       - Server Instance
   /?Action=DescribeInstanceStatus&k=1:
     get:
-      summary: Describes the status of one or more instances.
+      summary: Describe Instance Status
       description: Describes the status of one or more instances.
       operationId: describeinstancestatus
       parameters:
@@ -3221,7 +3194,7 @@ paths:
       - Server Instance Status
   /?Action=DescribeInternetGateways&k=1:
     get:
-      summary: Describes one or more of your Internet gateways.
+      summary: Describe Internet Gateways
       description: Describes one or more of your Internet gateways.
       operationId: describeinternetgateways
       parameters:
@@ -3247,7 +3220,7 @@ paths:
       - Internet Gateways
   /?Action=DescribeKeyPairs&k=1:
     get:
-      summary: Describes one or more of your key pairs.
+      summary: Describe Key Pairs
       description: Describes one or more of your key pairs.
       operationId: describekeypairs
       parameters:
@@ -3274,8 +3247,7 @@ paths:
       - Key Paris
   /?Action=DescribeMovingAddresses&k=1:
     get:
-      summary: Describes your Elastic IP addresses that are being moved to the EC2-VPC
-        platform, or that are being restored to the EC2-Classic platform.
+      summary: Describe Moving Addresses
       description: Describes your Elastic IP addresses that are being moved to the
         EC2-VPC platform, or that are being restored to the EC2-Classic platform.
       operationId: describemovingaddresses
@@ -3302,7 +3274,7 @@ paths:
       - IP Address
   /?Action=DescribeNatGateways&k=1:
     get:
-      summary: Describes one or more of the your NAT gateways.
+      summary: Describe Nat Gateways
       description: Describes one or more of the your NAT gateways.
       operationId: describenatgateways
       parameters:
@@ -3324,7 +3296,7 @@ paths:
       - NAT Gateways
   /?Action=DescribeNetworkAcls&k=1:
     get:
-      summary: Describes one or more of your network ACLs.
+      summary: Describe Network Acls
       description: Describes one or more of your network ACLs.
       operationId: describenetworkacls
       parameters:
@@ -3351,7 +3323,7 @@ paths:
       - Network ACL
   /?Action=DescribeNetworkInterfaceAttribute&k=1:
     get:
-      summary: Describes a network interface attribute.
+      summary: Describe Network Interface Attribute
       description: Describes a network interface attribute.
       operationId: describenetworkinterfaceattribute
       parameters:
@@ -3377,7 +3349,7 @@ paths:
       - Network Interface
   /?Action=DescribeNetworkInterfaces&k=1:
     get:
-      summary: Describes one or more of your network interfaces.
+      summary: Describe Network Interfaces
       description: Describes one or more of your network interfaces.
       operationId: describenetworkinterfaces
       parameters:
@@ -3403,7 +3375,7 @@ paths:
       - Network Interface
   /?Action=DescribePlacementGroups&k=1:
     get:
-      summary: Describes one or more of your placement groups.
+      summary: Describe Placement Groups
       description: Describes one or more of your placement groups.
       operationId: describeplacementgroups
       parameters:
@@ -3429,9 +3401,7 @@ paths:
       - Placement Groups
   /?Action=DescribePrefixLists&k=1:
     get:
-      summary: Describes available AWS services in a prefix list format, which includes
-        the prefix list name and prefix list ID of the service and the IP address
-        range for the service.
+      summary: Describe Prefix Lists
       description: Describes available AWS services in a prefix list format, which
         includes the prefix list name and prefix list ID of the service and the IP
         address range for the service.
@@ -3470,7 +3440,7 @@ paths:
       - Prefix List
   /?Action=DescribeRegions&k=1:
     get:
-      summary: Describes one or more regions that are currently available to you.
+      summary: Describe Regions
       description: Describes one or more regions that are currently available to you.
       operationId: describeregions
       responses:
@@ -3480,7 +3450,7 @@ paths:
       - Regions
   /?Action=DescribeReservedInstances&k=1:
     get:
-      summary: Describes one or more of the Reserved Instances that you purchased.
+      summary: Describe Reserved Instances
       description: Describes one or more of the Reserved Instances that you purchased.
       operationId: describereservedinstances
       parameters:
@@ -3503,8 +3473,7 @@ paths:
       - Reserved Instances
   /?Action=DescribeReservedInstancesListings&k=1:
     get:
-      summary: Describes your account's Reserved Instance listings in the Reserved
-        Instance Marketplace.
+      summary: Describe Reserved Instances Listings
       description: Describes your accounts Reserved Instance listings in the Reserved
         Instance Marketplace.
       operationId: describereservedinstanceslistings
@@ -3528,7 +3497,7 @@ paths:
       - Reserved Instances
   /?Action=DescribeReservedInstancesModifications&k=1:
     get:
-      summary: Describes the modifications made to your Reserved Instances.
+      summary: Describe Reserved Instances Modifications
       description: Describes the modifications made to your Reserved Instances.
       operationId: describereservedinstancesmodifications
       parameters:
@@ -3617,7 +3586,7 @@ paths:
       - Reserved Instances
   /?Action=DescribeReservedInstancesOfferings&k=1:
     get:
-      summary: Describes Reserved Instance offerings that are available for purchase.
+      summary: Describe Reserved Instances Offerings
       description: Describes Reserved Instance offerings that are available for purchase.
       operationId: describereservedinstancesofferings
       parameters:
@@ -3644,7 +3613,7 @@ paths:
       - Reserved Instances
   /?Action=DescribeRouteTables&k=1:
     get:
-      summary: Describes one or more of your route tables.
+      summary: Describe Route Tables
       description: Describes one or more of your route tables.
       operationId: describeroutetables
       parameters:
@@ -3663,7 +3632,7 @@ paths:
       - Route Tables
   /?Action=DescribeScheduledInstanceAvailability&k=1:
     get:
-      summary: Finds available schedules that meet the specified criteria.
+      summary: Describe Scheduled Instance Availability
       description: Finds available schedules that meet the specified criteria.
       operationId: describescheduledinstanceavailability
       responses:
@@ -3673,7 +3642,7 @@ paths:
       - Server Instance Availability
   /?Action=DescribeScheduledInstances&k=1:
     get:
-      summary: Describes one or more of your Scheduled Instances.
+      summary: Describe Scheduled Instances
       description: Describes one or more of your Scheduled Instances.
       operationId: describescheduledinstances
       responses:
@@ -3683,9 +3652,7 @@ paths:
       - Scheduled Server Instances
   /?Action=DescribeSecurityGroupReferences (EC2-VPC only)&k=1:
     get:
-      summary: '[EC2-VPC only] Describes the VPCs on the other side of a VPC peering
-        connection that are referencing the security groups you''ve specified in this
-        request.'
+      summary: Describe Security Group References ( E C2- V P C only)
       description: '[EC2-VPC only] Describes the VPCs on the other side of a VPC peering
         connection that are referencing the security groups youve specified in this
         request.'
@@ -3723,7 +3690,7 @@ paths:
       - Security Group
   /?Action=DescribeSecurityGroups&k=1:
     get:
-      summary: Describes one or more of your security groups.
+      summary: Describe Security Groups
       description: Describes one or more of your security groups.
       operationId: describesecuritygroups
       parameters:
@@ -3756,7 +3723,7 @@ paths:
       - Security Group
   /?Action=DescribeSnapshotAttribute&k=1:
     get:
-      summary: Describes the specified attribute of the specified snapshot.
+      summary: Describe Snapshot Attribute
       description: Describes the specified attribute of the specified snapshot.
       operationId: describesnapshotattribute
       parameters:
@@ -3812,7 +3779,7 @@ paths:
       - Drive Snapshot
   /?Action=DescribeSnapshots&k=1:
     get:
-      summary: Describes one or more of the EBS snapshots available to you.
+      summary: Describe Snapshots
       description: Describes one or more of the EBS snapshots available to you.
       operationId: describesnapshots
       parameters:
@@ -3838,7 +3805,7 @@ paths:
       - Drive Snapshot
   /?Action=DescribeSpotDatafeedSubscription&k=1:
     get:
-      summary: Describes the data feed for Spot instances.
+      summary: Describe Spot Datafeed Subscription
       description: Describes the data feed for Spot instances.
       operationId: describespotdatafeedsubscription
       parameters:
@@ -3864,7 +3831,7 @@ paths:
       - Spot Data Feed
   /?Action=DescribeSpotFleetInstances&k=1:
     get:
-      summary: Describes the running instances for the specified Spot fleet.
+      summary: Describe Spot Fleet Instances
       description: Describes the running instances for the specified Spot fleet.
       operationId: describespotfleetinstances
       parameters:
@@ -3906,8 +3873,7 @@ paths:
       - Spot Fleet Instance
   /?Action=DescribeSpotFleetRequestHistory&k=1:
     get:
-      summary: Describes the events for the specified Spot fleet request during the
-        specified time.
+      summary: Describe Spot Fleet Request History
       description: Describes the events for the specified Spot fleet request during
         the specified time.
       operationId: describespotfleetrequesthistory
@@ -3941,7 +3907,7 @@ paths:
       - Spot Fleet Request History
   /?Action=DescribeSpotFleetRequests&k=1:
     get:
-      summary: Describes your Spot fleet requests.
+      summary: Describe Spot Fleet Requests
       description: Describes your Spot fleet requests.
       operationId: describespotfleetrequests
       responses:
@@ -3951,7 +3917,7 @@ paths:
       - Sport Fleet Requests
   /?Action=DescribeSpotInstanceRequests&k=1:
     get:
-      summary: Describes the Spot instance requests that belong to your account.
+      summary: Describe Spot Instance Requests
       description: Describes the Spot instance requests that belong to your account.
       operationId: describespotinstancerequests
       parameters:
@@ -4007,7 +3973,7 @@ paths:
       - Spot Instance Requests
   /?Action=DescribeSpotPriceHistory&k=1:
     get:
-      summary: Describes the Spot price history.
+      summary: Describe Spot Price History
       description: Describes the Spot price history.
       operationId: describespotpricehistory
       parameters:
@@ -4078,8 +4044,7 @@ paths:
       - Spot Price History
   /?Action=DescribeStaleSecurityGroups (EC2-VPC only)&k=1:
     get:
-      summary: '[EC2-VPC only] Describes the stale security group rules for security
-        groups in a specified VPC.'
+      summary: Describe Stale Security Groups ( E C2- V P C only)
       description: '[EC2-VPC only] Describes the stale security group rules for security
         groups in a specified VPC.'
       operationId: describestalesecuritygroups-ec2vpc-only
@@ -4141,7 +4106,7 @@ paths:
       - Security Groups
   /?Action=DescribeSubnets&k=1:
     get:
-      summary: Describes one or more of your subnets.
+      summary: Describe Subnets
       description: Describes one or more of your subnets.
       operationId: describesubnets
       parameters:
@@ -4156,7 +4121,7 @@ paths:
       - Subnets
   /?Action=DescribeTags&k=1:
     get:
-      summary: Describes one or more of the tags for your EC2 resources.
+      summary: Describe Tags
       description: Describes one or more of the tags for your EC2 resources.
       operationId: describetags
       parameters:
@@ -4182,7 +4147,7 @@ paths:
       - Tags
   /?Action=DescribeVolumeAttribute&k=1:
     get:
-      summary: Describes the specified attribute of the specified volume.
+      summary: Describe Volume Attribute
       description: Describes the specified attribute of the specified volume.
       operationId: describevolumeattribute
       parameters:
@@ -4228,7 +4193,7 @@ paths:
       - Volumes
   /?Action=DescribeVolumes&k=1:
     get:
-      summary: Describes the specified EBS volumes.
+      summary: Describe Volumes
       description: Describes the specified EBS volumes.
       operationId: describevolumes
       parameters:
@@ -4273,7 +4238,7 @@ paths:
       - Volumes
   /?Action=DescribeVolumeStatus&k=1:
     get:
-      summary: Describes the status of the specified volumes.
+      summary: Describe Volume Status
       description: Describes the status of the specified volumes.
       operationId: describevolumestatus
       parameters:
@@ -4313,7 +4278,7 @@ paths:
       - Volume Status
   /?Action=DescribeVpcAttribute&k=1:
     get:
-      summary: Describes the specified attribute of the specified VPC.
+      summary: Describe Vpc Attribute
       description: Describes the specified attribute of the specified VPC.
       operationId: describevpcattribute
       parameters:
@@ -4339,7 +4304,7 @@ paths:
       - VPC
   /?Action=DescribeVpcClassicLink&k=1:
     get:
-      summary: Describes the ClassicLink status of one or more VPCs.
+      summary: Describe Vpc Classic Link
       description: Describes the ClassicLink status of one or more VPCs.
       operationId: describevpcclassiclink
       parameters:
@@ -4365,7 +4330,7 @@ paths:
       - VPC
   /?Action=DescribeVpcClassicLinkDnsSupport&k=1:
     get:
-      summary: Describes the ClassicLink DNS support status of one or more VPCs.
+      summary: Describe Vpc Classic Link Dns Support
       description: Describes the ClassicLink DNS support status of one or more VPCs.
       operationId: describevpcclassiclinkdnssupport
       parameters:
@@ -4391,7 +4356,7 @@ paths:
       - VPC DNS
   /?Action=DescribeVpcEndpoints&k=1:
     get:
-      summary: Describes one or more of your VPC endpoints.
+      summary: Describe Vpc Endpoints
       description: Describes one or more of your VPC endpoints.
       operationId: describevpcendpoints
       parameters:
@@ -4420,8 +4385,7 @@ paths:
       - VPC Endpoints
   /?Action=DescribeVpcEndpointServices&k=1:
     get:
-      summary: Describes all supported AWS services that can be specified when creating
-        a VPC endpoint.
+      summary: Describe Vpc Endpoint Services
       description: Describes all supported AWS services that can be specified when
         creating a VPC endpoint.
       operationId: describevpcendpointservices
@@ -4462,7 +4426,7 @@ paths:
       - VPC Endpoint Services
   /?Action=DescribeVpcPeeringConnections&k=1:
     get:
-      summary: Describes one or more of your VPC peering connections.
+      summary: Describe Vpc Peering Connections
       description: Describes one or more of your VPC peering connections.
       operationId: describevpcpeeringconnections
       parameters:
@@ -4492,7 +4456,7 @@ paths:
       - VPC Peering Connections
   /?Action=DescribeVpcs&k=1:
     get:
-      summary: Describes one or more of your VPCs.
+      summary: Describe Vpcs
       description: Describes one or more of your VPCs.
       operationId: describevpcs
       parameters:
@@ -4507,7 +4471,7 @@ paths:
       - VPC
   /?Action=DescribeVpnConnections&k=1:
     get:
-      summary: Describes one or more of your VPN connections.
+      summary: Describe Vpn Connections
       description: Describes one or more of your VPN connections.
       operationId: describevpnconnections
       parameters:
@@ -4533,7 +4497,7 @@ paths:
       - VPN Connections
   /?Action=DescribeVpnGateways&k=1:
     get:
-      summary: Describes one or more of your virtual private gateways.
+      summary: Describe Vpn Gateways
       description: Describes one or more of your virtual private gateways.
       operationId: describevpngateways
       parameters:
@@ -4559,7 +4523,7 @@ paths:
       - VPN Gateways
   /?Action=DetachClassicLinkVpc&k=1:
     get:
-      summary: Unlinks (detaches) a linked EC2-Classic instance from a VPC.
+      summary: Detach Classic Link Vpc
       description: Unlinks (detaches) a linked EC2-Classic instance from a VPC.
       operationId: detachclassiclinkvpc
       parameters:
@@ -4581,8 +4545,7 @@ paths:
       - VPC
   /?Action=DetachInternetGateway&k=1:
     get:
-      summary: Detaches an Internet gateway from a VPC, disabling connectivity between
-        the Internet and the VPC.
+      summary: Detach Internet Gateway
       description: Detaches an Internet gateway from a VPC, disabling connectivity
         between the Internet and the VPC.
       operationId: detachinternetgateway
@@ -4605,7 +4568,7 @@ paths:
       - Internet Gateway
   /?Action=DetachNetworkInterface&k=1:
     get:
-      summary: Detaches a network interface from an instance.
+      summary: Detach Network Interface
       description: Detaches a network interface from an instance.
       operationId: detachnetworkinterface
       parameters:
@@ -4652,7 +4615,7 @@ paths:
       - Network Interface
   /?Action=DetachVolume&k=1:
     get:
-      summary: Detaches an EBS volume from an instance.
+      summary: Detach Volume
       description: Detaches an EBS volume from an instance.
       operationId: detachvolume
       parameters:
@@ -4674,8 +4637,7 @@ paths:
       - Volume
   /?Action=DisableVgwRoutePropagation&k=1:
     get:
-      summary: Disables a virtual private gateway (VGW) from propagating routes to
-        a specified route table of a VPC.
+      summary: Disable Vgw Route Propagation
       description: Disables a virtual private gateway (VGW) from propagating routes
         to a specified route table of a VPC.
       operationId: disablevgwroutepropagation
@@ -4699,7 +4661,7 @@ paths:
       - Virtual Private Gateway
   /?Action=DisableVpcClassicLink&k=1:
     get:
-      summary: Disables ClassicLink for a VPC.
+      summary: Disable Vpc Classic Link
       description: Disables ClassicLink for a VPC.
       operationId: disablevpcclassiclink
       parameters:
@@ -4714,7 +4676,7 @@ paths:
       - VPC
   /?Action=DisableVpcClassicLinkDnsSupport&k=1:
     get:
-      summary: Disables ClassicLink DNS support for a VPC.
+      summary: Disable Vpc Classic Link Dns Support
       description: Disables ClassicLink DNS support for a VPC.
       operationId: disablevpcclassiclinkdnssupport
       parameters:
@@ -4736,8 +4698,7 @@ paths:
       - VPC DNS
   /?Action=DisassociateAddress&k=1:
     get:
-      summary: Disassociates an Elastic IP address from the instance or network interface
-        it's associated with.
+      summary: Disassociate Address
       description: Disassociates an Elastic IP address from the instance or network
         interface its associated with.
       operationId: disassociateaddress
@@ -4760,7 +4721,7 @@ paths:
       - IIP Address
   /?Action=DisassociateRouteTable&k=1:
     get:
-      summary: Disassociates a subnet from a route table.
+      summary: Disassociate Route Table
       description: Disassociates a subnet from a route table.
       operationId: disassociateroutetable
       parameters:
@@ -4779,7 +4740,7 @@ paths:
       - Route Table
   /?Action=DisassociateSubnetCidrBlock&k=1:
     get:
-      summary: Disassociates a CIDR block from a subnet.
+      summary: Disassociate Subnet Cidr Block
       description: Disassociates a CIDR block from a subnet.
       operationId: disassociatesubnetcidrblock
       parameters:
@@ -4808,7 +4769,7 @@ paths:
       - CIDR Block
   /?Action=DisassociateVpcCidrBlock&k=1:
     get:
-      summary: Disassociates a CIDR block from a VPC.
+      summary: Disassociate Vpc Cidr Block
       description: Disassociates a CIDR block from a VPC.
       operationId: disassociatevpccidrblock
       parameters:
@@ -4836,8 +4797,7 @@ paths:
       - CIDR Block
   /?Action=EnableVgwRoutePropagation&k=1:
     get:
-      summary: Enables a virtual private gateway (VGW) to propagate routes to the
-        specified route table of a VPC.
+      summary: Enable Vgw Route Propagation
       description: Enables a virtual private gateway (VGW) to propagate routes to
         the specified route table of a VPC.
       operationId: enablevgwroutepropagation
@@ -4895,8 +4855,7 @@ paths:
       - Virtual Private Gateway Route Propogation
   /?Action=EnableVolumeIO&k=1:
     get:
-      summary: Enables I/O operations for a volume that had I/O operations disabled
-        because the data on then      volume was potentially inconsistent.
+      summary: Enable Volume I O
       description: Enables I/O operations for a volume that had I/O operations disabled
         because the data on the      volume was potentially inconsistent.
       operationId: enablevolumeio
@@ -4939,7 +4898,7 @@ paths:
       - Volumes
   /?Action=EnableVpcClassicLink&k=1:
     get:
-      summary: Enables a VPC for ClassicLink.
+      summary: Enable Vpc Classic Link
       description: Enables a VPC for ClassicLink.
       operationId: enablevpcclassiclink
       parameters:
@@ -4954,7 +4913,7 @@ paths:
       - VPC
   /?Action=EnableVpcClassicLinkDnsSupport&k=1:
     get:
-      summary: Enables a VPC to support DNS hostname resolution for ClassicLink.
+      summary: Enable Vpc Classic Link Dns Support
       description: Enables a VPC to support DNS hostname resolution for ClassicLink.
       operationId: enablevpcclassiclinkdnssupport
       parameters:
@@ -4986,7 +4945,7 @@ paths:
       - VPC NS
   /?Action=GetConsoleOutput&k=1:
     get:
-      summary: Gets the console output for the specified instance.
+      summary: Get Console Output
       description: Gets the console output for the specified instance.
       operationId: getconsoleoutput
       parameters:
@@ -5013,8 +4972,7 @@ paths:
       - Console Output
   /?Action=GetConsoleScreenshot&k=1:
     get:
-      summary: Retrieve a JPG-format screenshot of a running instance to help with
-        troubleshooting.
+      summary: Get Console Screenshot
       description: Retrieve a JPG-format screenshot of a running instance to help
         with troubleshooting.
       operationId: getconsolescreenshot
@@ -5037,8 +4995,7 @@ paths:
       - Console Screenshot
   /?Action=GetHostReservationPurchasePreview&k=1:
     get:
-      summary: Preview a reservation purchase with configurations that match those
-        of yourn            Dedicated Host.
+      summary: Get Host Reservation Purchase Preview
       description: Preview a reservation purchase with configurations that match those
         of your            Dedicated Host.
       operationId: gethostreservationpurchasepreview
@@ -5058,8 +5015,7 @@ paths:
       - Host Reservation
   /?Action=GetPasswordData&k=1:
     get:
-      summary: Retrieves the encrypted administrator password for an instance running
-        Windows.
+      summary: Get Password Data
       description: Retrieves the encrypted administrator password for an instance
         running Windows.
       operationId: getpassworddata
@@ -5165,8 +5121,7 @@ paths:
       - Password Data
   /?Action=GetReservedInstancesExchangeQuote&k=1:
     get:
-      summary: Returns details about the values and term of your specified Convertible
-        Reserved Instances.
+      summary: Get Reserved Instances Exchange Quote
       description: Returns details about the values and term of your specified Convertible
         Reserved Instances.
       operationId: getreservedinstancesexchangequote
@@ -5191,8 +5146,9 @@ paths:
       - Reserved Instances
   /?Action=ImportImage&k=1:
     get:
-      summary: .Import Image
-      description: .Import Image
+      summary: Import Image
+      description: Displays details about an import virtual machine or import snapshot
+        tasks that are already created.
       operationId: importimage
       responses:
         200:
@@ -5201,8 +5157,7 @@ paths:
       - Import Image
   /?Action=ImportInstance&k=1:
     get:
-      summary: Creates an import instance task using metadata from the specified disk
-        image.
+      summary: Import Instance
       description: Creates an import instance task using metadata from the specified
         disk image.
       operationId: importinstance
@@ -5213,8 +5168,7 @@ paths:
       - Instance
   /?Action=ImportKeyPair&k=1:
     get:
-      summary: Imports the public key from an RSA key pair that you created with a
-        third-party tool.
+      summary: Import Key Pair
       description: Imports the public key from an RSA key pair that you created with
         a third-party tool.
       operationId: importkeypair
@@ -5242,7 +5196,7 @@ paths:
   /?Action=ImportSnapshot&k=1:
     get:
       summary: Import Snapshot
-      description: Import Snapshot
+      description: Describes your import snapshot tasks.
       operationId: importsnapshot
       parameters:
       - in: query
@@ -5275,8 +5229,7 @@ paths:
       - Snapshot
   /?Action=ImportVolume&k=1:
     get:
-      summary: Creates an import volume task using metadata from the specified disk
-        image.
+      summary: Import Volume
       description: Creates an import volume task using metadata from the specified
         disk image.
       operationId: importvolume
@@ -5292,7 +5245,7 @@ paths:
       - Volume
   /?Action=ModifyHosts&k=1:
     get:
-      summary: Modify the auto-placement setting of a Dedicated Host.
+      summary: Modify Hosts
       description: Modify the auto-placement setting of a Dedicated Host.
       operationId: modifyhosts
       parameters:
@@ -5320,9 +5273,7 @@ paths:
       - Hosts
   /?Action=ModifyIdentityIdFormat&k=1:
     get:
-      summary: Modifies the ID format of a resource for a specified IAM user, IAM
-        role, or the rootn      user for an account; or all IAM users, IAM roles,
-        and the root user for an account.
+      summary: Modify Identity Id Format
       description: Modifies the ID format of a resource for a specified IAM user,
         IAM role, or the root      user for an account; or all IAM users, IAM roles,
         and the root user for an account.
@@ -5345,7 +5296,7 @@ paths:
       - Identity Format
   /?Action=ModifyIdFormat&k=1:
     get:
-      summary: Modifies the ID format for the specified resource on a per-region basis.
+      summary: Modify Id Format
       description: Modifies the ID format for the specified resource on a per-region
         basis.
       operationId: modifyidformat
@@ -5372,7 +5323,7 @@ paths:
       - Identity Format
   /?Action=ModifyImageAttribute&k=1:
     get:
-      summary: Modifies the specified attribute of the specified AMI.
+      summary: Modify Image Attribute
       description: Modifies the specified attribute of the specified AMI.
       operationId: modifyimageattribute
       parameters:
@@ -5437,7 +5388,7 @@ paths:
       - Server Image
   /?Action=ModifyInstanceAttribute&k=1:
     get:
-      summary: Modifies the specified attribute of the specified instance.
+      summary: Modify Instance Attribute
       description: Modifies the specified attribute of the specified instance.
       operationId: modifyinstanceattribute
       parameters:
@@ -5459,8 +5410,7 @@ paths:
       - Server Instance
   /?Action=ModifyInstancePlacement&k=1:
     get:
-      summary: Set the instance affinity value for a specific stopped instance and
-        modify then            instance tenancy setting.
+      summary: Modify Instance Placement
       description: Set the instance affinity value for a specific stopped instance
         and modify the            instance tenancy setting.
       operationId: modifyinstanceplacement
@@ -5503,7 +5453,7 @@ paths:
       - Server Instance
   /?Action=ModifyNetworkInterfaceAttribute&k=1:
     get:
-      summary: Modifies the specified network interface attribute.
+      summary: Modify Network Interface Attribute
       description: Modifies the specified network interface attribute.
       operationId: modifynetworkinterfaceattribute
       parameters:
@@ -5530,8 +5480,7 @@ paths:
       - Network Interface
   /?Action=ModifyReservedInstances&k=1:
     get:
-      summary: Modifies the Availability Zone, instance count, instance type, or network
-        platform (EC2-Classic or EC2-VPC) of your Standard Reserved Instances.
+      summary: Modify Reserved Instances
       description: Modifies the Availability Zone, instance count, instance type,
         or network platform (EC2-Classic or EC2-VPC) of your Standard Reserved Instances.
       operationId: modifyreservedinstances
@@ -5564,7 +5513,7 @@ paths:
       - Reserved Instance
   /?Action=ModifySnapshotAttribute&k=1:
     get:
-      summary: Adds or removes permission settings for the specified snapshot.
+      summary: Modify Snapshot Attribute
       description: Adds or removes permission settings for the specified snapshot.
       operationId: modifysnapshotattribute
       parameters:
@@ -5590,8 +5539,8 @@ paths:
       - Snapshot
   /?Action=ModifySpotFleetRequest&k=1:
     get:
-      summary: Modifies the specified Spot fleet request.
-      description: Modifies the specified Spot fleet request.
+      summary: Modify Spot Fleet Request
+      description: Modifies the specified Spot fleet request
       operationId: modifyspotfleetrequest
       parameters:
       - in: query
@@ -5612,7 +5561,7 @@ paths:
       - Spot Fleet
   /?Action=ModifySubnetAttribute&k=1:
     get:
-      summary: Modifies a subnet attribute.
+      summary: Modify Subnet Attribute
       description: Modifies a subnet attribute.
       operationId: modifysubnetattribute
       parameters:
@@ -5640,7 +5589,7 @@ paths:
       - Subnet
   /?Action=ModifyVolumeAttribute&k=1:
     get:
-      summary: Modifies a volume attribute.
+      summary: Modify Volume Attribute
       description: Modifies a volume attribute.
       operationId: modifyvolumeattribute
       parameters:
@@ -5667,7 +5616,7 @@ paths:
       - Volume
   /?Action=ModifyVpcAttribute&k=1:
     get:
-      summary: Modifies the specified attribute of the specified VPC.
+      summary: Modify Vpc Attribute
       description: Modifies the specified attribute of the specified VPC.
       operationId: modifyvpcattribute
       parameters:
@@ -5704,7 +5653,7 @@ paths:
       - VPC
   /?Action=ModifyVpcEndpoint&k=1:
     get:
-      summary: Modifies attributes of a specified VPC endpoint.
+      summary: Modify Vpc Endpoint
       description: Modifies attributes of a specified VPC endpoint.
       operationId: modifyvpcendpoint
       parameters:
@@ -5726,8 +5675,7 @@ paths:
       - VPC Endpoint
   /?Action=ModifyVpcPeeringConnectionOptions&k=1:
     get:
-      summary: Modifies the VPC peering connection options on one side of a VPC peering
-        connection.
+      summary: Modify Vpc Peering Connection Options
       description: Modifies the VPC peering connection options on one side of a VPC
         peering connection.
       operationId: modifyvpcpeeringconnectionoptions
@@ -5750,7 +5698,7 @@ paths:
       - VPC Peering Connection
   /?Action=MonitorInstances&k=1:
     get:
-      summary: Enables detailed monitoring for a running instance.
+      summary: Monitor Instances
       description: Enables detailed monitoring for a running instance.
       operationId: monitorinstances
       parameters:
@@ -5772,8 +5720,7 @@ paths:
       - Monitor Instance
   /?Action=MoveAddressToVpc&k=1:
     get:
-      summary: Moves an Elastic IP address from the EC2-Classic platform to the EC2-VPC
-        platform.
+      summary: Move Address To Vpc
       description: Moves an Elastic IP address from the EC2-Classic platform to the
         EC2-VPC platform.
       operationId: moveaddresstovpc
@@ -5800,8 +5747,7 @@ paths:
       - IP Address
   /?Action=PurchaseHostReservation&k=1:
     get:
-      summary: Purchase a reservation with configurations that match those of your
-        Dedicated Host.
+      summary: Purchase Host Reservation
       description: Purchase a reservation with configurations that match those of
         your Dedicated Host.
       operationId: purchasehostreservation
@@ -5817,7 +5763,7 @@ paths:
       - Host Reservation
   /?Action=PurchaseReservedInstancesOffering&k=1:
     get:
-      summary: Purchases a Reserved Instance for use with your account.
+      summary: Purchase Reserved Instances Offering
       description: Purchases a Reserved Instance for use with your account.
       operationId: purchasereservedinstancesoffering
       parameters:
@@ -5838,8 +5784,8 @@ paths:
       - Reserved Instance
   /?Action=PurchaseScheduledInstances&k=1:
     get:
-      summary: .Purchase Scheduled Instances
-      description: .Purchase Scheduled Instances
+      summary: Purchase Scheduled Instances
+      description: Purchases one or more Scheduled Instances with the specified schedule.
       operationId: purchasescheduledinstances
       responses:
         200:
@@ -5848,7 +5794,7 @@ paths:
       - Scheduled Instance
   /?Action=RebootInstances&k=1:
     get:
-      summary: Requests a reboot of one or more instances.
+      summary: Reboot Instances
       description: Requests a reboot of one or more instances.
       operationId: rebootinstances
       parameters:
@@ -5891,7 +5837,7 @@ paths:
       - Instance
   /?Action=RegisterImage&k=1:
     get:
-      summary: Registers an AMI.
+      summary: Register Image
       description: Registers an AMI.
       operationId: registerimage
       parameters:
@@ -5918,7 +5864,7 @@ paths:
       - Server Image
   /?Action=RejectVpcPeeringConnection&k=1:
     get:
-      summary: Rejects a VPC peering connection request.
+      summary: Reject Vpc Peering Connection
       description: Rejects a VPC peering connection request.
       operationId: rejectvpcpeeringconnection
       parameters:
@@ -5954,7 +5900,7 @@ paths:
       - VPC Peering Connection
   /?Action=ReleaseAddress&k=1:
     get:
-      summary: Releases the specified Elastic IP address.
+      summary: Release Address
       description: Releases the specified Elastic IP address.
       operationId: releaseaddress
       parameters:
@@ -5976,8 +5922,7 @@ paths:
       - IP Address
   /?Action=ReleaseHosts&k=1:
     get:
-      summary: When you no longer want to use an On-Demand Dedicated Host it can be
-        released.
+      summary: Release Hosts
       description: When you no longer want to use an On-Demand Dedicated Host it can
         be released.
       operationId: releasehosts
@@ -6005,7 +5950,7 @@ paths:
       - Hosts
   /?Action=ReplaceNetworkAclAssociation&k=1:
     get:
-      summary: Changes which network ACL a subnet is associated with.
+      summary: Replace Network Acl Association
       description: Changes which network ACL a subnet is associated with.
       operationId: replacenetworkaclassociation
       parameters:
@@ -6072,7 +6017,7 @@ paths:
       - Network ACL
   /?Action=ReplaceNetworkAclEntry&k=1:
     get:
-      summary: Replaces an entry (rule) in a network ACL.
+      summary: Replace Network Acl Entry
       description: Replaces an entry (rule) in a network ACL.
       operationId: replacenetworkaclentry
       parameters:
@@ -6098,7 +6043,7 @@ paths:
       - Network ACL
   /?Action=ReplaceRoute&k=1:
     get:
-      summary: Replaces an existing route within a route table in a VPC.
+      summary: Replace Route
       description: Replaces an existing route within a route table in a VPC.
       operationId: replaceroute
       parameters:
@@ -6124,7 +6069,7 @@ paths:
       - Route
   /?Action=ReplaceRouteTableAssociation&k=1:
     get:
-      summary: Changes the route table associated with a given subnet in a VPC.
+      summary: Replace Route Table Association
       description: Changes the route table associated with a given subnet in a VPC.
       operationId: replaceroutetableassociation
       responses:
@@ -6134,7 +6079,7 @@ paths:
       - Route Table
   /?Action=ReportInstanceStatus&k=1:
     get:
-      summary: Submits feedback about the status of an instance.
+      summary: Report Instance Status
       description: Submits feedback about the status of an instance.
       operationId: reportinstancestatus
       parameters:
@@ -6160,7 +6105,7 @@ paths:
       - Server Instance
   /?Action=RequestSpotFleet&k=1:
     get:
-      summary: Creates a Spot fleet request.
+      summary: Request Spot Fleet
       description: Creates a Spot fleet request.
       operationId: requestspotfleet
       parameters:
@@ -6180,7 +6125,7 @@ paths:
       - Spot Fleet
   /?Action=RequestSpotInstances&k=1:
     get:
-      summary: Creates a Spot instance request.
+      summary: Request Spot Instances
       description: Creates a Spot instance request.
       operationId: requestspotinstances
       parameters:
@@ -6207,7 +6152,7 @@ paths:
       - Spot Instance
   /?Action=ResetImageAttribute&k=1:
     get:
-      summary: Resets an attribute of an AMI to its default value.
+      summary: Reset Image Attribute
       description: Resets an attribute of an AMI to its default value.
       operationId: resetimageattribute
       parameters:
@@ -6233,7 +6178,7 @@ paths:
       - Server Image
   /?Action=ResetInstanceAttribute&k=1:
     get:
-      summary: Resets an attribute of an instance to its default value.
+      summary: Reset Instance Attribute
       description: Resets an attribute of an instance to its default value.
       operationId: resetinstanceattribute
       parameters:
@@ -6382,7 +6327,7 @@ paths:
       - Server Instance
   /?Action=ResetNetworkInterfaceAttribute&k=1:
     get:
-      summary: Resets a network interface attribute.
+      summary: Reset Network Interface Attribute
       description: Resets a network interface attribute.
       operationId: resetnetworkinterfaceattribute
       parameters:
@@ -6401,7 +6346,7 @@ paths:
       - Network Interface
   /?Action=ResetSnapshotAttribute&k=1:
     get:
-      summary: Resets permission settings for the specified snapshot.
+      summary: Reset Snapshot Attribute
       description: Resets permission settings for the specified snapshot.
       operationId: resetsnapshotattribute
       parameters:
@@ -6424,8 +6369,7 @@ paths:
       - Snapshot
   /?Action=RestoreAddressToClassic&k=1:
     get:
-      summary: Restores an Elastic IP address that was previously moved to the EC2-VPC
-        platform back to the EC2-Classic platform.
+      summary: Restore Address To Classic
       description: Restores an Elastic IP address that was previously moved to the
         EC2-VPC platform back to the EC2-Classic platform.
       operationId: restoreaddresstoclassic
@@ -6454,8 +6398,7 @@ paths:
       - IP ADdress
   /?Action=RevokeSecurityGroupEgress (EC2-VPC only)&k=1:
     get:
-      summary: '[EC2-VPC only] Removes one or more egress rules from a security group
-        for EC2-VPC.'
+      summary: Revoke Security Group Egress ( E C2- V P C only)
       description: '[EC2-VPC only] Removes one or more egress rules from a security
         group for EC2-VPC.'
       operationId: revokesecuritygroupegress-ec2vpc-only
@@ -6528,7 +6471,7 @@ paths:
       - Security Groups
   /?Action=RevokeSecurityGroupIngress&k=1:
     get:
-      summary: Removes one or more ingress rules from a security group.
+      summary: Revoke Security Group Ingress
       description: Removes one or more ingress rules from a security group.
       operationId: revokesecuritygroupingress
       parameters:
@@ -6550,8 +6493,7 @@ paths:
       - Security Groups
   /?Action=RunInstances&k=1:
     get:
-      summary: Launches the specified number of instances using an AMI for which you
-        haven            permissions.
+      summary: Run Instances
       description: Launches the specified number of instances using an AMI for which
         you have            permissions.
       operationId: runinstances
@@ -6578,8 +6520,8 @@ paths:
       - Server Instances
   /?Action=RunScheduledInstances&k=1:
     get:
-      summary: .Run Scheduled Instances
-      description: .Run Scheduled Instances
+      summary: Run Scheduled Instances
+      description: Launches the specified Scheduled Instances.
       operationId: runscheduledinstances
       parameters:
       - in: query
@@ -6639,7 +6581,7 @@ paths:
       - Scheduled Instances
   /?Action=StartInstances&k=1:
     get:
-      summary: Starts an Amazon EBS-backed AMI that you've previously stopped.
+      summary: Start Instances
       description: Starts an Amazon EBS-backed AMI that youve previously stopped.
       operationId: startinstances
       parameters:
@@ -6668,7 +6610,7 @@ paths:
       - Server Instances
   /?Action=StopInstances&k=1:
     get:
-      summary: Stops an Amazon EBS-backed instance.
+      summary: Stop Instances
       description: Stops an Amazon EBS-backed instance.
       operationId: stopinstances
       parameters:
@@ -6690,7 +6632,7 @@ paths:
       - Server Instances
   /?Action=TerminateInstances&k=1:
     get:
-      summary: Shuts down one or more instances.
+      summary: Terminate Instances
       description: Shuts down one or more instances.
       operationId: terminateinstances
       parameters:
@@ -6712,7 +6654,7 @@ paths:
       - Terminal Instances
   /?Action=UnassignIpv6Addresses&k=1:
     get:
-      summary: Unassigns one or more IPv6 addresses from a network interface.
+      summary: Unassign Ipv6 Addresses
       description: Unassigns one or more IPv6 addresses from a network interface.
       operationId: unassignipv6addresses
       parameters:
@@ -6733,8 +6675,7 @@ paths:
       - IPv6 Addresses
   /?Action=UnassignPrivateIpAddresses&k=1:
     get:
-      summary: Unassigns one or more secondary private IP addresses from a network
-        interface.
+      summary: Unassign Private Ip Addresses
       description: Unassigns one or more secondary private IP addresses from a network
         interface.
       operationId: unassignprivateipaddresses
@@ -6761,7 +6702,7 @@ paths:
       - IP ADdress
   /?Action=UnmonitorInstances&k=1:
     get:
-      summary: Disables detailed monitoring for a running instance.
+      summary: Unmonitor Instances
       description: Disables detailed monitoring for a running instance.
       operationId: unmonitorinstances
       parameters:

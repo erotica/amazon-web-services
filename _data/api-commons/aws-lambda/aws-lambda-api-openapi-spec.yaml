@@ -1,0 +1,684 @@
+swagger: "2.0"
+info:
+  title: AWS Lambda API
+  version: 1.0.0
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
+paths:
+  /?Action=AddPermission&k=1:
+    get:
+      summary: ' Add Permission '
+      description: Adds a permission to the resource policy associated with the specified
+        AWS Lambda function.
+      operationId: addPermission
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Name of the Lambda function whose resource policy you are updating
+          by adding a new permission.
+        type: string
+      - in: query
+        name: Qualifier
+        description: 'You can use this optional query parameter to describe a qualified
+          ARN using a function version or an alias name. The permission will then
+          apply to the specific qualified ARN. For example, if you specify function
+          version 2 as the qualifier, then permission applies only when request is
+          made using qualified function ARN:'
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Permissions
+  /?Action=CreateAlias&k=1:
+    get:
+      summary: ' Create Alias '
+      description: Creates an alias that points to the specified Lambda function version.
+      operationId: createAlias
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Name of the Lambda function for which you want to create an alias.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Aliases
+  /?Action=CreateEventSourceMapping&k=1:
+    get:
+      summary: ' Create Event Source Mapping '
+      description: Identifies a stream as an event source for a Lambda function.
+      operationId: createEventSourceMapping
+      parameters:
+      - in: query
+        name: BatchSize
+        description: The largest number of records that AWS Lambda will retrieve from
+          your event source at the time of invoking your function. Your function receives
+          an event with all the retrieved records. The default is 100 records.
+        type: string
+      - in: query
+        name: Enabled
+        description: Indicates whether AWS Lambda should begin polling the event source.      By
+          default, Enabled is true.
+        type: string
+      - in: query
+        name: EventSourceArn
+        description: The Amazon Resource Name (ARN) of the Amazon Kinesis or the Amazon
+          DynamoDB stream that is the event source.       Any record added to this
+          stream could cause AWS Lambda to invoke your       Lambda function, it depends
+          on the BatchSize. AWS Lambda       POSTs the Amazon Kinesis event, containing
+          records, to your Lambda function as JSON.
+        type: string
+      - in: query
+        name: FunctionName
+        description: The Lambda function to invoke when AWS Lambda detects an event
+          on the stream.
+        type: string
+      - in: query
+        name: StartingPosition
+        description: The position in the stream where AWS Lambda should start reading.
+          Valid only for Kinesis streams. For more information, see             ShardIteratorType       in
+          the Amazon Kinesis API Reference.
+        type: string
+      - in: query
+        name: StartingPositionTimestamp
+        description: The timestamp of the data record from which to start reading.
+          Used with shard iterator type AT_TIMESTAMP. If a record with this exact
+          timestamp does not exist, the iterator returned is for the next (later)
+          record.             If the timestamp is older than the current trim horizon,
+          the iterator returned is for the oldest untrimmed data record (TRIM_HORIZON).
+          Valid only for Kinesis streams.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event Sources
+  /?Action=CreateFunction&k=1:
+    get:
+      summary: ' Create Function '
+      description: Creates a new Lambda function.
+      operationId: createFunction
+      parameters:
+      - in: query
+        name: Code
+        description: The code for the Lambda function.
+        type: string
+      - in: query
+        name: DeadLetterConfig
+        description: The parent object that contains the target Amazon Resource Name
+          (ARN) of an Amazon SQS queue or Amazon SNS topic.
+        type: string
+      - in: query
+        name: Description
+        description: A short, user-defined function description. Lambda does not use
+          this value. Assign a meaningful description as you see fit.
+        type: string
+      - in: query
+        name: Environment
+        description: The parent object that contains your environments configuration
+          settings.
+        type: string
+      - in: query
+        name: FunctionName
+        description: The name you want to assign to the function you are uploading.                        The
+          function names appear in the       console and are returned in the ListFunctions
+          API. Function names are used to specify       functions to other AWS Lambda
+          API operations, such as Invoke.
+        type: string
+      - in: query
+        name: Handler
+        description: The function within your code that Lambda calls to begin execution.      For
+          Node.js, it is the module-name.export value in your function.       For
+          Java, it can be package.class-name::handler or       package.class-name.
+          For more information, see       Lambda Function Handler (Java).
+        type: string
+      - in: query
+        name: KMSKeyArn
+        description: The Amazon Resource Name (ARN) of the KMS key used to encrypt
+          your functions environment variables. If not provided, AWS Lambda will use
+          a default service key.
+        type: string
+      - in: query
+        name: MemorySize
+        description: The amount of memory, in MB, your Lambda function is given. Lambda
+          uses this memory size to infer the amount of CPU and memory allocated to
+          your function. Your function use-case determines your CPU and memory requirements.
+          For example, a database operation might need less memory compared to an
+          image processing function. The default value is 128 MB. The value must be
+          a multiple of 64 MB.
+        type: string
+      - in: query
+        name: Publish
+        description: This boolean parameter can be used to request AWS Lambda to create
+          the Lambda function and publish a version as an atomic operation.
+        type: string
+      - in: query
+        name: Role
+        description: 'The Amazon Resource Name (ARN) of the IAM role that Lambda assumes       when
+          it executes your function to access any other Amazon Web Services (AWS)
+          resources.            For more information, see       AWS Lambda: How it
+          Works.'
+        type: string
+      - in: query
+        name: Runtime
+        description: The runtime environment for the Lambda function you are uploading.
+        type: string
+      - in: query
+        name: Timeout
+        description: The function execution time at which Lambda should terminate
+          the function. Because the execution time has cost implications, we recommend
+          you set this value based on your expected execution time. The default is
+          3 seconds.
+        type: string
+      - in: query
+        name: VpcConfig
+        description: If your Lambda function accesses resources in a VPC, you provide
+          this parameter identifying the list of security group IDs and subnet IDs.
+          These must belong to the same VPC. You must provide at least one security
+          group and one subnet ID.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=DeleteAlias&k=1:
+    get:
+      summary: ' Delete Alias '
+      description: Deletes the specified Lambda function alias.
+      operationId: deleteAlias
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The Lambda function name for which the alias is created. Deleting
+          an alias does not delete the function version to which it is pointing.
+        type: string
+      - in: query
+        name: Name
+        description: Name of the alias to delete.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Aliases
+  /?Action=DeleteEventSourceMapping&k=1:
+    get:
+      summary: ' Delete Event Source Mapping '
+      description: Removes an event source mapping.
+      operationId: deleteEventSourceMapping
+      parameters:
+      - in: query
+        name: UUID
+        description: The event source mapping ID.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event Sources
+  /?Action=DeleteFunction&k=1:
+    get:
+      summary: ' Delete Function '
+      description: Deletes the specified Lambda function code and configuration.
+      operationId: deleteFunction
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The Lambda function to delete.
+        type: string
+      - in: query
+        name: Qualifier
+        description: Using this optional parameter you can specify a function version       (but
+          not the $LATEST version) to direct AWS Lambda to delete a       specific
+          function version. If the function version has one or more aliases       pointing
+          to it, you will get     an error because you cannot have aliases pointing
+          to it. You can delete any function      version but not the $LATEST, that
+          is, you cannot specify $LATEST       as the value of this parameter.     The
+          $LATEST version can be deleted only when you want to delete all the function
+          versions and aliases.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=GetAccountSettings&k=1:
+    get:
+      summary: ' Get Account Settings '
+      description: Returns a customers account settings.
+      operationId: getAccountSettings
+      parameters:
+      - in: query
+        name: AccountLimit
+        description: Provides limits of code size and concurrency associated with
+          the current account and region.
+        type: string
+      - in: query
+        name: AccountUsage
+        description: Provides code size usage and function count associated with the
+          current account and region.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Accounts
+  /?Action=GetAlias&k=1:
+    get:
+      summary: ' Get Alias '
+      description: Returns the specified alias information such as the alias ARN,
+        description, and function version it       is pointing to.
+      operationId: getAlias
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Function name for which the alias is created. An alias is a subresource
+          that exists only in the context of an existing Lambda function so you must
+          specify the function name.
+        type: string
+      - in: query
+        name: Name
+        description: Name of the alias for which you want to retrieve information.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Aliases
+  /?Action=GetEventSourceMapping&k=1:
+    get:
+      summary: ' Get Event Source Mapping '
+      description: Returns configuration information for the specified event source
+        mapping (see.
+      operationId: getEventSourceMapping
+      parameters:
+      - in: query
+        name: UUID
+        description: The AWS Lambda assigned ID of the event source mapping.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event Sources
+  /?Action=GetFunction&k=1:
+    get:
+      summary: ' Get Function '
+      description: Returns the configuration information of the Lambda function and
+        a presigned URL       link to the.
+      operationId: getFunction
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The Lambda function name.
+        type: string
+      - in: query
+        name: Qualifier
+        description: Using this optional parameter to specify a function version or
+          an alias name.       If you specify function version, the API uses qualified
+          function ARN for the request and returns information       about the specific
+          Lambda function version. If     you specify an alias name, the API uses
+          the alias ARN and returns information about the function version to which
+          the alias points. If you dont provide this     parameter, the API uses unqualified
+          function ARN and returns information about the $LATEST version of the Lambda
+          function.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=GetFunctionConfiguration&k=1:
+    get:
+      summary: ' Get Function Configuration '
+      description: Returns the configuration information of the Lambda function.
+      operationId: getFunctionConfiguration
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The name of the Lambda function for which you want to retrieve
+          the configuration information.
+        type: string
+      - in: query
+        name: Qualifier
+        description: Using this optional parameter you can specify a function version
+          or an alias name. If you specify function version, the API uses qualified
+          function ARN and returns information about the specific function version.
+          If you specify an alias name, the API uses the alias ARN and returns information
+          about the function version to which the alias points.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=GetPolicy&k=1:
+    get:
+      summary: ' Get Policy '
+      description: Returns the resource policy associated with the specified Lambda
+        function.
+      operationId: getPolicy
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Function name whose resource policy you want to retrieve.
+        type: string
+      - in: query
+        name: Qualifier
+        description: You can specify this optional query parameter to specify a function
+          version or an alias name in which case this API will return all permissions
+          associated with the specific qualified ARN. If you dont provide this parameter,
+          the API will return permissions that apply to the unqualified function ARN.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Policies
+  /?Action=Invoke&k=1:
+    get:
+      summary: ' Invoke '
+      description: Invokes a specific Lambda function.
+      operationId: invoke
+      parameters:
+      - in: query
+        name: ClientContext
+        description: Using the ClientContext you can pass client-specific information
+          to the       Lambda function you are invoking. You can then process the
+          client information in your Lambda function       as you choose through the
+          context variable. For an example of a ClientContext JSON,     see PutEvents
+          in       the Amazon Mobile Analytics API Reference and User Guide.
+        type: string
+      - in: query
+        name: FunctionName
+        description: The Lambda function name.
+        type: string
+      - in: query
+        name: InvocationType
+        description: By default, the Invoke API assumes RequestResponse invocation
+          type. You       can optionally request asynchronous execution by specifying
+          Event as the InvocationType.      You can also use this parameter to request
+          AWS Lambda to not execute the function but       do some verification,       such
+          as if the caller is authorized to invoke the function and       if the inputs
+          are valid. You request this by specifying DryRun as the InvocationType.     This
+          is useful in a cross-account scenario when       you want to verify access
+          to a function without running it.
+        type: string
+      - in: query
+        name: LogType
+        description: You can set this optional parameter to Tail in the request only       if
+          you specify the InvocationType parameter with value RequestResponse.      In
+          this case, AWS Lambda returns the base64-encoded last 4 KB of log data produced
+          by     your Lambda function in the x-amz-log-result header.
+        type: string
+      - in: query
+        name: Qualifier
+        description: You can use this optional parameter to specify a Lambda function
+          version or alias name. If you specify a function version, the API uses the
+          qualified function ARN to invoke a specific Lambda function. If you specify
+          an alias name, the API uses the alias ARN to invoke the Lambda function
+          version to which the alias points.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Invoke
+  /?Action=InvokeAsync&k=1:
+    get:
+      summary: ' Invoke Async '
+      description: ImportantThis API is deprecated.
+      operationId: invokeAsync
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The Lambda function name.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Async
+  /?Action=ListAliases&k=1:
+    get:
+      summary: ' List Aliases '
+      description: Returns list of aliases created for a Lambda function.
+      operationId: listAliases
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Lambda function name for which the alias is created.
+        type: string
+      - in: query
+        name: FunctionVersion
+        description: If you specify this optional parameter, the API returns only
+          the aliases that are pointing to the specific Lambda function version, otherwise
+          the API returns all of the aliases created for the Lambda function.
+        type: string
+      - in: query
+        name: Marker
+        description: Optional string. An opaque pagination token returned from a previous
+          ListAliases operation.       If present, indicates where to continue the
+          listing.
+        type: string
+      - in: query
+        name: MaxItems
+        description: Optional integer. Specifies the maximum number of aliases to
+          return in response. This parameter value must be greater than 0.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Aliases
+  /?Action=ListEventSourceMappings&k=1:
+    get:
+      summary: ' List Event Source Mappings '
+      description: Returns a list of event source mappings you created using the CreateEventSourceMapping       (see.
+      operationId: listEventSourceMappings
+      parameters:
+      - in: query
+        name: EventSourceArn
+        description: The Amazon Resource Name (ARN) of the Amazon Kinesis stream.
+          (This parameter is optional.)
+        type: string
+      - in: query
+        name: FunctionName
+        description: The name of the Lambda function.
+        type: string
+      - in: query
+        name: Marker
+        description: Optional string. An opaque pagination token returned from a previous
+          ListEventSourceMappings operation.       If present, specifies to continue
+          the list from where the returning call left off.
+        type: string
+      - in: query
+        name: MaxItems
+        description: Optional integer. Specifies the maximum number of event sources
+          to return in response. This value must be greater than 0.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event Sources
+  /?Action=ListFunctions&k=1:
+    get:
+      summary: ' List Functions '
+      description: Returns a list of your Lambda functions.
+      operationId: listFunctions
+      parameters:
+      - in: query
+        name: Marker
+        description: Optional string. An opaque pagination token returned from a previous
+          ListFunctions operation.       If present, indicates where to continue the
+          listing.
+        type: string
+      - in: query
+        name: MaxItems
+        description: Optional integer. Specifies the maximum number of AWS Lambda
+          functions to return in response. This parameter value must be greater than
+          0.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=ListVersionsByFunction&k=1:
+    get:
+      summary: ' List Versions By Function '
+      description: List all versions of a function.
+      operationId: listVersionsByFunction
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Function name whose versions to list.            You can specify
+          a function name (for example, Thumbnail) or you can       specify Amazon
+          Resource Name (ARN) of the function (for example,       arn:aws:lambda:us-west-2:account-id:function:ThumbNail).
+          AWS Lambda also allows       you to specify a partial ARN (for example,
+          account-id:Thumbnail).            Note that the length constraint       applies
+          only to the ARN.             If you specify only the function name, it is
+          limited       to 64 character in length.
+        type: string
+      - in: query
+        name: Marker
+        description: Optional string. An opaque pagination token returned from a previous       ListVersionsByFunction
+          operation. If present, indicates       where to continue the listing.
+        type: string
+      - in: query
+        name: MaxItems
+        description: Optional integer. Specifies the maximum number of AWS Lambda
+          function versions to return in response. This parameter value must be greater
+          than 0.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=PublishVersion&k=1:
+    get:
+      summary: ' Publish Version '
+      description: Publishes a version of your function from the current snapshot
+        of $LATEST.
+      operationId: publishVersion
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The Lambda function name.      You can specify a function name
+          (for example, Thumbnail) or you can       specify Amazon Resource Name (ARN)
+          of the function (for example,       arn:aws:lambda:us-west-2:account-id:function:ThumbNail).
+          AWS Lambda also allows       you to specify a partial ARN (for example,
+          account-id:Thumbnail).             Note that the length constraint       applies
+          only to the ARN. If you specify only the function name, it       is limited
+          to 64 character in length.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Version
+  /?Action=RemovePermission&k=1:
+    get:
+      summary: ' Remove Permission '
+      description: You can remove individual permissions from an resource policy associated
+        with a Lambda function by providing a statement ID that you provided when
+        you added the permission.
+      operationId: removePermission
+      parameters:
+      - in: query
+        name: FunctionName
+        description: Lambda function whose resource policy you want to remove a permission
+          from.
+        type: string
+      - in: query
+        name: Qualifier
+        description: You can specify this optional parameter to remove permission
+          associated with a specific function version or function alias. If you dont
+          specify this parameter, the API removes permission associated with the unqualified
+          function ARN.
+        type: string
+      - in: query
+        name: StatementId
+        description: Statement ID of the permission to remove.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Permissions
+  /?Action=UpdateAlias&k=1:
+    get:
+      summary: ' Update Alias '
+      description: Using this API you can update the function version to which the
+        alias points and the alias description.
+      operationId: updateAlias
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The function name for which the alias is created.
+        type: string
+      - in: query
+        name: Name
+        description: The alias name.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Aliases
+  /?Action=UpdateEventSourceMapping&k=1:
+    get:
+      summary: ' Update Event Source Mapping '
+      description: You can update an event source mapping.
+      operationId: updateEventSourceMapping
+      parameters:
+      - in: query
+        name: UUID
+        description: The event source mapping identifier.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Event Sources
+  /?Action=UpdateFunctionCode&k=1:
+    get:
+      summary: ' Update Function Code '
+      description: Updates the code for the specified Lambda function.
+      operationId: updateFunctionCode
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The existing Lambda function name whose code you want to replace.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+  /?Action=UpdateFunctionConfiguration&k=1:
+    get:
+      summary: ' Update Function Configuration '
+      description: Updates the configuration parameters for the specified Lambda function
+        by using the values provided in the request.
+      operationId: updateFunctionConfiguration
+      parameters:
+      - in: query
+        name: FunctionName
+        description: The name of the Lambda function.
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Functions
+definitions: []

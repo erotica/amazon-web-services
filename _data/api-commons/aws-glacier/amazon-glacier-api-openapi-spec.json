@@ -12,7 +12,7 @@
 		"/{AccountId}/policies/data-retrieval": {
 			"get": {
 				"summary": "Get  Data  Retrieval  Policy",
-				"description": "DescriptionThis operation returns the current data retrieval policy for the account and region specified in thettttGET request. For more information about data retrieval policies, seetttAmazon Glacier Data Retrieval Policies.RequestsTo return the current data retrieval policy, send an HTTP GET request to the data retrievaltttpolicy URI as shown in the following syntax example.",
+				"description": "DescriptionThis operation returns the current data retrieval policy for the account and region specified in thettttGET request",
 				"operationId": "Get Data Retrieval Policy (GET policy)",
 				"parameters": [{
 					"in": "query",
@@ -41,7 +41,7 @@
 			},
 			"put": {
 				"summary": "Set  Data  Retrieval  Policy",
-				"description": "DescriptionThis operation sets and then enacts a data retrieval policy in the region specified in the PUT request. You can set onetttpolicy per region for an AWS account. The policy is enacted within a few minutes of atttsuccessful PUT operation.  The set policy operation does not affect retrieval jobs that were in progress before the policy wastttenacted. For more information about data retrieval policies, see Amazon Glacier Data Retrieval Policies. Requests",
+				"description": "DescriptionThis operation sets and then enacts a data retrieval policy in the region specified in the PUT request",
 				"operationId": "Set Data Retrieval Policy (PUT policy)",
 				"parameters": [{
 					"in": "query",
@@ -72,7 +72,7 @@
 		"/{AccountId}/provisioned-capacity": {
 			"post": {
 				"summary": "Purchase  Provisioned  Capacity",
-				"description": "Purchase Provisioned Capacity (POST provisioned-capacity)This operation purchases a provisioned capacity unit for an AWS account.RequestsTo purchase provisioned capacity unit for an AWS account send an HTTP POST         request to the provisioned-capacity URI.",
+				"description": "Purchase Provisioned Capacity (POST provisioned-capacity)This operation purchases a provisioned capacity unit for an AWS account",
 				"operationId": "Purchase Provisioned Capacity (POST provisioned-capacity)",
 				"parameters": [{
 					"type": "string"
@@ -88,7 +88,7 @@
 		"/{AccountId}/vaults": {
 			"get": {
 				"summary": "List  Vaults",
-				"description": "DescriptionThis operation lists all vaults owned by the calling user&#8217;s account. The list returned intttthe response is ASCII-sorted by vault name. By default, this operation returns up to 1,000 items per request. If there are more vaultstttto list, the marker field in the response body contains the vault AmazontttResource Name (ARN) at which to continue the list with a new List Vaults request;tttotherwise, the marker field is null. In your next List Vaultstttrequest you set the marker parameter to the value Amazon Glacier returned in thetttresponses to your previous List Vaults request. You can also limit the number of vaultstttreturned in the response by specifying the limit parameter in the request. RequestsTo get a list of vaults, you send a GET request to thettttvaults resource.",
+				"description": "DescriptionThis operation lists all vaults owned by the calling user&#8217;s account",
 				"operationId": "List Vaults (GET vaults)",
 				"parameters": [{
 					"in": "query",
@@ -149,7 +149,7 @@
 		"/{AccountId}/vaults/{VaultName}": {
 			"delete": {
 				"summary": "Delete  Vault",
-				"description": "DescriptionThis operation deletes a vault. Amazon Glacier will delete a vault only if there are no archivestttin the vault as per the last inventory and there have been no writes to the vault sincetttthe last inventory. If either of these conditions is not satisfied, the vault deletiontttfails (that is, the vault is not removed) and Amazon Glacier returns an error. You can use the Describe Vault (GET vault)tttoperation that provides vault information, including the number of archives in the vault;ttthowever, the information is based on the vault inventory Amazon Glacier lasttttgenerated.This operation is idempotent.NoteWhen you delete a vault, the vault access policy attached to the vault is also deleted. ttttFor more information about vault access policies, see Amazon Glacier Access Control with Vault Access Policies.RequestsTo delete a vault, send a DELETE request to the vault resource URI.",
+				"description": "DescriptionThis operation deletes a vault",
 				"operationId": "Delete Vault (DELETE vault)",
 				"responses": {
 					"200": {
@@ -160,7 +160,7 @@
 			},
 			"get": {
 				"summary": "Describe  Vault",
-				"description": "DescriptionThis operation returns information about a vault, including the vault Amazon Resource Namettt(ARN), the date the vault was created, the number of archives contained within thetttvault, and the total size of all the archives in the vault. The number of archives andttttheir total size are as of the last vault inventory Amazon Glacier generated (see Working with Vaults in Amazon Glacier). Amazon Glaciertttgenerates vault inventories approximately daily. This means that if you add or remove antttarchive from a vault, and then immediately send a Describe Vault request, the responsetttmight not reflect the changes.  RequestsTo get information about a vault, send a GET request to the URI of the specifictttvault resource.",
+				"description": "DescriptionThis operation returns information about a vault, including the vault Amazon Resource Namettt(ARN), the date the vault was created, the number of archives contained within thetttvault, and the total size of all the archives in the vault",
 				"operationId": "Describe Vault (GET vault)",
 				"parameters": [{
 					"in": "query",
@@ -207,7 +207,7 @@
 			},
 			"put": {
 				"summary": "Create  Vault",
-				"description": "DescriptionThis operation creates a new vault with the specified name.&nbsp; The name of the vault must betttunique within a region for an AWS account. You can create up to 1,000 vaults pertttaccount. For information on creating more vaults, go to the Amazon Glacier product detailtttpage.You must use the following guidelines when naming a vault. ttt Names can be between 1 and 255 characters long. Allowed characters are a&#8211;z, A&#8211;Z, 0&#8211;9, _ (underscore), - (hyphen),ttttttand . (period).ttThis operation is idempotent, you can send the same request multiple times and it has notttfurther effect after the first time Amazon Glacier creates the specified vault.Requests",
+				"description": "DescriptionThis operation creates a new vault with the specified name",
 				"operationId": "Create Vault (PUT vault)",
 				"parameters": [{
 					"type": "string"
@@ -223,7 +223,7 @@
 		"/{AccountId}/vaults/{vaultName}/access-policy": {
 			"delete": {
 				"summary": "Delete  Vault  Access  Policy",
-				"description": "DescriptionThis operation deletes the access policy associated with the specified vault. Thetttoperation is eventually consistent&#8212;that is, it might take some time for Amazon Glacier totttcompletely remove the access policy, and you might still see the effect of the policytttfor a short time after you send the delete request. This operation is idempotent. You can invoke delete multiple times, even if there istttno policy associated with the vault. For more information about vault access policies,tttsee Amazon Glacier Access Control with Vault Access Policies.RequestsTo delete the current vault access policy, send an HTTP DELETE request totttthe URI of the vaults access-policy subresource.",
+				"description": "DescriptionThis operation deletes the access policy associated with the specified vault",
 				"operationId": "Delete Vault Access Policy (DELETEnttaccess-policy)",
 				"responses": {
 					"200": {
@@ -234,7 +234,7 @@
 			},
 			"get": {
 				"summary": "Get  Vault  Access  Policy",
-				"description": "DescriptionThis operation retrieves the access-policy subresource set on thetttvault&#8212;for more information on setting this subresource, see Set Vault Access Policy (PUT access-policy). Iftttthere is no access policy set on the vault, the operation returns a 404 Notttttfound error. For more information about vault access policies, see Amazon Glacier Access Control with Vault Access Policies.RequestsTo return the current vault access policy, send an HTTP GET request totttthe URI of the vaults access-policy subresource.",
+				"description": "DescriptionThis operation retrieves the access-policy subresource set on thetttvault&#8212;for more information on setting this subresource, see Set Vault Access Policy (PUT access-policy)",
 				"operationId": "Get Vault Access Policy (GET access-policy)",
 				"parameters": [{
 					"in": "query",
@@ -251,7 +251,7 @@
 			},
 			"put": {
 				"summary": "Set  Vault  Access  Policy",
-				"description": "DescriptionThis operation configures an access policy for a vault and will overwrite an existingtttpolicy. To configure a vault access policy, send a PUT request to thettttaccess-policy subresource of the vault. You can set one access policy per vaulttttand the policy can be up to 20 KB in size. For more information about vault accesstttpolicies, see Amazon Glacier Access Control with Vault Access Policies. Requests",
+				"description": "DescriptionThis operation configures an access policy for a vault and will overwrite an existingtttpolicy",
 				"operationId": "Set Vault Access Policy (PUT access-policy)",
 				"parameters": [{
 					"in": "query",
@@ -270,7 +270,7 @@
 		"/{AccountId}/vaults/{VaultName}/archives": {
 			"post": {
 				"summary": "Upload  Archive",
-				"description": "DescriptionThis operation adds an archive to a vault. For a successful upload, your data is durablytttpersisted. In response, Amazon Glacier returns the archive ID in thettttx-amz-archive-id header of the response. You should save the archive IDtttreturned so that you can access the archive later. You must provide a SHA256 tree hash of the data you are uploading. For information abouttttcomputing a SHA256 tree hash, see Computing Checksums. When uploading an archive, you can optionally specify an archive description of up to 1,024tttprintable ASCII characters. Amazon Glacier returns the archive description when youttteither retrieve the archive or get the vault inventory. Amazon Glacier does not interpret thetttdescription in any way. An archive description does not need to be unique. You cannottttuse the description to retrieve or sort the archive list. Except for the optional archive description, Amazon Glacier does not support anytttadditional metadata for the archives. The archive ID is an opaque sequence of characterstttfrom which you cannot infer any meaning about the archive. So you might maintaintttmetadata about the archives on the client-side. For more information, see tttWorking with Archives in Amazon Glacier.Archives are immutable. After you upload an archive, you cannot edit the archive or itstttdescription. RequestsTo upload an archive, you use the HTTP POST method and scope the request to thettttarchives subresource of the vault in which you want to save thetttarchive. The request must include the archive payload size, checksum (SHA256 tree hash),tttand can optionally include a description of the archive.",
+				"description": "DescriptionThis operation adds an archive to a vault",
 				"operationId": "Upload Archive (POST archive)",
 				"parameters": [{
 					"type": "string"
@@ -286,7 +286,7 @@
 		"/{AccountId}/vaults/{VaultName}/archives/{ArchiveID}": {
 			"delete": {
 				"summary": "Delete  Archive",
-				"description": "DescriptionThis operation deletes an archive from a vault. You can delete one archive at a time from a vault. tttTo delete the archive you must provide its archive ID in the delete request. tttYou can get the archive ID by downloading the vault inventory for the vault that contains the archive. tttFor more information about downloading the vault inventory, tttsee Downloading a Vault Inventory in Amazon Glacier.After you delete an archive, you might stilltttbe able to make a successful request to initiate a job to retrieve the deleted archive,tttbut the archive retrieval job will fail. Archive retrievals that are in progress for an archive ID when you delete thetttarchive might or might not succeed according to the following scenarios:tttIf the archive retrieval job is actively preparing the data for download when Amazon Glacierttttttreceives the delete archive request, the archival retrievaltoperation might fail. If the archive retrieval job has successfully prepared the archive for download whenttttttAmazon Glacier receives the delete archive request, you will be able tottttttdownload the output. ttFor more information about archive retrieval, see tttDownloading an Archive in Amazon Glacier. This operation is idempotent. Attemptingtttto delete an already-deleted archive does not result in an error. RequestsTo delete an archive you send a DELETE request to the archive resourcetttURI.",
+				"description": "DescriptionThis operation deletes an archive from a vault",
 				"operationId": "Delete Archive (DELETE archive)",
 				"responses": {
 					"200": {
@@ -299,7 +299,7 @@
 		"/{AccountId}/vaults/{VaultName}/jobs": {
 			"get": {
 				"summary": "List  Jobs",
-				"description": "DescriptionThis operation lists jobs for a vault including jobs that are in-progress and jobs that havetttrecently finished. tttNoteAmazon Glacier retains recently completed jobs for a period before deleting them; however,tttttit eventually removes completed jobs. The output of completed jobs can betttttretrieved. Retaining completed jobs for a period of time after they havetttttcompleted enables you to get a job output in the event you miss the jobtttttcompletion notification or your first attempt to download it fails. For example,tttttsuppose you start an archive retrieval job to download an archive. After the jobtttttcompletes, you start to download the archive but encounter a network error. Intttttthis scenario, you can retry and download the archive while the job exists. ttTo retrieve an archive or retrieve a vault inventory from Amazon Glacier, you first initiatettta job, and after the job completes, you download the data. For an archive retrieval, thetttoutput is the archive data. For an inventory retrieval, it is the inventory list.tttThe List Job operation returns a list of these jobs sorted by job initiationttttime.The List Jobs operation supports pagination. You should always check the responsettttMarker field. If there are no more jobs to list, thettttMarker field is set to null. If there are more jobs totttlist, the Marker field is set to a non-null value, which you can use totttcontinue the pagination of the list. To return a list of jobs that begins at a specifictttjob, set the marker request parameter to the Marker value fortttthat job that you obtained from a previous List Jobs request.You can set a maximum limit for the number of jobs returned in the response by specifyingtttthe limit parameter in the request. The default limit is 1000. The numbertttof jobs returned might be fewer than the limit but the number of returned jobs nevertttexceeds the limit.Additionally, you can filter the jobs list returned by specifying the optionaltttstatuscode parameter or completed parameter, or both. Usingtttthe statuscode parameter, you can specify to return only jobs that matchttteither the InProgress, Succeeded, or Failed status.tttUsing the completed parameter, you can specify to return only jobs that weretttcompleted (true) or jobs that were not completedttt(false).Requests",
+				"description": "DescriptionThis operation lists jobs for a vault including jobs that are in-progress and jobs that havetttrecently finished",
 				"operationId": "list Jobs (GET jobs)",
 				"parameters": [{
 					"in": "query",
@@ -454,7 +454,7 @@
 			},
 			"post": {
 				"summary": "Initiate  Job",
-				"description": "Initiate Job (POST jobs)This operation initiates a job of the specified type, which can be an archive retrieval or vault inventory retrieval.Initializing a Data Retrieval Job Retrieving an archive or a vault inventory are asynchronous operations that require you totttinitiate a job. Retrieval is a two-step process:tttInitiate a retrieval job.ImportantA data retrieval policy can cause your initiate retrieval job request to fail with attttttttPolicyEnforcedException exception. For more information about datatttttttretrieval policies, see Amazon Glacier Data Retrieval Policies. For more information about thettttttttPolicyEnforcedException exception, see Error Responses.After the job completes, download the bytes. ttThe retrieval request is executed asynchronously. When you initiate a retrieval job, Amazon Glacier creates a jobtttand returns a job ID in the response. When Amazon Glacier completes the job, you can get the job output (archive ortttinventory data). For information about getting job output, see the Get Job Output (GET output) operation. The job must complete before you can get its output. To determine when a job is complete, you have thetttfollowing options:tttUse an Amazon SNS notification&#8212; You can specify an Amazon Simple Notification Servicetttttt(Amazon SNS) topic to which Amazon Glacier can post a notification after the job is completed. You can specifyttttttan SNS topic per job request. The notification is sent only after Amazon Glacier completes the job. Inttttttaddition to specifying an SNS topic per job request, you can configure vault notifications for attttttvault so that job notifications are sent for all retrievals. For more information, see Set Vault Notification Configuration (PUTttnotification-configuration). Get job details&#8212; You can make a Describe Job (GET JobID) request to obtain jobttttttstatus information while a job is in progress. However, it is more efficient to use an Amazon SNSttttttnotification to determine when a job is complete.tttttNoteThe information you get via notification is same that you get by calling Describe Job (GET JobID). ttIf for a specific event, you add both the notification configuration on the vault and also specify an SNSttttopic in your initiate job request, Amazon Glacier sends both notifications. For more information, see Set Vault Notification Configuration (PUTttnotification-configuration).",
+				"description": "Initiate Job (POST jobs)This operation initiates a job of the specified type, which can be an archive retrieval or vault inventory retrieval",
 				"operationId": "initiate Job (POST jobs)",
 				"parameters": [{
 					"type": "string"
@@ -536,7 +536,7 @@
 		"/{AccountID}/vaults/{VaultName}/jobs/{JobID}": {
 			"get": {
 				"summary": "Describe  Job",
-				"description": "DescriptionThis operation returns information about a job you previously initiated, including the jobtttinitiation date, the user who initiated the job, the job status code/message and thetttAmazon Simple Notification Service (Amazon SNS) topic to notify after Amazon Glaciertttcompletes the job. For more information about initiating a job, see Initiate Job (POST jobs). tttNoteThis operation enables you to check the status of your job. However, it istttttstrongly recommended that you set up an Amazon SNS topic and specify it in yourtttttinitiate job request so that Amazon Glacier can notify the topic after it completestttttthe job. ttA job ID will not expire for at least 24 hours after Amazon Glacier completes the job. Requests",
+				"description": "DescriptionThis operation returns information about a job you previously initiated, including the jobtttinitiation date, the user who initiated the job, the job status code/message and thetttAmazon Simple Notification Service (Amazon SNS) topic to notify after Amazon Glaciertttcompletes the job",
 				"operationId": "describe Job (GET JobID)",
 				"parameters": [{
 					"in": "query",
@@ -681,7 +681,7 @@
 		"/{AccountId}/vaults/{VaultName}/jobs/{JobID}/output": {
 			"get": {
 				"summary": "Get  Job  Output",
-				"description": "DescriptionThis operation downloads the output of the job you initiated using Initiate Job (POST jobs). Dependingttton the job type you specified when you initiated the job, the output will be either thetttcontent of an archive or a vault inventory. You can download all the job output or download a portion of the output by specifyingttta byte range. For both archive and inventory retrieval jobs, you should verify the downloaded tttsize against the size returned in the headers from the tttGet Job Output response.For archive retrieval jobs, you should also verify that the size is what you expected. Iftttyou download a portion of the output, the expected size is based on the range of bytestttyou specified. For example, if you specify a range of bytes=0-1048575, you shouldtttverify your download size is 1,048,576 bytes. If you download an entire archive, thetttexpected size is the size of the archive when you uploaded it to Amazon Glacier.tttThe expected size is also returned in the headers from the tttGet Job Output response.In the case of an archive retrieval job, depending on the byte range youtttspecify, Amazon Glacier returns the checksum for the portion of the data. To ensure the portion you downloaded tttis the correct data, compute the checksum on the client, verify that the values match, tttand verify that the size is what you expected.A job ID does not expire for at least 24 hours after Amazon Glacier completes the job. Thattttis, you can download the job output within the 24-hour period after Amazon Glaciertttcompletes the job.Requests",
+				"description": "DescriptionThis operation downloads the output of the job you initiated using Initiate Job (POST jobs)",
 				"operationId": "get Job Output (GET output)",
 				"parameters": [{
 					"type": "string"
@@ -745,7 +745,7 @@
 		"/{AccountId}/vaults/{vaultName}/lock-policy": {
 			"delete": {
 				"summary": "Abort  Vault  Lock",
-				"description": "DescriptionThis operation aborts the vault locking process if the vault lock is not in thettttLocked state. If the vault lock is in the Locked statetttwhen this operation is requested, the operation returns anttttAccessDeniedException error. Aborting the vault locking process removestttthe vault lock policy from the specified vault. A vault lock is put into the InProgress state by calling Initiate Vault Lock (POST lock-policy). A vaulttttlock is put into the Locked state by calling Complete Vault Lock (POST lockId). You cantttget the state of a vault lock by calling Get Vault Lock (GET lock-policy). For more information about the vaulttttlocking process, see Amazon Glacier Vault Lock. For moretttinformation about vault lock policies, see Amazon Glacier Access Control with Vault Lock Policies.This operation is idempotent. You can successfully invoke this operation multiple times, iftttthe vault lock is in the InProgress state or if there is no policytttassociated with the vault.RequestsTo delete the vault lock policy, send an HTTP DELETE request to the URItttof the vaults lock-policy subresource.",
+				"description": "DescriptionThis operation aborts the vault locking process if the vault lock is not in thettttLocked state",
 				"operationId": "Abort Vault Lock (DELETE lock-policy)",
 				"responses": {
 					"200": {
@@ -756,7 +756,7 @@
 			},
 			"get": {
 				"summary": "Get  Vault  Lock",
-				"description": "DescriptionThis operation retrieves the following attributes from the lock-policytttsubresource set on the specified vault: tttThe vault lock policy set on the vault.The state of the vault lock, which is either InProgess ortttttttLocked.When the lock ID expires. The lock ID is used to complete the vault lockingttttttprocess.When the vault lock was initiated and put into the InProgress state.ttA vault lock is put into the InProgress state by calling Initiate Vault Lock (POST lock-policy). A vaulttttlock is put into the Locked state by calling Complete Vault Lock (POST lockId). You cantttabort the vault locking process by calling Abort Vault Lock (DELETE lock-policy). For more information about the vault lockingtttprocess, see Amazon Glacier Vault Lock.If there is no vault lock policy set on the vault, the operation returns a 404 Notttttfound error. For more information about vault lock policies, see Amazon Glacier Access Control with Vault Lock Policies.RequestsTo return the current vault lock policy and other attributes, send an HTTP GETtttrequest to the URI of the vaults lock-policy subresource as shown in thetttfollowing syntax example.",
+				"description": "DescriptionThis operation retrieves the following attributes from the lock-policytttsubresource set on the specified vault: tttThe vault lock policy set on the vault",
 				"operationId": "Get Vault Lock (GET lock-policy)",
 				"parameters": [{
 					"in": "query",
@@ -791,7 +791,7 @@
 			},
 			"post": {
 				"summary": "Initiate  Vault  Lock",
-				"description": "DescriptionThis operation initiates the vault locking process by doing the following: Installing a vault lock policy on the specified vault.Setting the lock state of vault lock to InProgress.Returning a lock ID, which is used to complete the vault locking process.tttttttYou can set one vault lock policy for each vault and this policy can be up to 20 KB in size.tttFor more information about vault lock policies, see Amazon Glacier Access Control with Vault Lock Policies.You must complete the vault locking process within 24 hours after the vault lock enters thettttInProgress state. After the 24 hour window ends, the lock ID expires,tttthe vault automatically exits the InProgress state, and the vault locktttpolicy is removed from the vault. You call Complete Vault Lock (POST lockId) to complete the vault locking process bytttsetting the state of the vault lock to Locked. NoteAfter a vault lock is in the Locked state, you cannot initiate a new vault lockttttfor the vault.You can abort the vault locking process by calling Abort Vault Lock (DELETE lock-policy). You can get the state of the vault lock bytttcalling Get Vault Lock (GET lock-policy). For moretttinformation about the vault locking process, see Amazon Glacier Vault Lock.If this operation is called when the vault lock is in the InProgress state, thetttoperation returns an AccessDeniedException error. When the vault lock is intttthe InProgress state you must call Abort Vault Lock (DELETE lock-policy) before you can initiate a new vault locktttpolicy. RequestsTo initiate the vault locking process, send an HTTP POST request to the URI oftttthe lock-policy subresource of the vault, as shown in the following syntaxtttexample.",
+				"description": "DescriptionThis operation initiates the vault locking process by doing the following: Installing a vault lock policy on the specified vault",
 				"operationId": "Initiate Vault Lock (POST lock-policy)",
 				"parameters": [{
 					"type": "string"
@@ -813,7 +813,7 @@
 		"/{AccountId}/vaults/{vaultName}/lock-policy/{lockId}": {
 			"post": {
 				"summary": "Complete  Vault  Lock",
-				"description": "DescriptionThis operation completes the vault locking process by transitioning the vault lock from         the InProgress state to the Locked state, which causes the vault         lock policy to become unchangeable. A vault lock is put into the InProgress         state by calling Initiate Vault Lock (POST lock-policy). You can obtain the state of the vault lock by         calling Get Vault Lock (GET lock-policy). For more         information about the vault locking process, see Amazon Glacier Vault Lock. This operation is idempotent. This request is always successful if the vault lock is in the         Locked state and the provided lock ID matches the lock ID originally used to         lock the vault.If an invalid lock ID is passed in the request when the vault lock is in the Locked state,         the operation returns an AccessDeniedException error. If an invalid lock ID is         passed in the request when the vault lock is in the InProgress state, the operation throws an            InvalidParameter error.RequestsTo complete the vault locking process, send an HTTP POST request to the URI         of the vaults lock-policy subresource with a valid lock ID.",
+				"description": "DescriptionThis operation completes the vault locking process by transitioning the vault lock from         the InProgress state to the Locked state, which causes the vault         lock policy to become unchangeable",
 				"operationId": "Complete Vault Lock (POST lockId)",
 				"responses": {
 					"200": {
@@ -987,7 +987,7 @@
 		"/{AccountId}/vaults/{VaultName}/notification-configuration": {
 			"delete": {
 				"summary": "Delete  Vault  Notifications",
-				"description": "DescriptionThis operation deletes the notification configuration set for a vault tttSet Vault Notification Configuration (PUTttnotification-configuration). The operation isttteventually consistent&#8212;that is, it might take some time for Amazon Glacier totttcompletely disable the notifications, and you might still receive some notifications forttta short time after you send the delete request. RequestsTo delete a vaults notification configuration, send a DELETE request to thetttvaults notification-configuration subresource.",
+				"description": "DescriptionThis operation deletes the notification configuration set for a vault tttSet Vault Notification Configuration (PUTttnotification-configuration)",
 				"operationId": "Delete Vault Notifications (DELETEnttnotification-configuration)",
 				"responses": {
 					"200": {
@@ -998,7 +998,7 @@
 			},
 			"get": {
 				"summary": "Get  Vault  Notifications",
-				"description": "DescriptionThis operation retrieves the notification-configuration subresource set on thetttvault (see Set Vault Notification Configuration (PUTttnotification-configuration). If notification configuration for atttvault is not set, the operation returns a 404 Not Found error. For moretttinformation about vault notifications, see Configuring Vault Notifications in Amazon Glacier. RequestsTo retrieve the notification configuration information, send a GET request totttthe URI of a vaults notification-configuration subresource.",
+				"description": "DescriptionThis operation retrieves the notification-configuration subresource set on thetttvault (see Set Vault Notification Configuration (PUTttnotification-configuration)",
 				"operationId": "Get Vault Notifications (GETnttnotification-configuration)",
 				"parameters": [{
 					"in": "query",
@@ -1021,7 +1021,7 @@
 			},
 			"put": {
 				"summary": "Set  Vault  Notification  Configuration",
-				"description": "DescriptionRetrieving an archive and a vault inventory are asynchronous operations in Amazon Glacier for whichtttyou must first initiate a job and wait for the job to complete before you can downloadtttthe job output. Most Amazon Glacier jobs take about four hours to complete. You can configure atttvault to post a message to an Amazon Simple Notification Service (Amazon SNS) topic when these jobs complete. You cantttuse this operation to set notification configuration on the vault. For more information,tttsee Configuring Vault Notifications in Amazon Glacier.tttttTo configure vault notifications, send a PUT request to thettttnotification-configuration subresource of the vault. A notificationtttconfiguration is specific to a vault; therefore, it is also referred to as a vaulttttsubresource. The request should include a JSON document that provides an Amazon Simple Notification Service (Amazon SNS) topic and the events for which you want Amazon Glacier totttsend notifications to the topic.You can configure a vault to publish a notification for the following vault events:tttArchiveRetrievalCompleted&#8212; This eventttttttoccurs when a job that was initiated for an archive retrieval is completedttttttt(Initiate Job (POST jobs)). The status of the completedttttttjob can be Succeeded or Failed. The notificationttttttsent to the SNS topic is the same output as returned from Describe Job (GET JobID).InventoryRetrievalCompleted&#8212; This eventttttttoccurs when a job that was initiated for an inventory retrieval is completedttttttt(Initiate Job (POST jobs)). The status of the completedttttttjob can be Succeeded or Failed. The notificationttttttsent to the SNS topic is the same output as returned from Describe Job (GET JobID).ttAmazon SNS topics must grant permission to the vault to be allowed to publish notificationstttto the topic.RequestsTo set notification configuration on your vault, send a PUT request to the URI of thetttvaults notification-configuration subresource. You specify thetttconfiguration in the request body. The configuration includes the Amazon SNS topic nametttand an array of events that trigger notification to each topic.",
+				"description": "DescriptionRetrieving an archive and a vault inventory are asynchronous operations in Amazon Glacier for whichtttyou must first initiate a job and wait for the job to complete before you can downloadtttthe job output",
 				"operationId": "Set Vault Notification Configuration (PUTnttnotification-configuration)",
 				"parameters": [{
 					"in": "query",
@@ -1046,7 +1046,7 @@
 		"Synta": {
 			"syntax": {
 				"summary": "List  Provisioned  Capacity",
-				"description": "List Provisioned Capacity (GET        provisioned-capacity)This operation lists the provisioned capacity for the specified AWS account.        Request SyntaxTo list the provisioned retrieval capacity for an account, send an HTTP GET request            to the provisioned-capacity URI as shown in the following syntax example.GET /AccountId/provisioned-capacity HTTP/1.1Host: glacier.Region.amazonaws.comDate: DateAuthorization: SignatureValuex-amz-glacier-version: 2012-06-01              NoteThe AccountId value is the AWS account ID. This value must match the AWS account ID associated with the credentials used to sign the request. You can either specify an AWS account ID or optionally a single - (hyphen), in which case Amazon Glacier uses the AWS account ID associated with the credentials used to sign the request. If you specify your account ID, do not include any hyphens (-) in the ID.          Request ParametersThis operation does not use request parameters.Request HeadersThis operation uses only request headers that are common to all operations. For information about common request headers, see tCommon Request Headers.Request BodyThis operation does not have a request body.ResponsesIf the operation is successful, the service sends back an HTTP 200 OK response.",
+				"description": "List Provisioned Capacity (GET        provisioned-capacity)This operation lists the provisioned capacity for the specified AWS account",
 				"operationId": "List Provisioned Capacity (GETn        provisioned-capacity)",
 				"parameters": [{
 					"in": "query",

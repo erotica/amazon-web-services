@@ -12,6 +12,8 @@ title: Amazon Web Services
   {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}
   {% assign path = path  | replace: '/apis.json','' %}
 
+  {{ path }}<br />
+
   {% for api in contents %}
 
     {% assign api_name = api[0] %}

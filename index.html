@@ -132,8 +132,9 @@ title: Amazon Web Services
 
                                   pathname1: {{ pathname }}<br />
 
+                                  {% assign pathplusfolder = path | append:'/' %}  
                                   {% assign pathname = pathname | replace: '.yaml','' %}
-                                  {% assign pathname = pathname | replace: path,'' %}
+                                  {% assign pathname = pathname | replace: pathplusfolder,'' %}
 
                                   pathname2: {{ pathname }}<br />
 

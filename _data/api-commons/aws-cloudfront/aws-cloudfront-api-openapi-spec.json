@@ -11,9 +11,9 @@
 	"paths": {
 		"/?Action=CreateCloudFrontOriginAccessIdentity&k=1": {
 			"get": {
-				"summary": "Creates a new origin access identity.",
+				"summary": " Create Cloud Front Origin Access Identity ",
 				"description": "Creates a new origin access identity.",
-				"operationId": "CreateCloudFrontOriginAccessIdentity",
+				"operationId": "createCloudFrontOriginAccessIdentity",
 				"parameters": [{
 					"in": "query",
 					"name": "CloudFrontOriginAccessIdentityConfig",
@@ -25,20 +25,38 @@
 					"name": "CreateCloudFrontOriginAccessIdentityRequest",
 					"description": "Root level tag for the CreateCloudFrontOriginAccessIdentityRequest parameters.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request, t    and provides an error response. If you have the required permissions, the error response is DryRunOperation. t    Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId.N",
+					"description": "One or more VPCs for which you want to describe the ClassicLink status.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Origin Access Identity"]
+				"tags": [""]
 			}
 		},
 		"/?Action=CreateDistribution&k=1": {
 			"get": {
-				"summary": "Creates a new web distribution.",
+				"summary": " Create Distribution ",
 				"description": "Creates a new web distribution.",
-				"operationId": "CreateDistribution",
+				"operationId": "createDistribution",
 				"parameters": [{
 					"in": "query",
 					"name": "CreateDistributionRequest",
@@ -50,20 +68,38 @@
 					"name": "DistributionConfig",
 					"description": "The distributions configuration information.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MaxResults",
+					"description": "The maximum number of items to return for this request. The request returns a token that you can specify in a subsequent call to get the next set of results.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "NextToken",
+					"description": "The token for the next set of items to return. (You received this token from a prior call.)",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcIds.N",
+					"description": "One or more VPC IDs.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Web Distribution"]
+				"tags": [""]
 			}
 		},
 		"/?Action=CreateDistributionWithTags&k=1": {
 			"get": {
-				"summary": "Create a new distribution with tags.",
+				"summary": " Create Distribution With Tags ",
 				"description": "Create a new distribution with tags.",
-				"operationId": "CreateDistributionWithTags",
+				"operationId": "createDistributionWithTags",
 				"parameters": [{
 					"in": "query",
 					"name": "CreateDistributionWithTagsRequest",
@@ -75,24 +111,23 @@
 					"name": "DistributionConfigWithTags",
 					"description": "The distributions configuration information.",
 					"type": "string"
-				}],
-				"responses": {
-					"200": {
-						"description": "OK"
-					}
 				},
-				"tags": ["Web Distribution"]
-			}
-		},
-		"/?Action=CreateInvalidation&k=1": {
-			"get": {
-				"summary": "Create a new invalidation.",
-				"description": "Create a new invalidation.",
-				"operationId": "CreateInvalidation",
-				"parameters": [{
+				{
 					"in": "query",
-					"name": "DistributionId",
-					"description": "The distributions id.",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request, t    and provides an error response. If you have the required permissions, the error response is DryRunOperation. t    Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of the instance to unlink from the VPC.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of the VPC to which the instance is linked.",
 					"type": "string"
 				}],
 				"responses": {
@@ -100,14 +135,45 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Validations"]
+				"tags": [""]
+			}
+		},
+		"/?Action=CreateInvalidation&k=1": {
+			"get": {
+				"summary": " Create Invalidation ",
+				"description": "Create a new invalidation.",
+				"operationId": "createInvalidation",
+				"parameters": [{
+					"in": "query",
+					"name": "DistributionId",
+					"description": "The distributions id.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request, tt    and provides an error response. If you have the required permissions, the error response is DryRunOperation. tt    Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of the VPC.",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
 			}
 		},
 		"/?Action=CreateStreamingDistribution&k=1": {
 			"get": {
-				"summary": "Creates a new RMTP distribution.",
+				"summary": " Create Streaming Distribution ",
 				"description": "Creates a new RMTP distribution.",
-				"operationId": "CreateStreamingDistribution",
+				"operationId": "createStreamingDistribution",
 				"parameters": [{
 					"in": "query",
 					"name": "CreateStreamingDistributionRequest",
@@ -119,20 +185,26 @@
 					"name": "StreamingDistributionConfig",
 					"description": "The streaming distributions configuration information.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of the VPC.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=CreateStreamingDistributionWithTags&k=1": {
 			"get": {
-				"summary": "Create a new streaming distribution with tags.",
+				"summary": " Create Streaming Distribution With Tags ",
 				"description": "Create a new streaming distribution with tags.",
-				"operationId": "CreateStreamingDistributionWithTags",
+				"operationId": "createStreamingDistributionWithTags",
 				"parameters": [{
 					"in": "query",
 					"name": "CreateStreamingDistributionWithTagsRequest",
@@ -141,8 +213,20 @@
 				},
 				{
 					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request, t    and provides an error response. If you have the required permissions, the error response is DryRunOperation. t    Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
 					"name": "StreamingDistributionConfigWithTags",
 					"description": "The streaming distributions configuration information.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of the VPC.",
 					"type": "string"
 				}],
 				"responses": {
@@ -150,14 +234,14 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=DeleteCloudFrontOriginAccessIdentity&k=1": {
 			"get": {
-				"summary": "Delete an origin access identity.",
+				"summary": " Delete Cloud Front Origin Access Identity ",
 				"description": "Delete an origin access identity.",
-				"operationId": "DeleteCloudFrontOriginAccessIdentity",
+				"operationId": "deleteCloudFrontOriginAccessIdentity",
 				"parameters": [{
 					"in": "query",
 					"name": "Id",
@@ -169,21 +253,39 @@
 					"name": "If-Match",
 					"description": "The value of the ETag header you received from a previous GET      or PUT request. For example: E2QWRUHAPOMQZL.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of the VPC.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Origin Access Identity"]
+				"tags": [""]
 			}
 		},
 		"/?Action=DeleteDistribution&k=1": {
 			"get": {
-				"summary": "Delete a distribution.",
+				"summary": " Delete Distribution ",
 				"description": "Delete a distribution.",
-				"operationId": "DeleteDistribution",
+				"operationId": "deleteDistribution",
 				"parameters": [{
+					"in": "query",
+					"name": "BgpAsn",
+					"description": "For devices that support BGP, the customer gateways BGP ASN.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,             and provides an error response. If you have the required permissions, the error response is DryRunOperation.             Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The distribution ID.",
@@ -194,21 +296,45 @@
 					"name": "If-Match",
 					"description": "The value of the ETag header that you received when you disabled the      distribution. For example: E2QWRUHAPOMQZL.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "IpAddress",
+					"description": "The Internet-routable IP address for the customer gateways outside interface. The address must be static.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Type",
+					"description": "The type of VPN connection that this customer gateway supports (ipsec.1).",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=DeleteStreamingDistribution&k=1": {
 			"get": {
-				"summary": "Delete a streaming distribution.",
+				"summary": " Delete Streaming Distribution ",
 				"description": "Delete a streaming distribution.",
-				"operationId": "DeleteStreamingDistribution",
+				"operationId": "deleteStreamingDistribution",
 				"parameters": [{
+					"in": "query",
+					"name": "CustomerGatewayId",
+					"description": "The ID of the customer gateway.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,             and provides an error response. If you have the required permissions, the error response is DryRunOperation.             Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The distribution ID.",
@@ -225,15 +351,33 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetCloudFrontOriginAccessIdentity&k=1": {
 			"get": {
-				"summary": "Get the information about an origin access identity.",
+				"summary": " Get Cloud Front Origin Access Identity ",
 				"description": "Get the information about an origin access identity.",
-				"operationId": "GetCloudFrontOriginAccessIdentity",
+				"operationId": "getCloudFrontOriginAccessIdentity",
 				"parameters": [{
+					"in": "query",
+					"name": "CustomerGatewayId.N",
+					"description": "One or more customer gateway IDs.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,             and provides an error response. If you have the required permissions, the error response is DryRunOperation.             Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The identitys ID.",
@@ -244,37 +388,91 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Origin Access Identity"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetCloudFrontOriginAccessIdentityConfig&k=1": {
 			"get": {
-				"summary": "Get the configuration information about an origin access identity.",
+				"summary": " Get Cloud Front Origin Access Identity Config ",
 				"description": "Get the configuration information about an origin access identity.",
-				"operationId": "GetCloudFrontOriginAccessIdentityConfig",
+				"operationId": "getCloudFrontOriginAccessIdentityConfig",
 				"parameters": [{
+					"in": "query",
+					"name": "AutoPlacement",
+					"description": "This is enabled by default. This property allows instances to be automatically            placed onto available Dedicated Hosts, when you are launching instances without            specifying a host ID.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "AvailabilityZone",
+					"description": "The Availability Zone for the Dedicated Hosts.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ClientToken",
+					"description": "Unique, case-sensitive identifier you provide to ensure idempotency of the request.            For more information, see How to Ensure                Idempotency in the Amazon Elastic Compute Cloud User                Guide.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The identitys ID.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceType",
+					"description": "Specify the instance type that you want your Dedicated Hosts to be configured for.            When you specify the instance type, that is the only instance type that you can launch            onto that host.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Quantity",
+					"description": "The number of Dedicated Hosts you want to allocate to your account with these            parameters.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Origin Access Identity"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetDistribution&k=1": {
 			"get": {
-				"summary": "Get the information about a distribution.",
+				"summary": " Get Distribution ",
 				"description": "Get the information about a distribution.",
-				"operationId": "GetDistribution",
+				"operationId": "getDistribution",
 				"parameters": [{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "HostId.N",
+					"description": "The IDs of the Dedicated Hosts. The IDs are used for targeted instance            launches.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The distributions ID.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MaxResults",
+					"description": "The maximum number of results to return for the request in a single page. The            remaining results can be seen by sending another request with the returned                nextToken value. This value can be between 5 and 500; if                maxResults is given a larger value than 500, you will receive an error.            You cannot specify this parameter and the host IDs parameter in the same            request.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "NextToken",
+					"description": "The token to retrieve the next page of results.",
 					"type": "string"
 				}],
 				"responses": {
@@ -282,18 +480,54 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetDistributionConfig&k=1": {
 			"get": {
-				"summary": "Get the configuration information about a distribution.",
+				"summary": " Get Distribution Config ",
 				"description": "Get the configuration information about a distribution.",
-				"operationId": "GetDistributionConfig",
+				"operationId": "getDistributionConfig",
 				"parameters": [{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The distributions ID.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MaxDuration",
+					"description": "This is the maximum duration of the reservation youd like to purchase, specified            in seconds. Reservations are available in one-year and three-year terms. The number of            seconds specified must be the number of seconds in a year (365x24x60x60) times one of            the supported durations (1 or 3). For example, specify 94608000 for three            years.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MaxResults",
+					"description": "The maximum number of results to return for the request in a single page. The            remaining results can be seen by sending another request with the returned                nextToken value. This value can be between 5 and 500; if                maxResults is given a larger value than 500, you will receive an            error.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MinDuration",
+					"description": "This is the minimum duration of the reservation youd like to purchase, specified            in seconds. Reservations are available in one-year and three-year terms. The number of            seconds specified must be the number of seconds in a year (365x24x60x60) times one of            the supported durations (1 or 3). For example, specify 31536000 for one year.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "NextToken",
+					"description": "The token to use to retrieve the next page of results.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "OfferingId",
+					"description": "The ID of the reservation offering.",
 					"type": "string"
 				}],
 				"responses": {
@@ -301,14 +535,14 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetInvalidation&k=1": {
 			"get": {
-				"summary": "Get the information about an invalidation.",
+				"summary": " Get Invalidation ",
 				"description": "Get the information about an invalidation.",
-				"operationId": "GetInvalidation",
+				"operationId": "getInvalidation",
 				"parameters": [{
 					"in": "query",
 					"name": "DistributionId",
@@ -317,8 +551,32 @@
 				},
 				{
 					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "HostReservationIdSet.N",
+					"description": "One or more host reservation IDs.",
+					"type": "string"
+				},
+				{
+					"in": "query",
 					"name": "Id",
 					"description": "The identifier for the invalidation request, for example,      IDFDVBD632BHDS5.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MaxResults",
+					"description": "The maximum number of results to return for the request in a single page. The            remaining results can be seen by sending another request with the returned                nextToken value. This value can be between 5 and 500; if                maxResults is given a larger value than 500, you will receive an            error.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "NextToken",
+					"description": "The token to use to retrieve the next page of results.",
 					"type": "string"
 				}],
 				"responses": {
@@ -326,18 +584,30 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Invalidation"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetStreamingDistribution&k=1": {
 			"get": {
-				"summary": "Gets information about a specified RTMP distribution, including the distributionn      configuration.",
+				"summary": " Get Streaming Distribution ",
 				"description": "Gets information about a specified RTMP distribution, including the distribution      configuration.",
-				"operationId": "GetStreamingDistribution",
+				"operationId": "getStreamingDistribution",
 				"parameters": [{
+					"in": "query",
+					"name": "HostIdSet.N",
+					"description": "The ID/s of the Dedicated Host/s that the reservation will be associated            with.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The streaming distributions ID.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "OfferingId",
+					"description": "The offering ID of the reservation.",
 					"type": "string"
 				}],
 				"responses": {
@@ -345,15 +615,27 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=GetStreamingDistributionConfig&k=1": {
 			"get": {
-				"summary": "Get the configuration information about a streaming distribution.",
+				"summary": " Get Streaming Distribution Config ",
 				"description": "Get the configuration information about a streaming distribution.",
-				"operationId": "GetStreamingDistributionConfig",
+				"operationId": "getStreamingDistributionConfig",
 				"parameters": [{
+					"in": "query",
+					"name": "AutoPlacement",
+					"description": "Specify whether to enable or disable auto-placement.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "HostId.N",
+					"description": "The host IDs of the Dedicated Hosts you want to modify.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The streaming distributions ID.",
@@ -364,15 +646,33 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=ListCloudFrontOriginAccessIdentities&k=1": {
 			"get": {
-				"summary": "Lists origin access identities.",
+				"summary": " List Cloud Front Origin Access Identities ",
 				"description": "Lists origin access identities.",
-				"operationId": "ListCloudFrontOriginAccessIdentities",
+				"operationId": "listCloudFrontOriginAccessIdentities",
 				"parameters": [{
+					"in": "query",
+					"name": "Affinity",
+					"description": "The new affinity setting for the instance.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "HostId",
+					"description": "The ID of the Dedicated Host that the instance will have affinity with.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of the instance that you are modifying.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Marker",
 					"description": "Use this when paginating results to indicate where to begin in your list of origin      access identities. The results include identities in the list that occur after the marker. To      get the next page of results, set the Marker to the value of the        NextMarker from the current pages response (which is also the ID of the last      identity on that page).",
@@ -383,21 +683,51 @@
 					"name": "MaxItems",
 					"description": "The maximum number of origin access identities you want in the response body.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Tenancy",
+					"description": "The tenancy of the instance that you are modifying.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Origin Access Identity"]
+				"tags": [""]
 			}
 		},
 		"/?Action=ListDistributions&k=1": {
 			"get": {
-				"summary": "List distributions.",
+				"summary": " List Distributions ",
 				"description": "List distributions.",
-				"operationId": "ListDistributions",
+				"operationId": "listDistributions",
 				"parameters": [{
+					"in": "query",
+					"name": "ClientToken",
+					"description": "Unique, case-sensitive identifier you provide to ensure idempotency of the request.            For more information, see How to Ensure                Idempotency in the Amazon Elastic Compute Cloud User                Guide.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "CurrencyCode",
+					"description": "The currency in which the totalUpfrontPrice, LimitPrice,            and totalHourlyPrice amounts are specified. At this time, the only            supported currency is USD.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "HostIdSet.N",
+					"description": "The ID/s of the Dedicated Host/s that the reservation will be associated            with.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "LimitPrice",
+					"description": "The specified limit is checked against the total upfront cost of the reservation            (calculated as the offerings upfront cost multiplied by the host count). If the total            upfront cost is greater than the specified price limit, the request will fail. This is            used to ensure that the purchase does not exceed the expected upfront cost of the            purchase. At this time, the only supported currency is USD. For example, to            indicate a limit price of USD 100, specify 100.00.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Marker",
 					"description": "Use this when paginating results to indicate where to begin in your list of      distributions. The results include distributions in the list that occur after the marker. To      get the next page of results, set the Marker to the value of the        NextMarker from the current pages response (which is also the ID of the last      distribution on that page).",
@@ -408,21 +738,33 @@
 					"name": "MaxItems",
 					"description": "The maximum number of distributions you want in the response body.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "OfferingId",
+					"description": "The ID of the offering.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=ListDistributionsByWebACLId&k=1": {
 			"get": {
-				"summary": "List the distributions that are associated with a specified AWS WAF web ACL.",
+				"summary": " List Distributions By Web A C L Id ",
 				"description": "List the distributions that are associated with a specified AWS WAF web ACL.",
-				"operationId": "ListDistributionsByWebACLId",
+				"operationId": "listDistributionsByWebACLId",
 				"parameters": [{
+					"in": "query",
+					"name": "HostId.N",
+					"description": "The IDs of the Dedicated Hosts you want to release.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Marker",
 					"description": "Use Marker and MaxItems to control pagination of results. If      you have more than MaxItems distributions that satisfy the request, the response      includes a NextMarker element. To get the next page of results, submit another      request. For the value of Marker, specify the value of NextMarker      from the last response. (For the first request, omit Marker.)",
@@ -445,18 +787,30 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=ListInvalidations&k=1": {
 			"get": {
-				"summary": "Lists invalidation batches.",
+				"summary": " List Invalidations ",
 				"description": "Lists invalidation batches.",
-				"operationId": "ListInvalidations",
+				"operationId": "listInvalidations",
 				"parameters": [{
+					"in": "query",
+					"name": "DhcpOptionsId",
+					"description": "The ID of the DHCP options set, or default to associate         no DHCP options with the VPC.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "DistributionId",
 					"description": "The distributions ID.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
 					"type": "string"
 				},
 				{
@@ -470,21 +824,39 @@
 					"name": "MaxItems",
 					"description": "The maximum number of invalidation batches that you want in the response      body.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of the VPC.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Invalidations"]
+				"tags": [""]
 			}
 		},
 		"/?Action=ListStreamingDistributions&k=1": {
 			"get": {
-				"summary": "List streaming distributions.",
+				"summary": " List Streaming Distributions ",
 				"description": "List streaming distributions.",
-				"operationId": "ListStreamingDistributions",
+				"operationId": "listStreamingDistributions",
 				"parameters": [{
+					"in": "query",
+					"name": "DhcpConfiguration.N",
+					"description": "A DHCP configuration option.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Marker",
 					"description": "The value that you provided for the Marker request parameter.",
@@ -501,15 +873,27 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=ListTagsForResource&k=1": {
 			"get": {
-				"summary": "List tags for a CloudFront resource.",
+				"summary": " List Tags For Resource ",
 				"description": "List tags for a CloudFront resource.",
-				"operationId": "ListTagsForResource",
+				"operationId": "listTagsForResource",
 				"parameters": [{
+					"in": "query",
+					"name": "DhcpOptionsId",
+					"description": "The ID of the DHCP options set.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Resource",
 					"description": "An ARN of a CloudFront resource.",
@@ -520,15 +904,33 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Tags"]
+				"tags": [""]
 			}
 		},
 		"/?Action=TagResource&k=1": {
 			"get": {
-				"summary": "Add tags to a CloudFront resource.",
+				"summary": " Tag Resource ",
 				"description": "Add tags to a CloudFront resource.",
-				"operationId": "TagResource",
+				"operationId": "tagResource",
 				"parameters": [{
+					"in": "query",
+					"name": "DhcpOptionsId.N",
+					"description": "The IDs of one or more DHCP options sets.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Resource",
 					"description": "An ARN of a CloudFront resource.",
@@ -539,18 +941,42 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=UntagResource&k=1": {
 			"get": {
-				"summary": "Remove tags from a CloudFront resource.",
+				"summary": " Untag Resource ",
 				"description": "Remove tags from a CloudFront resource.",
-				"operationId": "UntagResource",
+				"operationId": "untagResource",
 				"parameters": [{
+					"in": "query",
+					"name": "Device",
+					"description": "The device name to expose to the instance (for example, /dev/sdh or        xvdh).",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the      request, and provides an error response. If you have the required permissions, the error      response is DryRunOperation. Otherwise, it is      UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of the instance.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Resource",
 					"description": "An ARN of a CloudFront resource.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VolumeId",
+					"description": "The ID of the EBS volume. The volume and instance must be within the same Availability      Zone.",
 					"type": "string"
 				}],
 				"responses": {
@@ -558,15 +984,39 @@
 						"description": "OK"
 					}
 				},
-				"tags": ["Tags"]
+				"tags": [""]
 			}
 		},
 		"/?Action=UpdateCloudFrontOriginAccessIdentity&k=1": {
 			"get": {
-				"summary": "Update an origin access identity.",
+				"summary": " Update Cloud Front Origin Access Identity ",
 				"description": "Update an origin access identity.",
-				"operationId": "UpdateCloudFrontOriginAccessIdentity",
+				"operationId": "updateCloudFrontOriginAccessIdentity",
 				"parameters": [{
+					"in": "query",
+					"name": "Description",
+					"description": "A description for the EBS snapshot.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DestinationRegion",
+					"description": "The destination region to use in the PresignedUrl parameter of a snapshot copy      operation. This parameter is only valid for specifying the destination region in a        PresignedUrl parameter, where it is required.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the      request, and provides an error response. If you have the required permissions, the error      response is DryRunOperation. Otherwise, it is      UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Encrypted",
+					"description": "Specifies whether the destination snapshot should be encrypted. You can encrypt a copy of an      unencrypted snapshot using this flag, but you cannot use it to create an unencrypted copy from      an encrypted snapshot. Your default CMK for EBS is used unless a non-default AWS Key Management Service (AWS KMS) CMK is      specified with KmsKeyId. For more information, see Amazon EBS Encryption in the        Amazon Elastic Compute Cloud User Guide.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The identitys id.",
@@ -577,21 +1027,57 @@
 					"name": "If-Match",
 					"description": "The value of the ETag header that you received when retrieving the      identitys configuration. For example: E2QWRUHAPOMQZL.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "KmsKeyId",
+					"description": "The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when creating the snapshot copy. This parameter is      only required if you want to use a non-default CMK; if this parameter is not specified, the      default CMK for EBS is used. The ARN contains the arn:aws:kms namespace, followed by the region of the CMK, the AWS account ID of the CMK owner, the key namespace, and then the CMK ID. For example, arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. The specified CMK must exist in the region      that the snapshot is being copied to. If a KmsKeyId is specified, the        Encrypted flag must also be set.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "PresignedUrl",
+					"description": "The pre-signed URL that facilitates copying an encrypted snapshot. This parameter is only      required when copying an encrypted snapshot with the Amazon EC2 Query API; it is available as an      optional parameter in all other cases. The PresignedUrl should use the snapshot      source endpoint, the CopySnapshot action, and include the        SourceRegion, SourceSnapshotId, and DestinationRegion      parameters. The PresignedUrl must be signed using AWS Signature Version 4.      Because EBS snapshots are stored in Amazon S3, the signing algorithm for this parameter uses the      same logic that is described in Authenticating Requests by Using Query Parameters (AWS Signature Version 4) in the        Amazon Simple Storage Service API Reference. An invalid or improperly signed PresignedUrl will cause      the copy operation to fail asynchronously, and the snapshot will move to an error      state.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "SourceRegion",
+					"description": "The ID of the region that contains the snapshot to be copied.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "SourceSnapshotId",
+					"description": "The ID of the EBS snapshot to copy.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Origin Access Identity"]
+				"tags": [""]
 			}
 		},
 		"/?Action=UpdateDistribution&k=1": {
 			"get": {
-				"summary": "Update a distribution.",
+				"summary": " Update Distribution ",
 				"description": "Update a distribution.",
-				"operationId": "UpdateDistribution",
+				"operationId": "updateDistribution",
 				"parameters": [{
+					"in": "query",
+					"name": "Description",
+					"description": "A description for the snapshot.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the      request, and provides an error response. If you have the required permissions, the error      response is DryRunOperation. Otherwise, it is      UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The distributions id.",
@@ -602,21 +1088,45 @@
 					"name": "If-Match",
 					"description": "The value of the ETag header that you received when retrieving the      distributions configuration. For example: E2QWRUHAPOMQZL.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VolumeId",
+					"description": "The ID of the EBS volume.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Distributions"]
+				"tags": [""]
 			}
 		},
 		"/?Action=UpdateStreamingDistribution&k=1": {
 			"get": {
-				"summary": "Update a streaming distribution.",
+				"summary": " Update Streaming Distribution ",
 				"description": "Update a streaming distribution.",
-				"operationId": "UpdateStreamingDistribution",
+				"operationId": "updateStreamingDistribution",
 				"parameters": [{
+					"in": "query",
+					"name": "AvailabilityZone",
+					"description": "The Availability Zone in which to create the volume. Use DescribeAvailabilityZones to      list the Availability Zones that are currently available to you.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the      request, and provides an error response. If you have the required permissions, the error      response is DryRunOperation. Otherwise, it is      UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Encrypted",
+					"description": "Specifies whether the volume should be encrypted. Encrypted Amazon EBS volumes may only be      attached to instances that support Amazon EBS encryption. Volumes that are created from      encrypted snapshots are automatically encrypted. There is no way to create an encrypted volume      from an unencrypted snapshot or vice versa. If your AMI uses encrypted volumes, you can only      launch it on supported instance types. For more information, see Amazon EBS Encryption in the        Amazon Elastic Compute Cloud User Guide.",
+					"type": "string"
+				},
+				{
 					"in": "query",
 					"name": "Id",
 					"description": "The streaming distributions id.",
@@ -627,13 +1137,43 @@
 					"name": "If-Match",
 					"description": "The value of the ETag header that you received when retrieving the      streaming distributions configuration. For example: E2QWRUHAPOMQZL.",
 					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Iops",
+					"description": "Only valid for Provisioned IOPS SSD volumes. The number of I/O operations per second (IOPS) to      provision for the volume, with a maximum ratio of 50 IOPS/GiB.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "KmsKeyId",
+					"description": "The full ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted      volume. This parameter is only required if you want to use a non-default CMK; if this      parameter is not specified, the default CMK for EBS is used. The ARN contains the arn:aws:kms namespace, followed by the region of the CMK, the AWS account ID of the CMK owner, the key namespace, and then the CMK ID. For example, arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. If a        KmsKeyId is specified, the Encrypted flag must also be set.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Size",
+					"description": "The size of the volume, in GiBs.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "SnapshotId",
+					"description": "The snapshot from which to create the volume.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VolumeType",
+					"description": "The volume type. This can be gp2 for General Purpose SSD, io1 for Provisioned IOPS SSD,        st1 for Throughput Optimized HDD, sc1 for Cold HDD, or        standard for Magnetic volumes.",
+					"type": "string"
 				}],
 				"responses": {
 					"200": {
 						"description": "OK"
 					}
 				},
-				"tags": ["Streaming Distributions"]
+				"tags": [""]
 			}
 		}
 	},

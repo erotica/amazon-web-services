@@ -2,7 +2,6 @@
 layout: page
 title: Amazon Web Services
 ---
-debug: 4<br /><br />
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
@@ -12,15 +11,11 @@ debug: 4<br /><br />
   {% assign path = api.url  | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/gh-pages/_data/api-commons/','' %}
   {% assign path = path  | replace: '/apis.json','' %}
 
-  path: {{ path }}<br />
-
   {% for api in contents %}
 
     {% assign api_name = api[0] %}
     {% assign folder = api[1] %}
     {% if api_name == path %}
-
-    name: {{ api_name }}<br />
 
       <!--- Begin --->
 

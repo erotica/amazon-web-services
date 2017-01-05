@@ -32,6 +32,7 @@ title: Amazon Web Services
 
           <!-- APIs.json -->
           <table cellpadding="3" cellspacing="2" width="100%" border="1" style="margin-top: 0px;">
+
           {% assign blog_url = '' %}
           {% assign blogrss_url = '' %}
           {% assign portal_url = '' %}
@@ -92,12 +93,8 @@ title: Amazon Web Services
           {% endfor %}
 
             <tr>
-              <td>
-                <a href="{{ site.url }}" style="font-size: 22px;"><strong>API Documentation</strong></a><br />
-              </td>
-            </tr>
-            <tr>
               <td style="padding: 10px;">
+                <img src="{{ apijson.image }}" width="150" align="left" style="padding: 10px;" />
                 {{ apijson.description }}
               </td>
             </tr>
@@ -126,7 +123,9 @@ title: Amazon Web Services
                                 {% assign thisname = thisname | replace: ' ','-' %}
 
                                 {% if property.type == 'x-openapi-spec' %}
+
                                   {% assign openapi_spec_url = property.url %}
+                                  openapi_spec_url: {{ openapi_spec_url }}<br />
                                   {% assign pathname = openapi_spec_url | replace: '_data/api-commons/','' %}
                                   {% assign pathname = pathname | replace: '.yaml','' %}
                                   {% assign pathname = pathname | replace: '.json','' %}

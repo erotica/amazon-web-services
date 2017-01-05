@@ -128,11 +128,15 @@ title: Amazon Web Services
                                   openapi_spec_url: {{ openapi_spec_url }}<br />
 
                                   {% assign pathname = openapi_spec_url | replace: 'https://raw.githubusercontent.com/api-stack/amazon-web-services/master/_data/api-commons/,'' %}
+
+                                  pathname1: {{ pathname }}<br />
+
                                   {% assign pathname = pathname | replace: '.yaml','' %}
                                   {% assign pathname = pathname | replace: path,'' %}
                                   {% assign pathname = pathname | replace: '/','.' %}
 
-                                  pathname: {{ pathname }}<br />
+                                  pathname2: {{ pathname }}<br />
+                                  
                                   {% for entry in apicommons %}
                                     {% assign thisname = entry[0] %}
                                     {% assign thisentry = entry[1] %}

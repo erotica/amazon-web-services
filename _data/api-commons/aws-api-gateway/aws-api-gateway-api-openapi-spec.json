@@ -11,7 +11,7 @@
 	"paths": {
 		"/": {
 			"get": {
-				"summary": "Represents the root of the Amazon API Gateway control service.",
+				"summary": "Root Service",
 				"description": "Represents the root of the Amazon API Gateway control service.",
 				"operationId": "apiGateway",
 				"parameters": [{
@@ -50,7 +50,7 @@
 		},
 		"/account": {
 			"patch": {
-				"summary": "Changes information about the associated Account resource.",
+				"summary": "Account Update",
 				"description": "Changes information about the associated Account resource.",
 				"operationId": "accountUpdate",
 				"parameters": [{
@@ -136,7 +136,7 @@
 		},
 		"/apikeys": {
 			"get": {
-				"summary": "Gets the ApiKeys resource representing the set of ApiKey resources to identify clients for all of your APIs.",
+				"summary": "Get API Keys",
 				"description": "Gets the ApiKeys resource representing the set of ApiKey resources to identify clients for all of your APIs.",
 				"operationId": "apigatewayApi-keys",
 				"parameters": [{
@@ -173,7 +173,7 @@
 				"tags": ["API Keys"]
 			},
 			"post": {
-				"summary": "Creates a new ApiKey resource to represent an API key.",
+				"summary": "Create Key",
 				"description": "Creates a new ApiKey resource to represent an API key.",
 				"operationId": "apikeyCreate",
 				"parameters": [{
@@ -297,7 +297,7 @@
 		},
 		"/apikeys/hzYAVO9Sg98nsNh65VfX81M84O2kyXVy6K1xwHD7": {
 			"get": {
-				"summary": "Gets the ApiKey resource with the specified key identifier.",
+				"summary": "Get API Key",
 				"description": "Gets the ApiKey resource with the specified key identifier.",
 				"operationId": "apikeyBy-key",
 				"parameters": [{
@@ -334,7 +334,7 @@
 				"tags": ["API Keys"]
 			},
 			"patch": {
-				"summary": "Changes an API key properties, including the description, enabled, and name properties.",
+				"summary": "Apikey Update",
 				"description": "Changes an API key properties, including the description, enabled, and name properties.",
 				"operationId": "apikeyUpdate",
 				"parameters": [{
@@ -464,7 +464,7 @@
 		},
 		"/clientcertificates": {
 			"post": {
-				"summary": "Generates a new ClientCertificate resource.",
+				"summary": "Clientcertificate Generate",
 				"description": "Generates a new ClientCertificate resource.",
 				"operationId": "clientcertificateGenerate",
 				"parameters": [{
@@ -502,7 +502,7 @@
 		},
 		"/clientcertificates/9ao60f": {
 			"get": {
-				"summary": "Gets the ClientCertificate resource with the specified identifier.",
+				"summary": "Clientcertificate By-id",
 				"description": "Gets the ClientCertificate resource with the specified identifier.",
 				"operationId": "clientcertificateBy-id",
 				"parameters": [{
@@ -533,9 +533,124 @@
 				"tags": ["Client Certificates"]
 			}
 		},
+		"/clientcertificates/{clientcertificate_id}": {
+			"patch": {
+				"summary": "Clientcertificate Update",
+				"description": "Changes information about the ClientCertificate resource.",
+				"operationId": "clientcertificateUpdate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;op&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;patchOperations&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;path&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;value&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ExecutableBy.N",
+					"description": "Scopes the images by users with explicit launch permissions. ttttSpecify an AWS account ID, self (the sender of the request),ttttor all (public AMIs).",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ImageId.N",
+					"description": "One or more image IDs.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "query",
+					"name": "Owner.N",
+					"description": "Filters the images by the owner. Specify an AWS account ID, self (owner is      the sender of the request), or an AWS owner alias (valid values are amazon |        aws-marketplace | microsoft). Omitting this option returns all      images for which you have launch permissions, regardless of ownership.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": ["Certificates"]
+			}
+		},
 		"/domainnames/a.b.c.com/basepathmappings": {
 			"get": {
-				"summary": "Gets the BasePathMappings resource representing the collection of base path mappings for the specified custom domain name.",
+				"summary": "Get Domain Base Path",
 				"description": "Gets the BasePathMappings resource representing the collection of base path mappings for the specified custom domain name.",
 				"operationId": "domainnameBasepathmappings",
 				"parameters": [{
@@ -568,7 +683,7 @@
 		},
 		"/domainnames/mon-api.com": {
 			"delete": {
-				"summary": "Deletes the domain name resource.",
+				"summary": "Domainname Delete",
 				"description": "Deletes the domain name resource.",
 				"operationId": "domainnameDelete",
 				"parameters": [{
@@ -601,7 +716,7 @@
 		},
 		"/restapis": {
 			"post": {
-				"summary": "Creates a new API represented by a RestApi instance in API Gateway.",
+				"summary": "Restapi Create",
 				"description": "Creates a new API represented by a RestApi instance in API Gateway.",
 				"operationId": "restapiCreate",
 				"parameters": [{
@@ -650,7 +765,7 @@
 		},
 		"/restapis/86l3267lf6/authorizers": {
 			"get": {
-				"summary": "Gets an API&#39;s collection of custom authorizers that is represented as an Authorizers instance.",
+				"summary": "Restapi Authorizers",
 				"description": "Gets an API&#39;s collection of custom authorizers that is represented as an Authorizers instance.",
 				"operationId": "restapiAuthorizers",
 				"parameters": [{
@@ -688,7 +803,7 @@
 		},
 		"/restapis/8ekh4oszgl/resources/4oa3abz7jc/methods/GET": {
 			"delete": {
-				"summary": "Delete the method resource.",
+				"summary": "Method Delete",
 				"description": "Delete the method resource.",
 				"operationId": "methodDelete",
 				"parameters": [{
@@ -721,7 +836,7 @@
 		},
 		"/restapis/fugvjdxtri/": {
 			"patch": {
-				"summary": "Changes properties of a RestApi resource.",
+				"summary": "Restapi Update",
 				"description": "Changes properties of a RestApi resource.",
 				"operationId": "restapiUpdate",
 				"parameters": [{
@@ -806,7 +921,7 @@
 		},
 		"/restapis/fugvjdxtri/deployments/dzacq7": {
 			"delete": {
-				"summary": "Deletes the deployment resource.",
+				"summary": "Deployment Delete",
 				"description": "Deletes the deployment resource.",
 				"operationId": "deploymentDelete",
 				"parameters": [{
@@ -837,7 +952,7 @@
 				"tags": ["API Deployment"]
 			},
 			"patch": {
-				"summary": "Changes information about the deployment resource.",
+				"summary": "Deployment Update",
 				"description": "Changes information about the deployment resource.",
 				"operationId": "deploymentUpdate",
 				"parameters": [{
@@ -922,7 +1037,7 @@
 		},
 		"/restapis/fugvjdxtri/deployments?limit=2": {
 			"get": {
-				"summary": "Gets an API&#39;s Deployments resource.",
+				"summary": "Restapi Deployments",
 				"description": "Gets an API&#39;s Deployments resource.",
 				"operationId": "restapiDeployments",
 				"parameters": [{
@@ -955,7 +1070,7 @@
 		},
 		"/restapis/fugvjdxtri/resources": {
 			"get": {
-				"summary": "Gets an API&#39;s resource collection as represented by a Resources instance.",
+				"summary": "Restapi Resources",
 				"description": "Gets an API&#39;s resource collection as represented by a Resources instance.",
 				"operationId": "restapiResources",
 				"parameters": [{
@@ -988,7 +1103,7 @@
 		},
 		"/restapis/fugvjdxtri/resources/3kzxbg5sa2": {
 			"get": {
-				"summary": "Gets an API resource of the Resource type for a given resource identifier.",
+				"summary": "Resource By-id",
 				"description": "Gets an API resource of the Resource type for a given resource identifier.",
 				"operationId": "resourceBy-id",
 				"parameters": [{
@@ -1019,7 +1134,7 @@
 				"tags": ["API Resources"]
 			},
 			"post": {
-				"summary": "Creates an API resource.",
+				"summary": "Resource Create",
 				"description": "Creates an API resource.",
 				"operationId": "resourceCreate",
 				"parameters": [{
@@ -1057,7 +1172,7 @@
 		},
 		"/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET": {
 			"get": {
-				"summary": "Gets an API resource&#39;s method of a given HTTP verb.",
+				"summary": "Resource Methods",
 				"description": "Gets an API resource&#39;s method of a given HTTP verb.",
 				"operationId": "resourceMethods",
 				"parameters": [{
@@ -1088,7 +1203,7 @@
 				"tags": ["API Resource Methods"]
 			},
 			"patch": {
-				"summary": "Update the method settings.",
+				"summary": "Method Update",
 				"description": "Update the method settings.",
 				"operationId": "methodUpdate",
 				"parameters": [{
@@ -1178,7 +1293,7 @@
 		},
 		"/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration": {
 			"delete": {
-				"summary": "Deletes an integration.",
+				"summary": "Integration Delete",
 				"description": "Deletes an integration.",
 				"operationId": "integrationDelete",
 				"parameters": [{
@@ -1209,7 +1324,7 @@
 				"tags": ["API Integration"]
 			},
 			"patch": {
-				"summary": "Changes information about an integration.",
+				"summary": "Integration Update",
 				"description": "Changes information about an integration.",
 				"operationId": "integrationUpdate",
 				"parameters": [{
@@ -1292,7 +1407,7 @@
 				"tags": ["API Integration"]
 			},
 			"put": {
-				"summary": "Set up the method&#39;s integration request.",
+				"summary": "Integration Put",
 				"description": "Set up the method&#39;s integration request.",
 				"operationId": "integrationPut",
 				"parameters": [{
@@ -1368,7 +1483,7 @@
 		},
 		"/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/integration/responses/200": {
 			"delete": {
-				"summary": "Deletes an integration response.",
+				"summary": "Integrationresponse Delete",
 				"description": "Deletes an integration response.",
 				"operationId": "integrationresponseDelete",
 				"parameters": [{
@@ -1399,7 +1514,7 @@
 				"tags": ["API Integration"]
 			},
 			"get": {
-				"summary": "Specifies the integration&#39;s responses.",
+				"summary": "Integration Responses",
 				"description": "Specifies the integration&#39;s responses.",
 				"operationId": "integrationResponses",
 				"parameters": [{
@@ -1430,7 +1545,7 @@
 				"tags": ["API Integration"]
 			},
 			"patch": {
-				"summary": "Changes information about an integration response.",
+				"summary": "Integrationresponse Update",
 				"description": "Changes information about an integration response.",
 				"operationId": "integrationresponseUpdate",
 				"parameters": [{
@@ -1513,7 +1628,7 @@
 				"tags": ["API Integration"]
 			},
 			"put": {
-				"summary": "Set up an IntegrationResponse for the integration.",
+				"summary": "Integrationresponse Put",
 				"description": "Set up an IntegrationResponse for the integration.",
 				"operationId": "integrationresponsePut",
 				"parameters": [{
@@ -1569,7 +1684,7 @@
 		},
 		"/restapis/fugvjdxtri/resources/3kzxbg5sa2/methods/GET/responses/200": {
 			"get": {
-				"summary": "Represents a method response of a given HTTP status code returned to the client. The method response is passed from the back end through the associated integration response that can be transformed using a mapping template.",
+				"summary": "Get Response",
 				"description": "Represents a method response of a given HTTP status code returned to the client. The method response is passed from the back end through the associated integration response that can be transformed using a mapping template.",
 				"operationId": "methodResponse",
 				"parameters": [{
@@ -1618,7 +1733,7 @@
 				"tags": ["API Method Response"]
 			},
 			"put": {
-				"summary": "Set up the method response.",
+				"summary": "Methodresponse Put",
 				"description": "Set up the method response.",
 				"operationId": "methodresponsePut",
 				"parameters": [{
@@ -1671,7 +1786,7 @@
 		},
 		"/restapis/fugvjdxtri/resources/47rxl6": {
 			"post": {
-				"summary": "Creates a child API resource of a given API resource.",
+				"summary": "Resource Create-child",
 				"description": "Creates a child API resource of a given API resource.",
 				"operationId": "resourceCreate-child",
 				"parameters": [{
@@ -1709,7 +1824,7 @@
 		},
 		"/restapis/fugvjdxtri/stages/stage1": {
 			"patch": {
-				"summary": "Changes information about the stage.",
+				"summary": "Stage Update",
 				"description": "Changes information about the stage.",
 				"operationId": "stageUpdate",
 				"parameters": [{
@@ -1794,7 +1909,7 @@
 		},
 		"/restapis/l9kujxkzq2/models": {
 			"get": {
-				"summary": "Gets an API&#39;s model collection represented by a Models instance.",
+				"summary": "Restapi Models",
 				"description": "Gets an API&#39;s model collection represented by a Models instance.",
 				"operationId": "restapiModels",
 				"parameters": [{
@@ -1832,7 +1947,7 @@
 		},
 		"/restapis/mxsmn867vb/authorizers": {
 			"post": {
-				"summary": "Creates an Authorizer resource.",
+				"summary": "Authorizer Create",
 				"description": "Creates an Authorizer resource.",
 				"operationId": "authorizerCreate",
 				"parameters": [{
@@ -1890,7 +2005,7 @@
 		},
 		"/restapis/mxsmn867vb/authorizers/40j2n8": {
 			"get": {
-				"summary": "Gets the Authorizer resource representing a custom authorizer of a specified identifier.",
+				"summary": "Authorizer By-id",
 				"description": "Gets the Authorizer resource representing a custom authorizer of a specified identifier.",
 				"operationId": "authorizerBy-id",
 				"parameters": [{
@@ -1923,7 +2038,7 @@
 		},
 		"/restapis/mxsmn867vb/authorizers/4unj71": {
 			"delete": {
-				"summary": "Deletes an authorizer.",
+				"summary": "Authorizer Delete",
 				"description": "Deletes an authorizer.",
 				"operationId": "authorizerDelete",
 				"parameters": [{
@@ -1962,7 +2077,7 @@
 		},
 		"/restapis/uojnr9hd57/models": {
 			"post": {
-				"summary": "Creates a new Model for this API.",
+				"summary": "Model Create",
 				"description": "Creates a new Model for this API.",
 				"operationId": "modelCreate",
 				"parameters": [{
@@ -2010,7 +2125,7 @@
 		},
 		"/restapis/uojnr9hd57/models/CalcOutput": {
 			"delete": {
-				"summary": "Deletes a model.",
+				"summary": "Model Delete",
 				"description": "Deletes a model.",
 				"operationId": "modelDelete",
 				"parameters": [{
@@ -2043,7 +2158,7 @@
 		},
 		"/restapis/uojnr9hd57/models/output": {
 			"get": {
-				"summary": "Gets information about the Model of a specified name.",
+				"summary": "Model By-name",
 				"description": "Gets information about the Model of a specified name.",
 				"operationId": "modelBy-name",
 				"parameters": [{
@@ -2076,7 +2191,7 @@
 		},
 		"/restapis/uojnr9hd57/models/output/default_template": {
 			"get": {
-				"summary": "Generates a sample mapping template that can be used to transform a payload into the structure of a model.",
+				"summary": "Model Generate-template",
 				"description": "Generates a sample mapping template that can be used to transform a payload into the structure of a model.",
 				"operationId": "modelGenerate-template",
 				"parameters": [{
@@ -2109,7 +2224,7 @@
 		},
 		"/restapis/uojnr9hd57/resources/0cjtch/methods/GET": {
 			"get": {
-				"summary": "Gets the method (as a Method resource) on a specified API resource (as Resource resource) of the given HTTP method type.",
+				"summary": "Method By-http-method",
 				"description": "Gets the method (as a Method resource) on a specified API resource (as Resource resource) of the given HTTP method type.",
 				"operationId": "methodBy-http-method",
 				"parameters": [{
@@ -2147,7 +2262,7 @@
 		},
 		"/restapis/uojnr9hd57/resources/0cjtch/methods/GET/integration": {
 			"get": {
-				"summary": "Gets the method&#39;s integration responsible for passing the client-submitted request to the back end and performing necessary transformations to make the request compliant with the back end.",
+				"summary": "Method Integration",
 				"description": "Gets the method&#39;s integration responsible for passing the client-submitted request to the back end and performing necessary transformations to make the request compliant with the back end.",
 				"operationId": "methodIntegration",
 				"parameters": [{
@@ -2185,7 +2300,7 @@
 		},
 		"/restapis/uojnr9hd57/resources/0cjtch/methods/GET/responses/200": {
 			"delete": {
-				"summary": "Deletes method response settings.",
+				"summary": "Methodresponse Delete",
 				"description": "Deletes method response settings.",
 				"operationId": "methodresponseDelete",
 				"parameters": [{
@@ -2221,7 +2336,7 @@
 				"tags": ["API Method"]
 			},
 			"get": {
-				"summary": "Gets a method response associated with a given HTTP status code.",
+				"summary": "Method Responses",
 				"description": "Gets a method response associated with a given HTTP status code.",
 				"operationId": "methodResponses",
 				"parameters": [{
@@ -2257,7 +2372,7 @@
 				"tags": ["API Method"]
 			},
 			"patch": {
-				"summary": "Update MethodResponse resource&#39;s properties.",
+				"summary": "Methodresponse Update",
 				"description": "Update MethodResponse resource&#39;s properties.",
 				"operationId": "methodresponseUpdate",
 				"parameters": [{
@@ -2342,7 +2457,7 @@
 		},
 		"/restapis/uycll6xg9a/stages/alpha": {
 			"delete": {
-				"summary": "Deletes a named stage of a given API.",
+				"summary": "Stage Delete",
 				"description": "Deletes a named stage of a given API.",
 				"operationId": "stageDelete",
 				"parameters": [{
@@ -2375,7 +2490,7 @@
 		},
 		"/restapis/uycll6xg9a/stages/alpha/cache/authorizers": {
 			"delete": {
-				"summary": "Flushes all cached Authorizer entries on a named stage.",
+				"summary": "Stage Flush",
 				"description": "Flushes all cached Authorizer entries on a named stage.",
 				"operationId": "stageFlush-authorizer-cache",
 				"parameters": [{
@@ -2408,7 +2523,7 @@
 		},
 		"/restapis/uycll6xg9a/stages/alpha/cache/data": {
 			"delete": {
-				"summary": "Flushes the cached data of a named stage.",
+				"summary": "Stage Flush",
 				"description": "Flushes the cached data of a named stage.",
 				"operationId": "stageFlush-cache",
 				"parameters": [{
@@ -2441,7 +2556,7 @@
 		},
 		"/restapis/wn611yeyp3?mode=merge": {
 			"put": {
-				"summary": "Update the definition of a REST API, including the resources, methods, templates, and models.",
+				"summary": "Restapi Put",
 				"description": "Update the definition of a REST API, including the resources, methods, templates, and models.",
 				"operationId": "restapiPut",
 				"parameters": [{
@@ -2659,7 +2774,7 @@
 		},
 		"/restapis?mode=import&amp;failonwarning=true": {
 			"post": {
-				"summary": "Creates an API from an external API definition.",
+				"summary": "Restapi Import",
 				"description": "Creates an API from an external API definition.",
 				"operationId": "restapiImport",
 				"parameters": [{
@@ -2859,6 +2974,1216 @@
 					}
 				},
 				"tags": ["API"]
+			}
+		},
+		"/usageplans/{usageplanId}/keys/{keyId}": {
+			"delete": {
+				"summary": "Clientcertificate Delete",
+				"description": "Deletes the ClientCertificate resource.",
+				"operationId": "clientcertificateDelete",
+				"parameters": [{
+					"in": "query",
+					"name": "Attribute",
+					"description": "The AMI attribute.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ImageId",
+					"description": "The ID of the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": ["Certificates"]
+			}
+		},
+		"along": {
+			"fugvjdxtri</code>)": {
+				"summary": "Deployment Create",
+				"description": "Creates a new Deployment for the API, which will be referenced by the provided Stage. If the specified stage already exists, it will be updated to point to the new deployment. If the stage does not exist, a new one will be created and point to this deployment.",
+				"operationId": "deploymentCreate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;cacheClusterEnabled&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;description&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;stageDescription&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;stageName&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;sv1&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;variables&quot;",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Attribute",
+					"description": "The name of the attribute to modify.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Description",
+					"description": "A description for the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ImageId",
+					"description": "The ID of the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "LaunchPermission",
+					"description": "A launch permission modification.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "OperationType",
+					"description": "The operation type.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ProductCode.N",
+					"description": "One or more product codes. After you add a product code to an AMI, it cant be removed.        This is only valid when modifying the productCodes attribute.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "UserGroup.N",
+					"description": "One or more user groups. This is only valid when modifying the launchPermission attribute.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "UserId.N",
+					"description": "One or more AWS account IDs. This is only valid when modifying the launchPermission attribute.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Value",
+					"description": "The value of the attribute being modified. This is only valid when modifying the description attribute.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"base": {
+			"testapi</code>": {
+				"summary": "Basepathmapping Create",
+				"description": "Creates a new BasePathMapping resource.",
+				"operationId": "basepathmappingCreate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;basePath&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;restApiId&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;stage&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "BlockDeviceMapping.N",
+					"description": "Information about one or more block device mappings.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Description",
+					"description": "A description for the new image.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of the instance.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Name",
+					"description": "A name for the new image.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "NoReboot",
+					"description": "By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the No Reboot option is set, Amazon EC2 doesnt shut down the instance before creating the image. When this option is used, file system integrity on the created image cant be guaranteed.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"enabling": {
+			"alpha</code>,": {
+				"summary": "Stage Create",
+				"description": "Creates a new stage, as represented by a Stage instance, in a pre-existing Deployment of an API.",
+				"operationId": "stageCreate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;cacheClusterEnabled&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;cacheClusterSize&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;deploymentId&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;description&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;stageName&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;sv_1&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;sv_2&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;variables&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request, t    and provides an error response. If you have the required permissions, the error response is DryRunOperation. t    Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId.N",
+					"description": "One or more instance IDs. Must be instances linked to a VPC through ClassicLink.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "MaxResults",
+					"description": "The maximum number of results to return for the request in a single page. The remaining results of the initial request can be seen by sending anothert    request with the returned NextToken value. This value can be between 5 and 1000;t    if MaxResults is given a value larger than 1000, only 1000 results are returned. You cannot specify this parameter and the instance IDs parameter in the samet    request.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "NextToken",
+					"description": "The token to retrieve the next page of results.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"from": {
+			"m799ha</code>": {
+				"summary": "Resource Delete",
+				"description": "Deletes an API resource represented by a Resource instance.",
+				"operationId": "resourceDelete",
+				"parameters": [{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "BundleId",
+					"description": "The ID of the bundle task.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"is": {
+			"authorizationtype</code>": {
+				"summary": "Method Put",
+				"description": "Create a Method resource on a specified Resource resource.",
+				"operationId": "methodPut",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;authorizationType&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the      request, and provides an error response. If you have the required permissions, the error      response is DryRunOperation. Otherwise, it is      UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of the instance.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ProductCode",
+					"description": "The product code. This must be a product code that you own.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"of": {
+			"certificatename</code>)": {
+				"summary": "Domainname Update",
+				"description": "Changes information about the domain name resource.",
+				"operationId": "domainnameUpdate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;op&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;patchOperations&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;path&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;value&quot;",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Architecture",
+					"description": "The architecture of the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "BlockDeviceMapping.N",
+					"description": "One or more block device mapping entries.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Description",
+					"description": "A description for your AMI.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "EnaSupport",
+					"description": "Set to true to enable enhanced networking with ENA for the AMI and any instances that you launch from the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ImageLocation",
+					"description": "The full path to your AMI manifest in Amazon S3 storage.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "KernelId",
+					"description": "The ID of the kernel.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Name",
+					"description": "A name for your AMI.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "query",
+					"name": "RamdiskId",
+					"description": "The ID of the RAM disk.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "RootDeviceName",
+					"description": "The name of the root device (for example, /dev/sda1, ortttt/dev/xvda).",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "SriovNetSupport",
+					"description": "Set to simple to enable enhanced networking with the Intel 82599 Virtual Function interface for the AMI and any instances that you launch from the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "query",
+					"name": "VirtualizationType",
+					"description": "The type of virtualization.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"testapi</code>)": {
+				"summary": "Basepathmapping Update",
+				"description": "Changes information about the base path mapping resource.",
+				"operationId": "basepathmappingUpdate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;op&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;patchOperations&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;path&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;value&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ImageId",
+					"description": "The ID of the AMI.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"property": {
+			"identitysource</code>": {
+				"summary": "Authorizer Update",
+				"description": "Changes information about an authorizer.",
+				"operationId": "authorizerUpdate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;op&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;patchOperations&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;path&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;value&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "ClientToken",
+					"description": "Unique, case-sensitive identifier you provide to ensurettttidempotency of the request. For more information, see How to Ensure Idempotency in the ttt  Amazon Elastic Compute Cloud User Guide.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Description",
+					"description": "A description for the new AMI in the destination region.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Encrypted",
+					"description": "Specifies whether the destination snapshots of the copied image should be encrypted. The default CMK for EBS is used unless a non-default       AWS Key Management Service (AWS KMS) CMK is specified with KmsKeyId. For more information, see Amazon EBS Encryption in the       Amazon Elastic Compute Cloud User Guide.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "KmsKeyId",
+					"description": "The full ARN of the AWS Key Management Service (AWS KMS) CMK to use when encrypting the snapshots of an image during a copy operation. This parameter is       only required if you want to use a non-default CMK; if this parameter is not specified, the       default CMK for EBS is used. The ARN contains the arn:aws:kms namespace, followed by the region of the CMK, the AWS account ID of the CMK owner, the key namespace, and then the CMK ID. For example, arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef. The specified CMK must exist in the region       that the snapshot is being copied to. If a KmsKeyId is specified, the       Encrypted flag must also be set.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Name",
+					"description": "The name of the new AMI in the destination region.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "query",
+					"name": "SourceImageId",
+					"description": "The ID of the AMI to copy.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "SourceRegion",
+					"description": "The name of the region that contains the AMI to copy.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"resource": {
+			"/r2/r2-1</code>": {
+				"summary": "Resource Update",
+				"description": "Update an API resource represented by a Resource instance only.",
+				"operationId": "resourceUpdate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;op&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;patchOperations&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;path&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;value&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "BundleId.N",
+					"description": "One or more bundle task IDs.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "Filter.N",
+					"description": "One or more filters.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"stage": {
+			"prod</code>": {
+				"summary": "Stage By-name",
+				"description": "Gets information of a named stage represented by a Stage resource.",
+				"operationId": "stageBy-name",
+				"parameters": [{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request, tt    and provides an error response. If you have the required permissions, the error response is DryRunOperation. tt    Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of an EC2-Classic instance to link to the ClassicLink-enabled VPC.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "SecurityGroupId.N",
+					"description": "The ID of one or more of the VPCs security groups. You cannot specify security groups from a different VPC.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "VpcId",
+					"description": "The ID of a ClassicLink-enabled VPC.",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"usageplans/{usageplanId}/keys": {
+			"post": {
+				"summary": "Usageplankey Create",
+				"description": "Creates a UsagePlanKey resource to associate an existing API key to the specified usage plan.",
+				"operationId": "usageplankeyCreate",
+				"parameters": [{
+					"in": "body",
+					"name": "apiId",
+					"description": "API Id of the associated API stage in a usage plan.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "query",
+					"name": "AttributeName.N",
+					"description": "One or more account attribute names.",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "method",
+					"description": "The HTTP verb of a method. It is a valid field for the API entity types of METHOD, PATH_PARAMETER, QUERY_PARAMETER, REQUEST_HEADER, REQUEST_BODY, RESPONSE, RESPONSE_HEADER, and RESPONSE_BODY. The default value is * for any method. When an applicable child entity inherits the content of an entity of the same type with more general specifications of the other location attributes, the child entity&#39;s method attribute must match that of the parent entity exactly.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "name",
+					"description": "The name of the targeted API entity. It is a valid and required field for the API entity types of AUTHORIZER, MODEL, PATH_PARAMETER, QUERY_PARAMETER, REQUEST_HEADER, REQUEST_BODY and RESPONSE_HEADER. It is an invalid field for any other entity type.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "stage",
+					"description": "API stage name of the associated API stage in a usage plan.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "statusCode",
+					"description": "The HTTP status code of a response. It is a valid field for the API entity types of RESPONSE, RESPONSE_HEADER, and RESPONSE_BODY. The default value is * for any status code. When an applicable child entity inherits the content of an entity of the same type with more general specifications of the other location attributes, the child entity&#39;s statusCode attribute must match that of the parent entity exactly.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "type",
+					"description": "The type of API entity to which the documentation content applies. It is a valid and required field for API entity types of API, AUTHORIZER, MODEL, RESOURCE, METHOD, PATH_PARAMETER, QUERY_PARAMETER, REQUEST_HEADER, REQUEST_BODY, RESPONSE, RESPONSE_HEADER, and RESPONSE_BODY. Content inheritance does not apply to any entity of the API, AUTHROZER, MODEL, or RESOURCE type.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": ["Keys"]
+			}
+		},
+		"value.": {
+			"op.description</code>": {
+				"summary": "Model Update",
+				"description": "Updates properties of a Model resource.",
+				"operationId": "modelUpdate",
+				"parameters": [{
+					"in": "header",
+					"name": "&quot;op&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;patchOperations&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "&quot;path&quot;",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Authorization",
+					"type": "string"
+				},
+				{
+					"in": "header",
+					"name": "Content-Type",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "DryRun",
+					"description": "Checks whether you have the required permissions for the action, without actually making the request,        and provides an error response. If you have the required permissions, the error response is DryRunOperation.        Otherwise, it is UnauthorizedOperation.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "from",
+					"description": "Not supported.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "Host",
+					"type": "string"
+				},
+				{
+					"in": "query",
+					"name": "InstanceId",
+					"description": "The ID of the instance to bundle.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "op",
+					"description": "An update operation to be performed with this PATCH request. The valid value can be &quot;add&quot;, &quot;remove&quot;, or &quot;replace&quot;. Not all valid operations are supported for a given resource. Support of the operations depends on specific operational contexts. Attempts to apply an unsupported operation on a resource will return an error message.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "body",
+					"name": "path",
+					"description": "The op operation&#39;s target, as identified by a JSON Pointer value that references a location within the targeted resource. For example, if the target resource has an updateable property of {&quot;name&quot;:&quot;value&quot;}, the path for this property is /name. If the name property value is a JSON object (e.g., {&quot;name&quot;: {&quot;child/name&quot;: &quot;child-value&quot;}}), the path for the child/name property will be /name/child~1name. Any slash (&quot;/&quot;) character appearing in path names must be escaped with &quot;~1&quot;, as shown in the example above. Each op operation can have only one path associated with it.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "query",
+					"name": "Storage",
+					"description": "The bucket in which to store the AMI. You can specify a bucket that you already own or a new bucket that Amazon EC2 creates on your behalf. If you specify a bucket that belongs to someone else, Amazon EC2 returns an error.",
+					"type": "string"
+				},
+				{
+					"in": "body",
+					"name": "value",
+					"description": "The new target value of the update operation.",
+					"schema": {
+						"$ref": "#/definitions/holder"
+					}
+				},
+				{
+					"in": "header",
+					"name": "X-Amz-Date",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
 			}
 		}
 	},

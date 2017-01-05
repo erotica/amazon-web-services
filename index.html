@@ -3,7 +3,7 @@ layout: page
 title: Amazon Web Services
 ---
 
-<strong>debug 12: </strong>
+<strong>debug 1: </strong>
 
 {% assign index = site.data.apis %}
 {% assign apijson = index[0] %}
@@ -17,13 +17,18 @@ title: Amazon Web Services
   {% for api in contents %}
 
     {% assign api_name = api[0] %}
-    {% assign apijson = api[1] %}
+    {% assign folder = api[1] %}
     {% if api_name == path %}
 
       <!--- Begin --->
 
-        {{ apijson }}<br /><hr />
+      {% for item in folder %}
 
+        {% assign item_name = item[0] %}
+
+        {{ item_name }}<br /><hr />
+
+      {% endif %}
 
       <!--- END --->
 

@@ -170,7 +170,6 @@ title: Amazon Web Services
 
                                             {% assign tagarray = method[1].tags %}
                                             {% assign tag = tagarray[0] %}
-
                                             {% assign verb = method[0] | upcase %}
 
                                             {% if verb == 'GET' %}
@@ -219,12 +218,4 @@ title: Amazon Web Services
 
   {% endfor %}
 
-{% endfor %}
-
-----
-
-{% assign contents = site.data.api-commons %}
-
-{% for api in contents %}
-  {{ api[0] }} <br />
 {% endfor %}

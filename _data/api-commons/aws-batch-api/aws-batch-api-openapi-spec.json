@@ -11,9 +11,9 @@
 	"paths": {
 		"/?Action=CancelJob&k=1": {
 			"get": {
-				"summary": "Cancels jobs in an AWS Batch job queue.",
+				"summary": " Cancel Job ",
 				"description": "Cancels jobs in an AWS Batch job queue.",
-				"operationId": "CancelJob",
+				"operationId": "cancelJob",
 				"parameters": [{
 					"in": "query",
 					"name": "jobId",
@@ -36,9 +36,9 @@
 		},
 		"/?Action=CreateComputeEnvironment&k=1": {
 			"get": {
-				"summary": "Creates an AWS Batch compute environment.",
+				"summary": " Create Compute Environment ",
 				"description": "Creates an AWS Batch compute environment.",
-				"operationId": "CreateComputeEnvironment",
+				"operationId": "createComputeEnvironment",
 				"parameters": [{
 					"in": "query",
 					"name": "computeEnvironmentName",
@@ -79,9 +79,9 @@
 		},
 		"/?Action=CreateJobQueue&k=1": {
 			"get": {
-				"summary": "Creates an AWS Batch job queue.",
+				"summary": " Create Job Queue ",
 				"description": "Creates an AWS Batch job queue.",
-				"operationId": "CreateJobQueue",
+				"operationId": "createJobQueue",
 				"parameters": [{
 					"in": "query",
 					"name": "computeEnvironmentOrder",
@@ -116,9 +116,9 @@
 		},
 		"/?Action=DeleteComputeEnvironment&k=1": {
 			"get": {
-				"summary": "Deletes an AWS Batch compute environment.",
+				"summary": " Delete Compute Environment ",
 				"description": "Deletes an AWS Batch compute environment.",
-				"operationId": "DeleteComputeEnvironment",
+				"operationId": "deleteComputeEnvironment",
 				"parameters": [{
 					"in": "query",
 					"name": "computeEnvironment",
@@ -135,9 +135,9 @@
 		},
 		"/?Action=DeleteJobQueue&k=1": {
 			"get": {
-				"summary": "Deletes the specified job queue.",
+				"summary": " Delete Job Queue ",
 				"description": "Deletes the specified job queue.",
-				"operationId": "DeleteJobQueue",
+				"operationId": "deleteJobQueue",
 				"parameters": [{
 					"in": "query",
 					"name": "jobQueue",
@@ -154,9 +154,9 @@
 		},
 		"/?Action=DeregisterJobDefinition&k=1": {
 			"get": {
-				"summary": "Deregisters an AWS Batch job definition.",
+				"summary": " Deregister Job Definition ",
 				"description": "Deregisters an AWS Batch job definition.",
-				"operationId": "DeregisterJobDefinition",
+				"operationId": "deregisterJobDefinition",
 				"parameters": [{
 					"in": "query",
 					"name": "jobDefinition",
@@ -173,9 +173,9 @@
 		},
 		"/?Action=DescribeComputeEnvironments&k=1": {
 			"get": {
-				"summary": "Describes one or more of your compute environments.",
+				"summary": " Describe Compute Environments ",
 				"description": "Describes one or more of your compute environments.",
-				"operationId": "DescribeComputeEnvironments",
+				"operationId": "describeComputeEnvironments",
 				"parameters": [{
 					"in": "query",
 					"name": "computeEnvironments",
@@ -204,9 +204,9 @@
 		},
 		"/?Action=DescribeJobDefinitions&k=1": {
 			"get": {
-				"summary": "Describes a list of job definitions.",
+				"summary": " Describe Job Definitions ",
 				"description": "Describes a list of job definitions.",
-				"operationId": "DescribeJobDefinitions",
+				"operationId": "describeJobDefinitions",
 				"parameters": [{
 					"in": "query",
 					"name": "jobDefinitionName",
@@ -247,9 +247,9 @@
 		},
 		"/?Action=DescribeJobQueues&k=1": {
 			"get": {
-				"summary": "Describes one or more of your job queues.",
+				"summary": " Describe Job Queues ",
 				"description": "Describes one or more of your job queues.",
-				"operationId": "DescribeJobQueues",
+				"operationId": "describeJobQueues",
 				"parameters": [{
 					"in": "query",
 					"name": "jobQueues",
@@ -278,9 +278,9 @@
 		},
 		"/?Action=DescribeJobs&k=1": {
 			"get": {
-				"summary": "Describes a list of AWS Batch jobs.",
+				"summary": " Describe Jobs ",
 				"description": "Describes a list of AWS Batch jobs.",
-				"operationId": "DescribeJobs",
+				"operationId": "describeJobs",
 				"parameters": [{
 					"in": "query",
 					"name": "jobs",
@@ -297,9 +297,9 @@
 		},
 		"/?Action=ListJobs&k=1": {
 			"get": {
-				"summary": "Returns a list of task jobs for a specified job queue.",
+				"summary": " List Jobs ",
 				"description": "Returns a list of task jobs for a specified job queue.",
-				"operationId": "ListJobs",
+				"operationId": "listJobs",
 				"parameters": [{
 					"in": "query",
 					"name": "jobQueue",
@@ -334,9 +334,9 @@
 		},
 		"/?Action=RegisterJobDefinition&k=1": {
 			"get": {
-				"summary": "Registers an AWS Batch job definition.",
+				"summary": " Register Job Definition ",
 				"description": "Registers an AWS Batch job definition.",
-				"operationId": "RegisterJobDefinition",
+				"operationId": "registerJobDefinition",
 				"parameters": [{
 					"in": "query",
 					"name": "containerProperties",
@@ -371,9 +371,9 @@
 		},
 		"/?Action=SubmitJob&k=1": {
 			"get": {
-				"summary": "Submits an AWS Batch job from a job definition.",
+				"summary": " Submit Job ",
 				"description": "Submits an AWS Batch job from a job definition.",
-				"operationId": "SubmitJob",
+				"operationId": "submitJob",
 				"parameters": [{
 					"in": "query",
 					"name": "containerOverrides",
@@ -420,9 +420,9 @@
 		},
 		"/?Action=TerminateJob&k=1": {
 			"get": {
-				"summary": "Terminates jobs in a job queue.",
+				"summary": " Terminate Job ",
 				"description": "Terminates jobs in a job queue.",
-				"operationId": "TerminateJob",
+				"operationId": "terminateJob",
 				"parameters": [{
 					"in": "query",
 					"name": "jobId",
@@ -445,9 +445,9 @@
 		},
 		"/?Action=UpdateComputeEnvironment&k=1": {
 			"get": {
-				"summary": "Updates an AWS Batch compute environment.",
+				"summary": " Update Compute Environment ",
 				"description": "Updates an AWS Batch compute environment.",
-				"operationId": "UpdateComputeEnvironment",
+				"operationId": "updateComputeEnvironment",
 				"parameters": [{
 					"in": "query",
 					"name": "computeEnvironment",
@@ -482,9 +482,9 @@
 		},
 		"/?Action=UpdateJobQueue&k=1": {
 			"get": {
-				"summary": "Updates a job queue.",
+				"summary": " Update Job Queue ",
 				"description": "Updates a job queue.",
-				"operationId": "UpdateJobQueue",
+				"operationId": "updateJobQueue",
 				"parameters": [{
 					"in": "query",
 					"name": "computeEnvironmentOrder",
